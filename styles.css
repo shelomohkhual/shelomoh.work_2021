@@ -24,14 +24,14 @@ canvas {
 
 h1 {
   font-family: "VCR_OSD_MONO_1";
-  font-size: 70px;
+  font-size: 35px;
   letter-spacing: 5px;
 }
 
 p {
   font-family: "Roboto Mono", monospace;
-  font-size: 25px;
-  letter-spacing: 5px;
+  font-size: smaller;
+  letter-spacing: 3px;
 }
 
 .glitch-wrapper {
