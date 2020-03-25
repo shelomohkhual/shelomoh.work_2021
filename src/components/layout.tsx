@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import TopBar from "./TopBar";
 
-const scrollDown = <p className="scroll"> SCROLL - >> </p>;
+// const scrollDown = <p className="scroll"> SCROLL - >> </p>;
 
 const Layout = ({ children }) => (
   <React.Fragment>

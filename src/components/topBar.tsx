@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faBars, faSlash } from "@fortawesome/free-solid-svg-icons";
-import MobileNavBar from "./mobile-navbar";
+// import MobileNavBar from "./mobile-navbar";
 import React from "react";
 
 interface TopBarProps {}
