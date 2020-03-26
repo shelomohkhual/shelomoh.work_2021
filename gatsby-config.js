@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-transformer-json",
     "gatsby-plugin-typescript",
+    `gatsby-plugin-transition-link`,
     {
       resolve: "gatsby-source-filesystem",
       options: {

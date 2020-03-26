@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+import TransitionLink from "gatsby-plugin-transition-link/AniLink";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -59,9 +59,9 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
       <div className="topbar-container">
         <div className="topbar-logo-col">
           <div className="topbar-item">
-            <Link to="/">
+            <TransitionLink fade fade to="/">
               <span className="logo">SHELOMOH</span>
-            </Link>
+            </TransitionLink>
           </div>
           <span className={mobileNavBarIconOpen()}>
             <FontAwesomeIcon
@@ -97,23 +97,23 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
             />
           </span>
           <div className={mobileNavBarContainer()}>
-            <Link to="/">
+            <TransitionLink fade to="/">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">HOME</span>
               </p>
-            </Link>
+            </TransitionLink>
 
-            <Link to="/work">
+            <TransitionLink fade to="/work">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Work</span>
               </p>
-            </Link>
+            </TransitionLink>
 
-            <Link to="/contact">
+            <TransitionLink fade to="/contact">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Contact</span>
               </p>
-            </Link>
+            </TransitionLink>
             <span className="divider" />
             <div className="mobile-social-container">
               <a target="_blank" href="https://www.instagram.com/shelomoh">

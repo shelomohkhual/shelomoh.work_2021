@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import TopBar from "./topBar";
-
+import TransitionLink from "gatsby-plugin-transition-link/AniLink";
 // const scrollDown = <p className="scroll"> SCROLL - >> </p>;
 
 const workPathsLocation = props => {
@@ -16,7 +15,8 @@ const Layout = ({ children }) => (
     <div className="layout-container">
       <TopBar />
       <div className="navbar">
-        <Link
+        <TransitionLink
+          fade
           to="/work"
           className="navbar-item-link-container"
           activeClassName="active"
@@ -25,9 +25,9 @@ const Layout = ({ children }) => (
           {/* <p className="navbar-item-link-container"> */}
           <span className="navbar-item-link ">Work</span>
           {/* </p> */}
-        </Link>
-
-        <Link
+        </TransitionLink>
+        <TransitionLink
+          fade
           to="/contact"
           className="navbar-item-link-container"
           activeClassName="active"
@@ -35,7 +35,7 @@ const Layout = ({ children }) => (
           {/* <p className="navbar-item-link-container"> */}
           <span className="navbar-item-link ">Contact</span>
           {/* </p> */}
-        </Link>
+        </TransitionLink>
       </div>
       <main className="main-container">{children}</main>
     </div>
