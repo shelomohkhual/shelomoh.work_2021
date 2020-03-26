@@ -98,21 +98,21 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
           </span>
           <div className={mobileNavBarContainer()}>
             <Link to="/">
-              <a className="mobile-navbar-item-link-container">
+              <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">HOME</span>
-              </a>
+              </p>
             </Link>
 
             <Link to="/work">
-              <a className="mobile-navbar-item-link-container">
+              <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Work</span>
-              </a>
+              </p>
             </Link>
 
             <Link to="/contact">
-              <a className="mobile-navbar-item-link-container">
+              <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Contact</span>
-              </a>
+              </p>
             </Link>
             <span className="divider" />
             <div className="mobile-social-container">

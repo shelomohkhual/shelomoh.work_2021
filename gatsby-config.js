@@ -18,20 +18,6 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "contact",
-        path: "./data"
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "index",
-        path: "./data"
-      }
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`space mono\:400,400i,700,700i`],

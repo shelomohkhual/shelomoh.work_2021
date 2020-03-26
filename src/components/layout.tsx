@@ -12,15 +12,15 @@ const Layout = ({ children }) => (
       {/* NAVBAR */}
       <div className="navbar">
         <Link to="/work">
-          <a className="navbar-item-link-container">
+          <p className="navbar-item-link-container">
             <span className="navbar-item-link ">Work</span>
-          </a>
+          </p>
         </Link>
 
         <Link to="/contact">
-          <a className="navbar-item-link-container">
+          <p className="navbar-item-link-container">
             <span className="navbar-item-link ">Contact</span>
-          </a>
+          </p>
         </Link>
       </div>
       <main className="main-container">{children}</main>
