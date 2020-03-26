@@ -1,8 +1,9 @@
-import React from "react";
+import { useEffect } from "react";
+import { navigate } from "gatsby";
 
-const PageNotFound = () => (
-  <div>
-    <h1>Page Not Found</h1>
-  </div>
-);
-export default PageNotFound;
+export default () => {
+  useEffect(() => {
+    navigate("/");
+  }, []);
+  return null;
+};
