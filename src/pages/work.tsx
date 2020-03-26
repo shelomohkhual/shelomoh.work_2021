@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import ProjectPreview from "../components/project-preview";
 
-export const Works = () => {
+const Work = () => {
   const data = useStaticQuery(graphql`
     {
       allProjectsJson {
@@ -24,7 +24,6 @@ export const Works = () => {
       }
     }
   `);
-
   const projects = data.allProjectsJson.edges;
 
   return (
@@ -47,3 +46,5 @@ export const Works = () => {
     </Layout>
   );
 };
+
+export default Work;
