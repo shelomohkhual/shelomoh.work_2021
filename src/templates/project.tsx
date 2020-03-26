@@ -2,6 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { Project } from "../components/project";
+import HeadingBar from "../components/heading-bar";
+import HeadingAttribute from "../components/heading-attribute";
 
 export const query = graphql`
   query($slug: String!) {
@@ -42,6 +44,14 @@ const ProjectTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <HeadingBar key={title} title={title}>
+        <HeadingAttribute label="client">
+          <span>{client}</span>
+        </HeadingAttribute>
+        <HeadingAttribute label="SERVICE">
+          <span>{service}</span>
+        </HeadingAttribute>
+      </HeadingBar>
       <Project
         title={title}
         client={client}

@@ -28,21 +28,26 @@ const Work = () => {
 
   return (
     <Layout>
-      {projects.map(({ node: project }) => {
-        const title = project.title;
-        const description = project.description;
-        const slug = project.slug;
-        const imageData = project.image.childImageSharp.fluid;
+      <ul>
+        {projects.map(({ node: project }) => {
+          const title = project.title;
+          const description = project.description;
+          const slug = project.slug;
+          const imageData = project.image.childImageSharp.fluid;
 
-        return (
-          <ProjectPreview
-            title={title}
-            description={description}
-            slug={slug}
-            imageData={imageData}
-          />
-        );
-      })}
+          return (
+            <li key={slug}>
+              <ProjectPreview
+                key={slug}
+                title={title}
+                description={description}
+                slug={slug}
+                imageData={imageData}
+              />
+            </li>
+          );
+        })}
+      </ul>
     </Layout>
   );
 };
