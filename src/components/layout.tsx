@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import TopBar from "./TopBar";
+import TopBar from "./topBar";
 
 // const scrollDown = <p className="scroll"> SCROLL - >> </p>;
 
