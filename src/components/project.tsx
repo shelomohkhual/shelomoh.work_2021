@@ -1,16 +1,15 @@
 import React from "react";
-import Image, { FluidObject } from "gatsby-image";
 
 export interface ProjectInterface {
   title: string;
   client: string;
   service: string;
   description: string;
-  imageData: FluidObject;
+  imageData: string;
   archieve: string;
   subHeadTitle?: string;
   subContent?: string;
-  subContentImage?: FluidObject | null;
+  subContentImage?: string;
 }
 
 export const Project = (project: ProjectInterface) => {
@@ -47,8 +46,10 @@ export const Project = (project: ProjectInterface) => {
       </div>
       <div className="heading3-right-col">
         {project.subContentImage ? (
-          <Image fluid={project.subContentImage} alt={project.subHeadTitle} />
+          // <Image fluid={project.subContentImage} alt={project.subHeadTitle} />
+          <img src={project.subContentImage} />
         ) : (
+          // <img src={project.subContentImage.src} />
           <div />
         )}
       </div>
@@ -61,7 +62,8 @@ export const Project = (project: ProjectInterface) => {
     <div className="project-container">
       <p className="project-des">{project.description}</p>
       <div className="project-img-container">
-        <Image fluid={project.imageData} alt={project.title} />
+        {/* <Image fluid={project.imageData} alt={project.title} /> */}
+        <img src={project.imageData} />
       </div>
       {heading2}
       {heading3}

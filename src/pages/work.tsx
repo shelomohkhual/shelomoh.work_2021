@@ -15,7 +15,7 @@ const Work = () => {
             image {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid
+                  originalImg
                 }
               }
             }
@@ -33,7 +33,7 @@ const Work = () => {
           const title = project.title;
           const description = project.description;
           const slug = project.slug;
-          const imageData = project.image.childImageSharp.fluid;
+          const imageData = project.image.childImageSharp.fluid.originalImg;
 
           return (
             <li key={slug}>

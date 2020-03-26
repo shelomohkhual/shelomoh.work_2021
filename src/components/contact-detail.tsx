@@ -1,23 +1,26 @@
 import React from "react";
-import Image, { FluidObject } from "gatsby-image";
+import { FluidObject } from "gatsby-image";
 
 interface ContactPageInterface {
   email: string;
   phone: string;
   heading: string;
   description: string;
-  image?: FluidObject;
+  image?: any;
+  // image?: FluidObject;
   cv?: FluidObject;
 }
 
 const ContactDetail = (contactDetails: ContactPageInterface) => {
   const aboutImage = contactDetails.image ? (
     <div className="img-container">
-      <Image
+      <img src={contactDetails.image} className="contact-image" />
+
+      {/* <Image
         fluid={contactDetails.image}
         alt={contactDetails.heading}
         className="contact-image"
-      />
+      /> */}
     </div>
   ) : (
     <div />

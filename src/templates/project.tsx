@@ -15,7 +15,7 @@ export const query = graphql`
       image {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            originalImg
           }
         }
       }
@@ -25,7 +25,7 @@ export const query = graphql`
       subContentImage {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            originalImg
           }
         }
       }
@@ -39,7 +39,7 @@ const ProjectTemplate = ({ data }) => {
   const client = project.client;
   const service = project.service;
   const description = project.description;
-  const imageData = project.image.childImageSharp.fluid;
+  const imageData = project.image.childImageSharp.fluid.originalImg;
   const archieve = project.archieve;
 
   return (
@@ -61,7 +61,9 @@ const ProjectTemplate = ({ data }) => {
         archieve={archieve}
         subHeadTitle={project.subHeadTitle}
         subContent={project.subContent}
-        subContentImage={project.subContentImage.childImageSharp.fluid}
+        subContentImage={
+          project.subContentImage.childImageSharp.fluid.originalImg
+        }
       />
     </Layout>
   );
