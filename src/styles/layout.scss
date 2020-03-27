@@ -32,7 +32,7 @@
           }
 
           .attribute-detail {
-            font-size: 1.4vw;
+            font-size: 1rem;
           }
         }
       }
@@ -72,11 +72,10 @@
       order: 1;
       flex-basis: 100%;
 
-      .heading-container>.project-subhead-title {
+      .heading-container > .project-subhead-title {
         padding-right: 10%;
       }
     }
-
 
     .heading2-right-col {
       order: 2;
@@ -111,6 +110,7 @@
     }
 
     .heading3-right-col {
+      margin-top: 3vh;
       order: 2;
       flex-basis: 100%;
     }
@@ -121,7 +121,60 @@
   text-transform: uppercase;
   margin-top: 0;
   background-color: $primary-color;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.project-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 30vw;
+  transform: scale(1);
+  transition: all 0.8s;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(0.98);
+    transition: all 0.8s;
+  }
+
+  .project-preview-details-container {
+    flex-basis: 40%;
+    order: 1;
+    padding-right: 20px;
+    text-align: right;
+
+    .project-preview-details-service {
+      text-transform: uppercase;
+      font-size: 0.8em;
+      opacity: 0.5;
+      margin-bottom: 2vh;
+    }
+
+    .project-preview-details-title {
+      font-size: 1.5em;
+    }
+  }
+
+  .project-preview-image-container {
+    flex-basis: 60%;
+    order: 2;
+
+    img {
+      transform: scale(1);
+      opacity: 1;
+
+      &:hover {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -134,17 +187,32 @@
       height: calc(95vh - 179px);
 
       .header-container {
-        flex-basis: 25%;
+        flex-basis: 30%;
         order: 1;
-        padding-right: 30px;
+        padding-right: 6vw;
 
         .heading-title {
           font-size: 4vw;
         }
       }
 
+      .project-preview-container {
+        height: 18vw;
+
+        .project-preview-details-container {
+          flex-basis: 25%;
+        }
+        .project-preview-image-container {
+          flex-basis: 75%;
+        }
+      }
+
+      .attribute-lable {
+        font-size: 14px;
+      }
+
       .attribute-detail {
-        font-size: 1.8vh;
+        font-size: 1.4vw;
       }
 
       .project-container::-webkit-scrollbar {
@@ -159,11 +227,11 @@
         -ms-overflow-style: none;
 
         .project-subhead-title {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
 
         .project-des {
-          font-size: 1.3vw;
+          font-size: 1rem;
         }
 
         .heading2-container {
@@ -171,7 +239,8 @@
 
           .heading2-left-col {
             order: 1;
-            flex-basis: 25%;
+            flex-basis: 30%;
+            padding-right: 2vw;
           }
 
           .heading2-right-col {
@@ -185,13 +254,15 @@
 
           .heading3-left-col {
             order: 1;
-            flex-basis: 35%;
+            flex-basis: 40%;
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+            padding-right: 2vw;
           }
 
           .heading3-right-col {
+            margin: 0;
             order: 2;
             flex-basis: 60%;
             overflow: hidden;

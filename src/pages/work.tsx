@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import ProjectPreview from "../components/project-preview";
+import HeadingBar from "../components/heading-bar";
 
 const Work = () => {
   const data = useStaticQuery(graphql`
@@ -11,7 +12,7 @@ const Work = () => {
           node {
             title
             slug
-            description
+            service
             image {
               childImageSharp {
                 fluid {
@@ -28,26 +29,38 @@ const Work = () => {
 
   return (
     <Layout>
-      <ul>
-        {projects.map(({ node: project }) => {
+      <HeadingBar title="seleced work">
+        {/* <HeadingAttribute label="client">
+          <span>{project.client}</span>
+        </HeadingAttribute>
+        <HeadingAttribute label="SERVICE">
+          <span>{service}</span>
+        </HeadingAttribute> */}
+      </HeadingBar>
+      <div className="project-container">
+        {projects.map(({ node: project }, index) => {
           const title = project.title;
-          const description = project.description;
+          const service = project.service;
           const slug = project.slug;
           const imageData = project.image.childImageSharp.fluid.originalImg;
-
           return (
-            <li key={slug}>
+            <div key={slug}>
               <ProjectPreview
                 key={slug}
                 title={title}
-                description={description}
+                service={service}
                 slug={slug}
                 imageData={imageData}
               />
-            </li>
+              {index + 1 !== projects.length ? (
+                <hr className="divider" />
+              ) : (
+                <div />
+              )}
+            </div>
           );
         })}
-      </ul>
+      </div>
     </Layout>
   );
 };

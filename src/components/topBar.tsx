@@ -59,7 +59,7 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
       <div className="topbar-container">
         <div className="topbar-logo-col">
           <div className="topbar-item">
-            <TransitionLink fade fade to="/">
+            <TransitionLink fade to="/">
               <span className="logo">SHELOMOH</span>
             </TransitionLink>
           </div>

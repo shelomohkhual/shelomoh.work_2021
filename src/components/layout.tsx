@@ -22,9 +22,7 @@ const Layout = ({ children }) => (
           activeClassName="active"
           getProps={({ location }) => workPathsLocation(location)}
         >
-          {/* <p className="navbar-item-link-container"> */}
           <span className="navbar-item-link ">Work</span>
-          {/* </p> */}
         </TransitionLink>
         <TransitionLink
           fade
@@ -32,9 +30,7 @@ const Layout = ({ children }) => (
           className="navbar-item-link-container"
           activeClassName="active"
         >
-          {/* <p className="navbar-item-link-container"> */}
           <span className="navbar-item-link ">Contact</span>
-          {/* </p> */}
         </TransitionLink>
       </div>
       <main className="main-container">{children}</main>
