@@ -44,7 +44,7 @@ const Work = () => {
           const slug = project.slug;
           const imageData = project.image.childImageSharp.fluid.originalImg;
           return (
-            <div key={slug}>
+            <div key={slug} className="project-preview-wrapper">
               <ProjectPreview
                 key={slug}
                 title={title}
@@ -52,11 +52,7 @@ const Work = () => {
                 slug={slug}
                 imageData={imageData}
               />
-              {index + 1 !== projects.length ? (
-                <hr className="divider" />
-              ) : (
-                <div />
-              )}
+              {index + 1 !== projects.length ? <hr className="divider" /> : ""}
             </div>
           );
         })}

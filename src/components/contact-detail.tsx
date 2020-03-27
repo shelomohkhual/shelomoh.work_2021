@@ -2,8 +2,8 @@ import React from "react";
 import { FluidObject } from "gatsby-image";
 
 interface ContactPageInterface {
-  email: string;
-  phone: string;
+  // email: string;
+  // phone: string;
   heading: string;
   description: string;
   image?: any;
@@ -12,19 +12,19 @@ interface ContactPageInterface {
 }
 
 const ContactDetail = (contactDetails: ContactPageInterface) => {
-  const aboutImage = contactDetails.image ? (
-    <div className="img-container">
-      <img src={contactDetails.image} className="contact-image" />
+  // const aboutImage = contactDetails.image ? (
+  //   <div className="img-container">
+  //     <img src={contactDetails.image} className="contact-image" />
 
-      {/* <Image
-        fluid={contactDetails.image}
-        alt={contactDetails.heading}
-        className="contact-image"
-      /> */}
-    </div>
-  ) : (
-    <div />
-  );
+  //     {/* <Image
+  //       fluid={contactDetails.image}
+  //       alt={contactDetails.heading}
+  //       className="contact-image"
+  //     /> */}
+  //   </div>
+  // ) : (
+  //   <div />
+  // );
 
   // const downloadCV = contactDetails.cv ? (
   //   <a href={contactDetails.cv.src} className="contact-cv">
@@ -36,14 +36,16 @@ const ContactDetail = (contactDetails: ContactPageInterface) => {
 
   return (
     <div className="contact-container">
-      {aboutImage}
-      <div className="contact-detail">
-        <h3 className="contact-heading">{contactDetails.heading}</h3>
-        <span className="contact-description">
-          {contactDetails.description}
-        </span>
+      <div className="contact-image-container">
+        <img src={contactDetails.image} className="contact-image" />
+        {/* {aboutImage} */}
+      </div>
+      <div className="contact-detail-container">
+        <h2 className="contact-detail-heading">{contactDetails.heading}</h2>
+        <p className="contact-detail-des">{contactDetails.description}</p>
         {/* {downloadCV} */}
       </div>
+      <hr className="bottom-divider contact-bottom-divider"></hr>
     </div>
   );
 };

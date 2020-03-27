@@ -3,6 +3,9 @@ import Layout from "../components/layout";
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { FluidObject } from "gatsby-image";
+import HeadingBar from "../components/heading-bar";
+import HeadingAttribute from "../components/heading-attribute";
+// import Project from "../components/project";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -34,9 +37,17 @@ const Contact = () => {
 
   return (
     <Layout>
+      <HeadingBar key="contact" title="contact">
+        <HeadingAttribute label="h/p:">
+          <span>{phone}</span>
+        </HeadingAttribute>
+        <HeadingAttribute label="email:">
+          <a href={`mailto:${email}`}>{email}</a>
+        </HeadingAttribute>
+      </HeadingBar>
       <ContactDetail
-        email={email}
-        phone={phone}
+        // email={email}
+        // phone={phone}
         heading={heading}
         description={description}
         image={imageData}

@@ -17,7 +17,7 @@ const Layout = ({ children }) => (
       <div className="navbar">
         <TransitionLink
           fade
-          to="/work"
+          to="/work/"
           className="navbar-item-link-container"
           activeClassName="active"
           getProps={({ location }) => workPathsLocation(location)}
@@ -26,7 +26,7 @@ const Layout = ({ children }) => (
         </TransitionLink>
         <TransitionLink
           fade
-          to="/contact"
+          to="/contact/"
           className="navbar-item-link-container"
           activeClassName="active"
         >
