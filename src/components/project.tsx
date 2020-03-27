@@ -67,6 +67,7 @@ export const Project = (project: ProjectInterface) => {
       </div>
       {heading2}
       {heading3}
+      <hr className="bottom-divider"></hr>
     </div>
   );
 };

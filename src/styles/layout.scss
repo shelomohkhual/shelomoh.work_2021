@@ -136,7 +136,7 @@
   height: 30vw;
   transform: scale(1);
   transition: all 0.8s;
-  opacity: 0.9;
+  opacity: 0.8;
 
   &:hover {
     opacity: 1;
@@ -276,17 +276,17 @@
   }
 }
 
-// .heading-container::after {
-//   content: "";
-//   display: block;
-//   width: 90%;
-//   height: 3px;
-//   background-color: $secondary-color;
-//   position: absolute;
-//   right: 0;
-//   top: 50%;
-//   z-index: -2;
-// }
+.heading-container::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 3px;
+  background-color: $secondary-color;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -2;
+}
 
 .heading-container {
   position: relative;
