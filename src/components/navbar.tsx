@@ -1,19 +1,33 @@
-// import { Link } from "gatsby";
+import TransitionLink from "gatsby-plugin-transition-link/AniLink";
+import React from "react";
 
-// const Navbar = (props: any) =>{
-//   <div className="navbar">
-//     <Link to="/work">
-//       <a className="navbar-item-link-container">
-//         <span className="navbar-item-link ">Work</span>
-//       </a>
-//     </Link>
+export const workPathsLocation = props => {
+  const currentLocation = props.pathname;
+  if (currentLocation.includes("work")) {
+    return { className: "navbar-item-link-container active" };
+  }
+};
 
-//     <Link to="/contact">
-//       <a className="navbar-item-link-container">
-//         <span className="navbar-item-link ">Contact</span>
-//       </a>
-//     </Link>
-//   </div>
-// );
+const Navbar = () => {
+  return (
+    <div className="navbar">
+      <TransitionLink
+        to="/work/"
+        className="navbar-item-link-container"
+        activeClassName="active"
+        getProps={({ location }) => workPathsLocation(location)}
+      >
+        <span className="navbar-item-link ">Work</span>
+      </TransitionLink>
+      <TransitionLink
+        to="/contact/"
+        className="navbar-item-link-container"
+        activeClassName="active"
+      >
+        <span className="navbar-item-link ">Contact</span>
+      </TransitionLink>
+    </div>
+  );
+};
 
-// export default Navbar;
+export default Navbar;
