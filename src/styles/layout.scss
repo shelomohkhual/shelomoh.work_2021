@@ -320,7 +320,8 @@ $dash-width: 5vw;
   transition: all 0.8s;
 }
 
-.topbar-item-link-container.active>.topbar-item-link>.hover-dash {
+.topbar-item-link-container.active>.topbar-item-link>.hover-dash,
+.topbar-item-link-container:hover>.topbar-item-link>.hover-dash {
   width: $dash-width;
   opacity: 1;
   transition: all 0.8s;
