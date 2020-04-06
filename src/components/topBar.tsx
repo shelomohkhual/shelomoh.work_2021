@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faLinkedinIn,
-  faGithub
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faBars, faSlash } from "@fortawesome/free-solid-svg-icons";
 // import MobileNavBar from "./mobile-navbar";
 import React from "react";
+import { workPathsLocation } from "./navbar";
 
 interface TopBarProps {}
 
@@ -21,7 +22,7 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
   constructor(props: TopBarProps) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
 
@@ -59,8 +60,20 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
       <div className="topbar-container">
         <div className="topbar-logo-col">
           <div className="topbar-item">
-            <TransitionLink fade to="/">
-              <span className="logo">SHELOMOH</span>
+            <TransitionLink
+              to="/"
+              className="topbar-item-link-container"
+              activeClassName="active"
+            >
+              <span className="topbar-item-link logo">
+                SHELOMOH
+                <span
+                  className="hover-dash"
+                  style={{
+                    margin: "0 0 10px 1vw",
+                  }}
+                />
+              </span>
             </TransitionLink>
           </div>
           <span className={mobileNavBarIconOpen()}>
@@ -97,19 +110,19 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
             />
           </span>
           <div className={mobileNavBarContainer()}>
-            <TransitionLink fade to="/">
+            <TransitionLink to="/">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">HOME</span>
               </p>
             </TransitionLink>
 
-            <TransitionLink fade to="/work">
+            <TransitionLink to="/work">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Work</span>
               </p>
             </TransitionLink>
 
-            <TransitionLink fade to="/contact">
+            <TransitionLink to="/contact">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Contact</span>
               </p>

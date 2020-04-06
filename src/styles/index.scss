@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: $font-stack-1;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 @keyframes mobileNavbarOpen {
@@ -60,10 +61,8 @@ li {
   list-style-type: none;
 }
 
+
 img {
-  opacity: 0.9;
-  transform: scale(1.02);
-  transition: all 0.8s;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -71,10 +70,35 @@ img {
   left: 50%;
 }
 
-img:hover {
-  transform: scale(1);
-  transition: all 0.8s;
-  opacity: 1;
+
+.clickable-img {
+  // opacity: 1;
+  // transform: scale(1);
+  transition: mix-blend-mode 0.8s;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  mix-blend-mode: normal;
+  // mix-blend-mode: luminosity;
+
+  &:hover {
+    // transform: scale(1.02);
+    transition: mix-blend-mode 0.8s;
+    // opacity: 0.9;
+    mix-blend-mode: luminosity;
+    // mix-blend-mode: normal;
+  }
+}
+
+.label {
+  margin: 1vh 0px 2vh;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  font-weight: 100;
 }
 
 /* ================  TOP-BAR ================ */
@@ -97,9 +121,10 @@ img:hover {
   align-items: center;
 }
 
-.mobile-navbar-icon-close-wrapper > .mobile-navbar-icon-close {
+.mobile-navbar-icon-close-wrapper>.mobile-navbar-icon-close {
   transform: rotate(52deg);
   transition: transform 0.3s 0.2s ease-out;
+  color: $accent;
 }
 
 .mobile-navbar-icon-close-wrapper.show {
@@ -107,9 +132,10 @@ img:hover {
   transition: opacity 0.4s 0.8s;
 }
 
-.mobile-navbar-icon-close-wrapper.show > .mobile-navbar-icon-close {
+.mobile-navbar-icon-close-wrapper.show>.mobile-navbar-icon-close {
   transform: rotate(0);
   transition: transform 0.2s 0.8s;
+  color: $accent;
 }
 
 .mobile-navbar-icon-open-wrapper.show {
@@ -297,14 +323,13 @@ img:hover {
   width: 100%;
   transition: width 0.8s;
   animation: activeKF 0.8s;
-  background: $secondary-color;
+  background: $accent;
 }
 
-.mobile-navbar-container.show
-  > .mobile-navbar-item-link-container.active::after {
+.mobile-navbar-container.show>.mobile-navbar-item-link-container.active::after {
   width: 100%;
   transition: width 0.8s 0.8s ease;
-  background: $secondary-color;
+  background: $accent;
 }
 
 @keyframes activeKF {
@@ -339,13 +364,13 @@ img:hover {
 .mobile-navbar-item-link-container:hover::after {
   width: 100%;
   transition: width 0.8s;
-  background: $secondary-color;
+  background: $accent;
 }
 
 .navbar-item-link {
   background-color: $primary-color;
   padding-right: 1vh;
-  font-size: 1.5em;
+  font-size: 1.2em;
   /* font-weight: 600; */
 }
 
@@ -360,7 +385,7 @@ img:hover {
 
 @media only screen and (min-width: 900px) {
   .logo {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .navbar {

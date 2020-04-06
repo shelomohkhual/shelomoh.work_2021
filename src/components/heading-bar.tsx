@@ -1,10 +1,14 @@
 import React from "react";
+import { headingRightDash } from "./project";
 
 const HeadingBar = ({ title, children }) => {
   return (
     <div className="header-container">
       <div className="heading-container heading-title">
-        <p className="heading-title">{title}</p>
+        <span className="heading-title">
+          {title}
+          {headingRightDash}
+        </span>
       </div>
       <div className="attribute-container">{children}</div>
     </div>
