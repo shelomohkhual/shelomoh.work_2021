@@ -13,7 +13,7 @@ const Work = () => {
             title
             slug
             service
-            image {
+            coverImg {
               childImageSharp {
                 fluid {
                   originalImg
@@ -42,7 +42,7 @@ const Work = () => {
           const title = project.title;
           const service = project.service;
           const slug = project.slug;
-          const imageData = project.image.childImageSharp.fluid.originalImg;
+          const imageData = project.coverImg.childImageSharp.fluid.originalImg;
           return (
             <div key={slug} className="project-preview-wrapper">
               <ProjectPreview

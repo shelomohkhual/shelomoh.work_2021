@@ -6,7 +6,8 @@ interface ContactPageInterface {
   // phone: string;
   heading: string;
   description: string;
-  image?: any;
+  image?: string;
+  // image?: any;
   // image?: FluidObject;
   cv?: FluidObject;
 }
