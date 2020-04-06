@@ -8,39 +8,65 @@ import HeadingAttribute from "../components/heading-attribute";
 export const query = graphql`
   query($slug: String!) {
     projectsJson(slug: { eq: $slug }) {
-      title
-      client
-      service
-      description
-      image {
+      coverImg {
         childImageSharp {
           fluid {
             originalImg
           }
         }
       }
+      description
       archieve
-      subHeadTitle
-      subContent
-      subContentImage {
-        childImageSharp {
-          fluid {
-            originalImg
+      client
+      title
+      slug
+      service
+      result
+      featureTopics {
+        title
+        coverImg {
+          childImageSharp {
+            fluid {
+              originalImg
+            }
+          }
+        }
+        des
+        imgs {
+          label
+          images {
+            childImageSharp {
+              fluid {
+                originalImg
+              }
+            }
+          }
+        }
+      }
+      featureImgs {
+        label
+        images {
+          childImageSharp {
+            fluid {
+              originalImg
+            }
           }
         }
       }
     }
   }
 `;
-
 const ProjectTemplate = ({ data }) => {
   const project = data.projectsJson;
   const title = project.title;
   const client = project.client;
   const service = project.service;
   const description = project.description;
-  const imageData = project.image.childImageSharp.fluid.originalImg;
+  const coverImg = project.coverImg.childImageSharp.fluid.originalImg;
   const archieve = project.archieve;
+  const featureTopics = project.featureTopics;
+  const featureImgs = project.featureImgs;
+  const result = project.result;
 
   return (
     <Layout>
@@ -57,13 +83,11 @@ const ProjectTemplate = ({ data }) => {
         client={client}
         service={service}
         description={description}
-        imageData={imageData}
+        coverImg={coverImg}
         archieve={archieve}
-        subHeadTitle={project.subHeadTitle}
-        subContent={project.subContent}
-        subContentImage={
-          project.subContentImage.childImageSharp.fluid.originalImg
-        }
+        featureTopics={featureTopics}
+        featureImgs={featureImgs}
+        result={result}
       />
     </Layout>
   );
