@@ -140,40 +140,24 @@ $dash-width: 5vw;
   }
 
   .feature-topic-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    margin-top: 8vh;
+    margin: 8vh 0 auto;
 
-    .feature-topic-content-col {
-      order: 1;
-      flex-basis: 100%;
+    .feature-topic-double-col-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
 
-      .heading-container {
-        display: flex;
-        justify-content: flex-end;
-
-        &:after {
-          width: 50%;
-        }
-
-        .project-topic-title,
-        .feature-topic-title {
-          padding-left: 5%;
-        }
+      .feature-topic-content-col {
+        flex-basis: 100%;
       }
-    }
 
-    .feature-topic-cover-col {
-      margin-top: 3vh;
-      order: 2;
-      flex-basis: 100%;
-    }
 
-    .feature-topic-single-content-col {
-      margin: 0;
+      .feature-topic-cover-col {
+        margin-top: 3vh;
+        flex-basis: 100%;
+      }
     }
 
     .feature-img-container {
@@ -545,27 +529,25 @@ $dash-width: 5vw;
         }
 
         .feature-topic-container {
-          flex-wrap: nowrap;
+          margin: 8vh 7vw auto;
 
-          .feature-topic-content-col {
-            order: 1;
-            flex-basis: 50%;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            padding-right: 2vw;
+          .feature-topic-double-col-container {
+            flex-wrap: nowrap;
+
+            .feature-topic-content-col {
+              flex-basis: 50%;
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+            }
+
+            .feature-topic-cover-col {
+              margin: 0;
+              flex-basis: 50%;
+              overflow: hidden;
+            }
           }
 
-          .feature-topic-cover-col {
-            margin: 0;
-            order: 2;
-            flex-basis: 50%;
-            overflow: hidden;
-          }
-
-          .feature-topic-single-content-col {
-            margin: auto 7vw;
-          }
         }
       }
     }
