@@ -4,22 +4,83 @@
         "client": "re.code",
         "service": "Full-Stack Development",
         "description": "Website for an elegant apartment ‘Edition’ developed by New Zealand based design studio Graphic Activity. The website designed by Studio South.Via graphicactivity.co.nz",
-        "image": "./assets/learning-portal-1.jpg",
+        "coverImg": "./assets/learning-portal-1.jpg",
         "archieve": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-        "subHeadTitle": "UI/UX",
-        "subContent": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-        "subContentImage": "./assets/learning-portal-2.jpg"
+        "featureTopics": [{
+            "title": "UI/UX",
+            "des": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
+            "coverImg": "./assets/learning-portal-2.jpg",
+            "imgs": [{
+                    "label": "this is the label",
+                    "images": [
+                        "./assets/learning-portal-2.jpg",
+                        "./assets/learning-portal-2.jpg"
+                    ]
+                }
+
+            ]
+        }],
+        "featureImgs": [{
+                "label": "Featuring Images 1",
+                "images": [
+                    "./assets/learning-portal-2.jpg",
+                    "./assets/learning-portal-1.jpg",
+                    "./assets/learning-portal-2.jpg",
+                    "./assets/learning-portal-2.jpg",
+                    "./assets/learning-portal-2.jpg"
+                ]
+            }
+
+        ],
+        "result": "this will be the take away from the project that you have done or the achievements12 "
+
     },
     {
-        "slug": "asdfadsfadfadsfasdf",
-        "title": "asdfadsfadfadsfasdf",
-        "client": "asdfadsfadfadsfasdf",
-        "service": "Front-End Development",
+        "slug": "elementrix",
+        "title": "Elementrix",
+        "client": "Elementric",
+        "service": "Static Website with CMS Development",
         "description": "Website for an elegant apartment ‘Edition’ developed by New Zealand based design studio Graphic Activity. The website designed by Studio South.Via graphicactivity.co.nz",
-        "image": "./assets/learning-portal-1.jpg",
+        "coverImg": "./assets/elementrix-cover.png",
         "archieve": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-        "subHeadTitle": "UI/UX",
-        "subContent": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-        "subContentImage": "./assets/learning-portal-2.jpg"
+        "featureTopics": [{
+                "title": "UI/UX",
+                "des": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
+                "imgs": [{
+                        "label": "low-fidility sketches",
+                        "images": [
+                            "./assets/learning-portal-2.jpg",
+                            "./assets/learning-portal-2.jpg"
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "title": "web development",
+                "des": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
+                "imgs": [{
+                        "label": "wireframing",
+                        "images": [
+                            "./assets/learning-portal-2.jpg",
+                            "./assets/learning-portal-2.jpg"
+                        ]
+                    }
+
+                ]
+
+            }
+        ],
+        "featureImgs": [{
+                "label": "features Images",
+                "images": [
+                    "./assets/learning-portal-2.jpg"
+                ]
+            }
+
+        ],
+        "result": "this will be the take away from the project that you have done or the achievements12 "
+
     }
 ]
