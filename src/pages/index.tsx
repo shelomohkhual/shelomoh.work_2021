@@ -12,11 +12,14 @@ export default () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Layout>
         <div className="index-container">
           <h1 className="index-title">{data.indexJson.title}</h1>
-          <p className="index-des">{data.indexJson.description}</p>
+          <a className="index-des">
+            {data.indexJson.description}
+            <span className="dash-line-animation " />
+          </a>
         </div>
       </Layout>
     )}

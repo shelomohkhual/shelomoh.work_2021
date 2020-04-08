@@ -28,7 +28,17 @@ $dash-width: 5vw;
       .index-des {
         margin-top: 9vh;
         font-size: 1.3em;
+        color: $accent-darker;
+        transition: color 0.8s;
+
+
+        &:hover {
+          color: $accent;
+          transition: color 0.8s;
+
+        }
       }
+
     }
 
     .header-container {
@@ -320,6 +330,32 @@ $dash-width: 5vw;
   transition: all 0.8s;
 }
 
+.dash-line-animation {
+  display: inline-block;
+  width: 5vw;
+  height: 3px;
+  margin: 9px 0 4px 1vw;
+  background-color: $accent;
+  animation: dashingAnimation 3s infinite;
+}
+
+@keyframes dashingAnimation {
+  0% {
+    background-color: $accent-darker;
+    width: 0;
+  }
+
+  50% {
+    background-color: $accent;
+    width: 5vw;
+  }
+
+  100% {
+    background-color: $accent-darker;
+    width: 0;
+  }
+}
+
 .topbar-item-link-container.active>.topbar-item-link>.hover-dash,
 .topbar-item-link-container:hover>.topbar-item-link>.hover-dash {
   width: $dash-width;
@@ -416,10 +452,12 @@ $dash-width: 5vw;
       font-size: 0.8em;
       opacity: 0.5;
       margin-bottom: 2vh;
+      color: $secondary-color;
     }
 
     .project-preview-details-title {
       font-size: 1.5em;
+      color: $secondary-color;
     }
   }
 

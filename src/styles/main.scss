@@ -57,6 +57,11 @@ a {
   color: $secondary-color;
 }
 
+a:hover {
+  color: $accent;
+  transition: color 0.8s;
+}
+
 li {
   list-style-type: none;
 }
