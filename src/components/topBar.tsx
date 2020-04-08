@@ -8,9 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faBars, faSlash } from "@fortawesome/free-solid-svg-icons";
-// import MobileNavBar from "./mobile-navbar";
 import React from "react";
-import { workPathsLocation } from "./navbar";
 
 interface TopBarProps {}
 
@@ -35,6 +33,10 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
   }
 
   render() {
+    const linkedInLink = "https://www.linkedin.com/in/shelomoh-khual-17258872";
+    const instagramLink = "https://www.instagram.com/shelomoh";
+    const githubLink = "https://www.github.com/shelomohkhual";
+
     const topBarNavBarColClass = () => {
       const classes = ["topbar-navbar-col"];
       this.state.isOpen ? classes.push("show") : classes.push("");
@@ -84,19 +86,19 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
             />
           </span>
           <div className="topbar-item social-container">
-            <a target="_blank" href="https://www.instagram.com/shelomoh">
+            <a target="_blank" href={instagramLink}>
               <FontAwesomeIcon
                 className="social-icon instagram"
                 icon={faInstagram}
               />
             </a>
-            <a target="_blank" href="https://www.instagram.com/shelomoh">
+            <a target="_blank" href={linkedInLink}>
               <FontAwesomeIcon
                 className="social-icon linkedin"
                 icon={faLinkedinIn}
               />
             </a>
-            <a target="_blank" href="https://www.instagram.com/shelomoh">
+            <a target="_blank" href={githubLink}>
               <FontAwesomeIcon className="social-icon github" icon={faGithub} />
             </a>
           </div>
@@ -129,22 +131,19 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
             </TransitionLink>
             <span className="divider" />
             <div className="mobile-social-container">
-              <a target="_blank" href="https://www.instagram.com/shelomoh">
+              <a target="_blank" href={instagramLink}>
                 <FontAwesomeIcon
                   className="social-icon instagram"
                   icon={faInstagram}
                 />
               </a>
-              <a
-                target="_blank"
-                href="https://linkedin.com/in/shelomoh-khual-17258872"
-              >
+              <a target="_blank" href={linkedInLink}>
                 <FontAwesomeIcon
                   className="social-icon linkedin"
                   icon={faLinkedinIn}
                 />
               </a>
-              <a target="_blank" href="https://www.github.com/shelomohkhual">
+              <a target="_blank" href={githubLink}>
                 <FontAwesomeIcon
                   className="social-icon github"
                   icon={faGithub}
