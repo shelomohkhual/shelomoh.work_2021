@@ -16,8 +16,8 @@ const Contact = () => {
         heading
         image {
           childImageSharp {
-            original {
-              src
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -32,9 +32,8 @@ const Contact = () => {
   const heading = contactDetails.heading;
   const description = contactDetails.description;
   // const cv: FluidObject = contactDetails.cv.childImageSharp.fluid;
-  // const imageData: FluidObject =
-  //   contactDetails.image.childImageSharp.fluid.originalImg;
-  const imageData = contactDetails.image.childImageSharp.original.src;
+  const imageData: FluidObject = contactDetails.image.childImageSharp.fluid;
+  // const imageData = contactDetails.image.childImageSharp.original.src;
 
   return (
     <Layout>

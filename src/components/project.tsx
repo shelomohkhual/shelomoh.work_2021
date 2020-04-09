@@ -1,4 +1,5 @@
 import React, { CSSProperties } from "react";
+import Img, { FluidObject } from "gatsby-image";
 
 export const rightDash = <span className="dash-right" />;
 
@@ -40,7 +41,7 @@ export interface ProjectInterface {
   client: string;
   service: string;
   description: string;
-  coverImg: string;
+  coverImg: any;
   archieve: string;
   featureTopics?: ProjectFeatureTopic[];
   featureImgs?: FeatureImgs[];
@@ -54,7 +55,7 @@ function renderTopicImgs(
   return featureImgs === null || featureImgs === undefined ? (
     <></>
   ) : (
-    featureImgs.map((featureImage: FeatureImgs) => {
+    featureImgs.map((featureImage: FeatureImgs, index: number) => {
       var position = ["first", "second", "third"];
       var posIndex = 0;
       var imageStyle: CSSProperties;
@@ -62,7 +63,7 @@ function renderTopicImgs(
       return featureImage === null || featureImage === undefined ? (
         <></>
       ) : (
-        <div className="feature-img-container">
+        <div key={index} className="feature-img-container">
           <div style={{ margin: "1vh 0" }}>
             {featureImage.label ? (
               <h2
@@ -86,7 +87,7 @@ function renderTopicImgs(
                   : { justifyContent: "flex-start" }
               }
             >
-              {featureImage.images.map((img: any) => {
+              {featureImage.images.map((img: any, index: number) => {
                 posIndex = posIndex > 2 ? 0 : posIndex;
 
                 imageStyle =
@@ -96,12 +97,18 @@ function renderTopicImgs(
 
                 posIndex += 1;
                 return (
-                  <div key={img.src} className="feature-img" style={imageStyle}>
-                    <img
-                      className="clickable-img"
-                      src={img.childImageSharp.fluid.originalImg}
-                    />
-                  </div>
+                  // <div key={index} className="feature-img" style={imageStyle}>
+                  // <img
+                  //   className="clickable-img"
+                  //   src={img.childImageSharp.fluid.originalImg}
+                  // />
+                  <Img
+                    fluid={img.childImageSharp.fluid}
+                    key={index}
+                    className="feature-img clickable-img"
+                    style={imageStyle}
+                  />
+                  // </div>
                 );
               })}
             </div>
@@ -174,20 +181,33 @@ function featureTopicDoubleCol(
             <></>
           )}
         </div>
-        <div
+        {featureTopicData.coverImg ? (
+          <Img
+            fluid={featureTopicData.coverImg.childImageSharp.fluid}
+            alt={featureTopicData.title}
+            className="feature-topic-cover-col"
+            style={coverAlignPositionStyle}
+          />
+        ) : (
+          <></>
+        )}
+        {/* <div
           className="feature-topic-cover-col"
           style={coverAlignPositionStyle}
         >
           {featureTopicData.coverImg ? (
-            // <Image fluid={featureTopicData.coverImg} alt={featureTopicData.subHeadTitle} />
-            <img
-              src={featureTopicData.coverImg.childImageSharp.fluid.originalImg}
+            <Img
+              fluid={featureTopicData.coverImg.childImageSharp.fluid}
+              alt={featureTopicData.title}
             />
           ) : (
+            // <img
+            //   src={featureTopicData.coverImg.childImageSharp.fluid.originalImg}
+            // />
             // <img src={featureTopicData.subContentImage.src} />
             <></>
           )}
-        </div>
+        </div> */}
       </div>
       {renderTopicImgs(featureTopicData.imgs, alignPosition)}
     </>
@@ -254,10 +274,14 @@ export const Project = (project: ProjectInterface) => {
   return (
     <div className="project-container">
       <p className="project-des">{project.description}</p>
-      <div className="project-img-container">
-        {/* <Image fluid={project.coverImg} alt={project.title} /> */}
-        <img src={project.coverImg} />
-      </div>
+      {/* <div className="project-img-container"> */}
+      <Img
+        fluid={project.coverImg.fluid}
+        alt={project.title}
+        className="project-img-container"
+      />
+      {/* <img src={project.coverImg} /> */}
+      {/* </div> */}
       {mainTopicComponent("achieve", project.archieve)}
       {renderListFeatureTopics(project.featureTopics)}
       {listFeatureImages}

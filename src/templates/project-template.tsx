@@ -4,14 +4,16 @@ import Layout from "../components/layout";
 import { Project } from "../components/project";
 import HeadingBar from "../components/heading-bar";
 import HeadingAttribute from "../components/heading-attribute";
+import { FluidObject } from "gatsby-image";
+// import { FluidObject } from "gatsby-image";
 
 export const query = graphql`
   query($slug: String!) {
     projectsJson(slug: { eq: $slug }) {
       coverImg {
         childImageSharp {
-          fluid {
-            originalImg
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -26,8 +28,8 @@ export const query = graphql`
         title
         coverImg {
           childImageSharp {
-            fluid {
-              originalImg
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -36,8 +38,8 @@ export const query = graphql`
           label
           images {
             childImageSharp {
-              fluid {
-                originalImg
+              fluid(maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -47,8 +49,8 @@ export const query = graphql`
         label
         images {
           childImageSharp {
-            fluid {
-              originalImg
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -62,7 +64,7 @@ const ProjectTemplate = ({ data }) => {
   const client = project.client;
   const service = project.service;
   const description = project.description;
-  const coverImg = project.coverImg.childImageSharp.fluid.originalImg;
+  const coverImg: FluidObject = project.coverImg.childImageSharp;
   const archieve = project.archieve;
   const featureTopics = project.featureTopics;
   const featureImgs = project.featureImgs;

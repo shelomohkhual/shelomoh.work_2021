@@ -88,7 +88,7 @@ $dash-width: 5vw;
     height: calc(95vh - 205px);
     background-color: $primary-color;
 
-    .contact-image {
+    img {
       mix-blend-mode: luminosity;
     }
   }
@@ -190,6 +190,7 @@ $dash-width: 5vw;
         background-color: $primary-color;
         transform: scale(1);
         transition: all 0.8s;
+        position: initial !important;
 
         &::after {
           content: "";
@@ -527,13 +528,16 @@ $dash-width: 5vw;
         -ms-overflow-style: none;
       }
 
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
       .project-container,
       .contact-container {
         flex-basis: 70%;
         order: 2;
         margin: 0;
-        flex-wrap: wrap;
-        display: flex;
 
         .project-topic-title,
         .feature-topic-title {

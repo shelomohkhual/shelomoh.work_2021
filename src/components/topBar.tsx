@@ -63,6 +63,7 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
         <div className="topbar-logo-col">
           <div className="topbar-item">
             <TransitionLink
+              fade
               to="/"
               className="topbar-item-link-container"
               activeClassName="active"
@@ -112,19 +113,19 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
             />
           </span>
           <div className={mobileNavBarContainer()}>
-            <TransitionLink to="/">
+            <TransitionLink fade to="/">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">HOME</span>
               </p>
             </TransitionLink>
 
-            <TransitionLink to="/work">
+            <TransitionLink fade to="/work">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Work</span>
               </p>
             </TransitionLink>
 
-            <TransitionLink to="/contact">
+            <TransitionLink fade to="/contact">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Contact</span>
               </p>

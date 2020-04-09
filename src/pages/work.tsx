@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import ProjectPreview from "../components/project-preview";
 import HeadingBar from "../components/heading-bar";
+import { FluidObject } from "gatsby-image";
 
 const Work = () => {
   const data = useStaticQuery(graphql`
@@ -15,8 +16,8 @@ const Work = () => {
             service
             coverImg {
               childImageSharp {
-                fluid {
-                  originalImg
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -42,7 +43,8 @@ const Work = () => {
           const title = project.title;
           const service = project.service;
           const slug = project.slug;
-          const imageData = project.coverImg.childImageSharp.fluid.originalImg;
+          // const imageData = project.coverImg.childImageSharp.fluid.originalImg;
+          const imageData: FluidObject = project.coverImg.childImageSharp.fluid;
           return (
             <div key={slug} className="project-preview-wrapper">
               <ProjectPreview
