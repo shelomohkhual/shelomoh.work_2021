@@ -26,13 +26,6 @@ export const query = graphql`
       result
       featureTopics {
         title
-        coverImg {
-          childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         des
         imgs {
           label

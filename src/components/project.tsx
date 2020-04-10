@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import Img, { FluidObject } from "gatsby-image";
+import Img from "gatsby-image";
 
 export const rightDash = <span className="dash-right" />;
 
