@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Shelomoh`,
-    description: `Full-Stack Developer • Graphic Designer`
+    description: `Full-Stack Developer • Graphic Designer`,
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -15,15 +15,15 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "project",
-        path: "./data"
-      }
+        path: "./data",
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`space mono\:400,400i,700,700i`],
-        display: "swap"
-      }
-    }
-  ]
+        fonts: [`inter\:100,200,300,400,500,600,700,800,900`],
+        display: "swap",
+      },
+    },
+  ],
 };
