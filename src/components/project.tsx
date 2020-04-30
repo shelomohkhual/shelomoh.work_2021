@@ -59,7 +59,7 @@ function renderTopicImgs(
       var position = ["first", "second", "third"];
       var posIndex = 0;
       var imageStyle: CSSProperties;
-
+      //  = { marginBottom: "1%" };
       return featureImage === null || featureImage === undefined ? (
         <></>
       ) : (
@@ -87,7 +87,7 @@ function renderTopicImgs(
                   : { justifyContent: "flex-start" }
               }
             >
-              {featureImage.images.map((img: any, index: number) => {
+              {featureImage.images.map((img: any) => {
                 posIndex = posIndex > 2 ? 0 : posIndex;
 
                 imageStyle =
@@ -105,7 +105,7 @@ function renderTopicImgs(
                   <Img
                     fluid={img.childImageSharp.fluid}
                     key={index}
-                    className="feature-img clickable-img"
+                    className="feature-img  clickable-img"
                     style={imageStyle}
                   />
                   // </div>
@@ -119,7 +119,7 @@ function renderTopicImgs(
   );
 }
 
-function mainTopicComponent(title: string, content: string) {
+export function mainTopicComponent(title: string, content: string) {
   return (
     <div className="project-topic-container">
       <div className="project-topic-title-col">
@@ -215,26 +215,28 @@ function featureTopicDoubleCol(
 }
 
 function featureTopicSingleCol(
-  alignPosition: string,
+  // alignPosition: string,
   featureTopicData: ProjectFeatureTopic
 ) {
-  const textAlignStyle: CSSProperties =
-    alignPosition === "right" ? { textAlign: "right" } : { textAlign: "left" };
-
+  // const textAlignStyle: CSSProperties =
+  //   alignPosition === "right" ? { textAlign: "right" } : { textAlign: "left" };
   return (
-    <div className="feature-topic-single-content-col">
-      <div className="feature-topic-title-container" style={textAlignStyle}>
-        <span className="feature-topic-title">
-          {alignPosition === "right" ? leftDash : <></>}
-          {featureTopicData.title}
-          {alignPosition === "left" ? rightDash : <></>}
-        </span>
-      </div>
-      <p className="project-des" style={textAlignStyle}>
-        {featureTopicData.des}
-      </p>
-      {renderTopicImgs(featureTopicData.imgs, alignPosition)}
-    </div>
+    <>
+      {mainTopicComponent(featureTopicData.title, featureTopicData.des)}
+      {/* <div className="feature-topic-single-content-col">
+         <div className="feature-topic-title-container" style={textAlignStyle}>
+           <span className="feature-topic-title">
+             {alignPosition === "right" ? leftDash : <></>}
+             {featureTopicData.title}
+             {alignPosition === "left" ? rightDash : <></>}
+           </span>
+         </div>
+         <p className="project-des" style={textAlignStyle}>
+           {featureTopicData.des}
+         </p>
+       </div> */}
+      {renderTopicImgs(featureTopicData.imgs, "left")}
+    </>
   );
 }
 
@@ -255,7 +257,10 @@ function renderListFeatureTopics(listFeatureTopics: ProjectFeatureTopic[]) {
         <div key={featureTopicData.title} className="feature-topic-container">
           {featureTopicData.coverImg
             ? featureTopicDoubleCol(alignPosition, featureTopicData)
-            : featureTopicSingleCol(alignPosition, featureTopicData)}
+            : featureTopicSingleCol(
+                // alignPosition,
+                featureTopicData
+              )}
         </div>
       );
     })
@@ -273,20 +278,27 @@ export const Project = (project: ProjectInterface) => {
 
   return (
     <div className="project-container">
-      <p className="project-des">{project.description}</p>
       {/* <div className="project-img-container"> */}
       <Img
         fluid={project.coverImg.fluid}
         alt={project.title}
         className="project-img-container"
       />
+      <p
+        className="project-des"
+        style={{
+          marginTop: "3vh",
+        }}
+      >
+        {project.description}
+      </p>
       {/* <img src={project.coverImg} /> */}
       {/* </div> */}
-      {mainTopicComponent("achieve", project.archieve)}
+      {/* {mainTopicComponent("achieve", project.archieve)} */}
       {renderListFeatureTopics(project.featureTopics)}
       {listFeatureImages}
 
-      {mainTopicComponent("result", project.result)}
+      {/* {mainTopicComponent("result", project.result)} */}
       <hr className="bottom-divider"></hr>
     </div>
   );

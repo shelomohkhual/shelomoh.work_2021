@@ -1,6 +1,8 @@
 @import "style-variables";
 
-$dash-width: 5vw;
+$dash-width: 40px;
+$dash-height: 6px;
+$dash-space: 1vw;
 
 .layout-container {
   margin: 4vh 8vw;
@@ -31,14 +33,11 @@ $dash-width: 5vw;
         color: $accent-darker;
         transition: color 0.8s;
 
-
         &:hover {
           color: $accent;
           transition: color 0.8s;
-
         }
       }
-
     }
 
     .header-container {
@@ -52,7 +51,7 @@ $dash-width: 5vw;
 
       .attribute-container {
         .attribute-item {
-          margin-top: 20px;
+          margin-top: 5vh;
 
           .attribute-lable {
             display: block;
@@ -62,7 +61,7 @@ $dash-width: 5vw;
           }
 
           .attribute-detail {
-            font-size: 1rem;
+            font-size: 1.2rem;
           }
         }
       }
@@ -87,9 +86,14 @@ $dash-width: 5vw;
     overflow: hidden;
     height: calc(95vh - 205px);
     background-color: $primary-color;
+    opacity: 0.9;
 
     img {
       mix-blend-mode: luminosity;
+    }
+
+    img:hover {
+      mix-blend-mode: normal;
     }
   }
 
@@ -119,10 +123,73 @@ $dash-width: 5vw;
     font-size: 1.8vh;
     text-align: justify;
     margin: 0;
+    opacity: 0.8;
+
+  }
+
+  .contact-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 8vh;
+  }
+
+  .contact-title-col {
+    order: 1;
+    flex-basis: 30%;
+    padding-right: 0.8vw;
+
+
+    .contact-title {
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+  }
+
+
+  .contact-content-col {
+    order: 2;
+    flex-basis: 70%;
+    margin-top: 0.8em;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    margin-top: 0px;
+
+    li {
+      list-style-type: circle;
+
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 0.3em;
+    }
+
+    .contact-year {
+      text-transform: uppercase;
+      font-size: 14px;
+      opacity: 0.5;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .contact-li {
+    margin: 0px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .project-img-container {
-    margin-top: 3vh;
+    // margin-top: 3vh;
   }
 
   .project-topic-container {
@@ -163,7 +230,6 @@ $dash-width: 5vw;
         flex-basis: 100%;
       }
 
-
       .feature-topic-cover-col {
         margin-top: 3vh;
         flex-basis: 100%;
@@ -185,8 +251,8 @@ $dash-width: 5vw;
       flex-wrap: wrap;
 
       .feature-img {
-        width: 32.6666666666%;
-        height: 15vh;
+        // width: 32.6666666666%;
+        // height: 15vh;
         background-color: $primary-color;
         transform: scale(1);
         transition: all 0.8s;
@@ -196,7 +262,7 @@ $dash-width: 5vw;
           content: "";
           display: block;
           width: 0%;
-          height: 3px;
+          height: $dash-height;
           background-color: $accent;
           position: absolute;
           bottom: 0;
@@ -204,16 +270,16 @@ $dash-width: 5vw;
           transition: width 0.8s;
         }
 
-        &:hover {
-          transform: scale(1.02);
-          transition: all 0.8s;
+        // &:hover {
+        //   transform: scale(1.02);
+        //   transition: all 0.8s;
 
-          &::after {
-            width: 100%;
-            z-index: 1;
-            transition: width 0.8s;
-          }
-        }
+        //   &::after {
+        //     width: 100%;
+        //     z-index: 1;
+        //     transition: width 0.8s;
+        //   }
+        // }
       }
     }
   }
@@ -232,7 +298,7 @@ $dash-width: 5vw;
 .dash {
   display: inline-block;
   width: $dash-width;
-  height: 3px;
+  height: $dash-height;
   // margin-bottom: 9px;
   margin: 9px 1vw;
   background-color: $accent;
@@ -242,7 +308,7 @@ $dash-width: 5vw;
 .dash-left {
   display: inline-block;
   width: $dash-width;
-  height: 3px;
+  height: $dash-height;
   // margin-bottom: 9px;
   margin: 9px 1vw 9px 0;
   background-color: $accent;
@@ -252,9 +318,9 @@ $dash-width: 5vw;
 .dash-right {
   display: inline-block;
   width: $dash-width;
-  height: 3px;
+  height: $dash-height;
   // margin-bottom: 9px;
-  margin: 9px 0 9px 1vw;
+  margin: 9px 0 5px 1vw;
   background-color: $accent;
   animation: dashOpenAni 0.8s;
 }
@@ -262,9 +328,9 @@ $dash-width: 5vw;
 .heading-dash-right {
   display: inline-block;
   width: $dash-width;
-  height: 3px;
-  margin-bottom: 12px;
-  // margin: 0 0 20px 1vw;
+  height: $dash-height;
+  margin-bottom: 20px;
+  margin-left: $dash-space;
   background-color: $accent;
   animation: dashOpenAni 0.8s;
 }
@@ -277,7 +343,7 @@ $dash-width: 5vw;
 
   to {
     opacity: 1;
-    width: 80px;
+    width: $dash-width;
   }
 }
 
@@ -286,12 +352,12 @@ $dash-width: 5vw;
   text-transform: uppercase;
   margin-top: 0;
   background-color: $primary-color;
-  font-size: 2.5rem;
-  font-weight: 100;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .topbar-item-link-container {
-  padding-right: 8vh;
+  padding-right: $dash-width;
   position: relative;
   margin-right: 20px;
   transition: 0.8s;
@@ -300,7 +366,7 @@ $dash-width: 5vw;
     content: "";
     display: block;
     width: 0%;
-    height: 3px;
+    height: $dash-height;
     position: absolute;
     top: 20%;
     z-index: -2;
@@ -320,12 +386,11 @@ $dash-width: 5vw;
   background: $accent;
 }
 
-
 .hover-dash {
   display: inline-block;
   opacity: 0;
   width: 0px;
-  height: 3px;
+  height: $dash-height;
   margin-bottom: 6px;
   background-color: $accent;
   transition: all 0.8s;
@@ -334,7 +399,7 @@ $dash-width: 5vw;
 .dash-line-animation {
   display: inline-block;
   width: 5vw;
-  height: 3px;
+  height: $dash-height;
   margin: 9px 0 4px 1vw;
   background-color: $accent;
   animation: dashingAnimation 3s infinite;
@@ -371,7 +436,6 @@ $dash-width: 5vw;
   z-index: -2;
 }
 
-
 @keyframes activeLogo {
   from {
     opacity: 0;
@@ -380,7 +444,7 @@ $dash-width: 5vw;
 
   to {
     opacity: 1;
-    width: 80px;
+    width: $dash-width;
   }
 }
 
@@ -410,7 +474,7 @@ $dash-width: 5vw;
     display: inline-block;
     opacity: 0;
     width: 0px;
-    height: 3px;
+    height: $dash-height;
     margin-bottom: 6px;
     background-color: $accent;
     transition: all 0.8s;
@@ -434,10 +498,13 @@ $dash-width: 5vw;
       }
     }
 
-    .hover-dash {
-      opacity: 1;
-      width: $dash-width;
-      transition: all 0.8s;
+    .project-preview-details-title {
+      .hover-dash {
+        opacity: 1;
+        width: $dash-width;
+        transition: all 0.8s;
+        margin-left: $dash-space;
+      }
     }
   }
 
@@ -450,15 +517,16 @@ $dash-width: 5vw;
 
     .project-preview-details-service {
       text-transform: uppercase;
-      font-size: 0.8em;
+      font-size: 0.8rem;
       opacity: 0.5;
       margin-bottom: 2vh;
       color: $secondary-color;
     }
 
     .project-preview-details-title {
-      font-size: 1.5em;
+      font-size: 2em;
       color: $secondary-color;
+      font-weight: 400;
     }
   }
 
@@ -475,7 +543,7 @@ $dash-width: 5vw;
     .main-container {
       margin-left: 60px;
       flex-wrap: nowrap;
-      height: calc(95vh - 179px);
+      height: calc(95vh - 150px);
 
       .index-container {
         margin: 0 26vw 0 0vw;
@@ -491,8 +559,9 @@ $dash-width: 5vw;
         padding-right: 3vw;
 
         .heading-title {
-          font-size: 3.5vw;
+          font-size: 3rem;
           word-wrap: break-word;
+          font-weight: 400;
         }
       }
 
@@ -511,11 +580,12 @@ $dash-width: 5vw;
       }
 
       .attribute-lable {
-        font-size: 14px;
+        font-size: 1rem;
+        margin-bottom: 1vh;
       }
 
       .attribute-detail {
-        font-size: 1.4vw;
+        font-size: 1.2rem;
       }
 
       .project-container::-webkit-scrollbar,
@@ -538,10 +608,11 @@ $dash-width: 5vw;
         flex-basis: 70%;
         order: 2;
         margin: 0;
+        overflow-y: scroll;
 
         .project-topic-title,
         .feature-topic-title {
-          font-size: 2rem;
+          font-size: 2.4rem;
         }
 
         .contact-detail-container {
@@ -553,7 +624,10 @@ $dash-width: 5vw;
         .project-des,
         .feature-topic-des,
         .contact-detail-des {
-          font-size: 1rem;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 300;
+          margin-top: 0.8em;
         }
 
         .project-topic-container {
@@ -561,18 +635,20 @@ $dash-width: 5vw;
 
           .project-topic-title-col {
             order: 1;
-            flex-basis: 30%;
+            flex-basis: 50%;
             padding-right: 0.8vw;
           }
 
           .project-topic-content-col {
             order: 2;
-            flex-basis: 70%;
+            flex-basis: 50%;
           }
         }
 
         .feature-topic-container {
-          margin: 8vh 7vw auto;
+          .feature-topic-single-content-col {
+            margin: 10vh 7vw auto;
+          }
 
           .feature-topic-double-col-container {
             flex-wrap: nowrap;
@@ -590,7 +666,6 @@ $dash-width: 5vw;
               overflow: hidden;
             }
           }
-
         }
       }
     }
@@ -602,7 +677,7 @@ $dash-width: 5vw;
   margin-bottom: 3vh;
 
   .heading-title {
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 6vh;
     padding-right: 30px;
   }

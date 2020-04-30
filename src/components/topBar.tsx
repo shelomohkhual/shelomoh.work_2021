@@ -73,7 +73,7 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
                 <span
                   className="hover-dash"
                   style={{
-                    margin: "0 0 10px 1vw",
+                    margin: "0 0 6px 1vw",
                   }}
                 />
               </span>
