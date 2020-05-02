@@ -74,6 +74,11 @@ img {
   left: 50%;
 }
 
+.clickable-link {
+  text-decoration: underline;
+  text-decoration-color: #d20000;
+}
+
 .clickable-img {
   // opacity: 1;
   // transform: scale(1);
@@ -155,7 +160,7 @@ img {
 }
 
 .mobile-navbar-icon-open-wrapper {
-  font-size: 2em;
+  font-size: 25px;
   opacity: 0;
   transform: rotate(-90deg) scaleY(0);
   transition: opacity 0.2s, transform 0.1s;
@@ -163,10 +168,10 @@ img {
 
 .mobile-navbar-item-link-container {
   display: block;
-  /* font-weight: 400; */
-  font-size: 4em;
-  text-transform: uppercase;
-  margin-top: 2vh;
+  font-weight: 400;
+  font-size: 40px;
+  text-transform: lowercase;
+  margin-top: 4vh;
   position: relative;
   transition: 0.8s;
 }
@@ -229,8 +234,9 @@ img {
 }
 
 .logo {
-  font-size: 2em;
-  font-weight: 400;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: lowercase;
 }
 
 .social-container {
@@ -275,7 +281,7 @@ img {
 }
 
 .social-icon {
-  font-size: 2rem;
+  font-size: 25px
 }
 
 .linkedin {
@@ -294,11 +300,11 @@ img {
   display: none;
   flex-direction: row;
   align-items: center;
-  text-transform: uppercase;
+  text-transform: lowercase;
   /* Rotate from top left corner (not default) */
   transform-origin: 0 0;
   transform: rotate(-90deg);
-  bottom: 3.5vh;
+  bottom: 2.5vh;
   z-index: 5;
 }
 
@@ -306,7 +312,7 @@ img {
 .mobile-navbar-item-link-container {
   padding-right: 2vw;
   position: relative;
-  margin-right: 50px;
+  margin-right: 40px;
   transition: 0.8s;
 }
 
@@ -373,7 +379,7 @@ img {
 .navbar-item-link {
   background-color: $primary-color;
   padding-right: $dash-space;
-  font-size: 1.2em;
+  font-size: 22px;
   font-weight: 400;
 }
 
@@ -411,7 +417,7 @@ img {
   }
 
   .social-icon {
-    font-size: 1.4rem;
+    font-size: 20px;
   }
 
   .topbar-item.mobile-navbar-icon-close-wrapper,

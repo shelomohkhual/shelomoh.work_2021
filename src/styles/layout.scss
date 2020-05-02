@@ -1,15 +1,22 @@
 @import "style-variables";
 
-$dash-width: 40px;
-$dash-height: 6px;
+$dash-width: 35px;
+$dash-height: 5px;
 $dash-space: 1vw;
+
+$title-size: 24px;
+$title-weight: 400;
+$title-text-tranform: capitalize;
+
+$des-size: 18px;
 
 .layout-container {
   margin: 4vh 8vw;
 
   .main-container {
     margin: 0;
-    height: auto;
+    height: calc(85vh - 132px);
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -18,24 +25,30 @@ $dash-space: 1vw;
 
     .index-container {
       margin: 0;
-      height: calc(95vh - 179px);
       display: flex;
       justify-content: flex-end;
       flex-direction: column;
 
       .index-title {
-        font-size: 2.5em;
+        font-size: 28px;
+        word-wrap: break-word;
+        font-weight: 400;
       }
 
       .index-des {
-        margin-top: 9vh;
-        font-size: 1.3em;
+        margin-top: 2vh;
+        font-size: 16px;
         color: $accent-darker;
         transition: color 0.8s;
 
         &:hover {
           color: $accent;
           transition: color 0.8s;
+        }
+
+        .dash-line-animation {
+          height: 3px;
+          margin: 9px 0 3px 1vw;
         }
       }
     }
@@ -51,7 +64,7 @@ $dash-space: 1vw;
 
       .attribute-container {
         .attribute-item {
-          margin-top: 5vh;
+          margin-top: 3vh;
 
           .attribute-lable {
             display: block;
@@ -61,7 +74,8 @@ $dash-space: 1vw;
           }
 
           .attribute-detail {
-            font-size: 1.2rem;
+            // font-size: 1.2rem;
+            font-size: 16px;
           }
         }
       }
@@ -117,14 +131,14 @@ $dash-space: 1vw;
     display: grid;
   }
 
+
   .project-des,
   .feature-topic-des,
   .contact-detail-des {
-    font-size: 1.8vh;
-    text-align: justify;
-    margin: 0;
-    opacity: 0.8;
-
+    font-size: 16px;
+    text-align: left;
+    line-height: 22px;
+    font-weight: 300;
   }
 
   .contact-content-container {
@@ -133,27 +147,23 @@ $dash-space: 1vw;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    margin-top: 8vh;
   }
 
   .contact-title-col {
     order: 1;
-    flex-basis: 30%;
+    flex-basis: 25%;
     padding-right: 0.8vw;
 
-
     .contact-title {
-      font-size: 20px;
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-top: 0;
+      font-size: 30px;
+      font-weight: 600;
+      text-transform: $title-text-tranform;
     }
   }
 
-
   .contact-content-col {
     order: 2;
-    flex-basis: 70%;
+    flex-basis: 100%;
     margin-top: 0.8em;
     font-size: 20px;
     line-height: 30px;
@@ -162,7 +172,6 @@ $dash-space: 1vw;
 
     li {
       list-style-type: circle;
-
     }
 
     h5 {
@@ -188,9 +197,9 @@ $dash-space: 1vw;
     line-height: 24px;
   }
 
-  .project-img-container {
-    // margin-top: 3vh;
-  }
+  // .project-img-container {
+  //   // margin-top: 3vh;
+  // }
 
   .project-topic-container {
     display: flex;
@@ -217,7 +226,7 @@ $dash-space: 1vw;
   }
 
   .feature-topic-container {
-    margin: 8vh 0 auto;
+    margin: 18vh 0 auto;
 
     .feature-topic-double-col-container {
       display: flex;
@@ -285,6 +294,11 @@ $dash-space: 1vw;
   }
 }
 
+.contact-container,
+.contact-content-container {
+  margin-top: 14vh;
+}
+
 .feature-topic-title-container {
   margin-bottom: 2vh;
 }
@@ -329,7 +343,7 @@ $dash-space: 1vw;
   display: inline-block;
   width: $dash-width;
   height: $dash-height;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
   margin-left: $dash-space;
   background-color: $accent;
   animation: dashOpenAni 0.8s;
@@ -349,11 +363,11 @@ $dash-space: 1vw;
 
 .project-topic-title,
 .feature-topic-title {
-  text-transform: uppercase;
+  text-transform: $title-text-tranform;
   margin-top: 0;
   background-color: $primary-color;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: $title-weight;
 }
 
 .topbar-item-link-container {
@@ -543,13 +557,26 @@ $dash-space: 1vw;
     .main-container {
       margin-left: 60px;
       flex-wrap: nowrap;
-      height: calc(95vh - 150px);
+      height: calc(95vh - 132px);
 
       .index-container {
-        margin: 0 26vw 0 0vw;
+        // margin: 0 16vw 0 0vw;
 
         .index-title {
-          font-size: 3em;
+          font-size: 60px;
+          word-wrap: break-word;
+          font-weight: 400;
+          width: 870px;
+        }
+
+        .index-des {
+          margin-top: 9vh;
+          font-size: 1.3em;
+
+          .dash-line-animation {
+            height: 5px;
+            margin: 9px 0 4px 1vw;
+          }
         }
       }
 
@@ -559,9 +586,13 @@ $dash-space: 1vw;
         padding-right: 3vw;
 
         .heading-title {
-          font-size: 3rem;
+          font-size: 40px;
           word-wrap: break-word;
           font-weight: 400;
+        }
+
+        .attribute-item {
+          margin-top: 5vh;
         }
       }
 
@@ -603,6 +634,20 @@ $dash-space: 1vw;
         flex-wrap: wrap;
       }
 
+      .contact-content-col {
+        flex-basis: 70%;
+      }
+
+      .contact-content-container {
+        margin-top: 8vh;
+      }
+
+      .contact-title {
+        font-size: $title-size;
+        font-weight: $title-weight;
+        margin-top: 0;
+      }
+
       .project-container,
       .contact-container {
         flex-basis: 70%;
@@ -612,7 +657,8 @@ $dash-space: 1vw;
 
         .project-topic-title,
         .feature-topic-title {
-          font-size: 2.4rem;
+          // font-size: 2.4rem;
+          font-size: $title-size;
         }
 
         .contact-detail-container {
@@ -624,10 +670,17 @@ $dash-space: 1vw;
         .project-des,
         .feature-topic-des,
         .contact-detail-des {
-          font-size: 20px;
+          font-size: $des-size;
           line-height: 30px;
           font-weight: 300;
-          margin-top: 0.8em;
+        }
+
+        .contact-detail-des {
+          margin-top: 8px;
+        }
+
+        .project-des {
+          margin-top: 0px;
         }
 
         .project-topic-container {
@@ -635,17 +688,19 @@ $dash-space: 1vw;
 
           .project-topic-title-col {
             order: 1;
-            flex-basis: 50%;
+            flex-basis: 25%;
             padding-right: 0.8vw;
           }
 
           .project-topic-content-col {
             order: 2;
-            flex-basis: 50%;
+            flex-basis: 70%;
           }
         }
 
         .feature-topic-container {
+          margin: 10vh 0 auto;
+
           .feature-topic-single-content-col {
             margin: 10vh 7vw auto;
           }
@@ -677,7 +732,7 @@ $dash-space: 1vw;
   margin-bottom: 3vh;
 
   .heading-title {
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: 6vh;
     padding-right: 30px;
   }

@@ -38,16 +38,6 @@ export const query = graphql`
           }
         }
       }
-      featureImgs {
-        label
-        images {
-          childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
     }
   }
 `;

@@ -45,7 +45,7 @@ const ContactDetail = (contactDetails: ContactPageInterface) => {
       {/* </div> */}
       {/* <div className="contact-detail-container"> */}
       <div>
-        <h2 className="contact-detail-heading">{contactDetails.heading}</h2>
+        <h2 className="contact-detail-heading">Hi!</h2>
         <p className="contact-detail-des">{contactDetails.description}</p>
         {/* {downloadCV} */}
 
@@ -73,9 +73,26 @@ const ContactDetail = (contactDetails: ContactPageInterface) => {
             </div>
           </div>
           <div className="contact-content-col">
-            <h5>Full-stack Developer : re.code</h5>
-            <span className="contact-year">Sept 2019 - sept 2020</span>
-            <p>As Full-stack Developer who did everything</p>
+            <h5>
+              Full-stack Developer :{" "}
+              <a
+                className="clickable-link"
+                target="_blank"
+                href="https://recodemalaysia.com"
+              >
+                re.code
+              </a>
+            </h5>
+            <span className="contact-year">Oct 2019 - Feb 2020</span>
+            <p>
+              Assigned to develop a mobile and web apps as a team based project.
+              I’ve improved my coding such as structuring before codes, using
+              comments to explain what it’s about and enhanced my problem
+              solving skills and learn new design patterns like RxDart, new
+              languages such as Dart, React, Typescripts and Go. I was able to
+              help the new company about branding, designing webpage and able to
+              publish through wordpress.
+            </p>
           </div>
         </div>
 

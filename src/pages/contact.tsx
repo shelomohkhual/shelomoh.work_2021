@@ -42,7 +42,9 @@ const Contact = () => {
           <span>{phone}</span>
         </HeadingAttribute>
         <HeadingAttribute label="email:">
-          <a href={`mailto:${email}`}>{email}</a>
+          <a className="clickable-link" href={`mailto:${email}`}>
+            {email}
+          </a>
         </HeadingAttribute>
       </HeadingBar>
       <ContactDetail

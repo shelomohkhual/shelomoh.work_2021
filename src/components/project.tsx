@@ -126,7 +126,7 @@ export function mainTopicComponent(title: string, content: string) {
         <div className="heading-container">
           <span className="project-topic-title">
             {title}
-            {rightDash}
+            {/* {rightDash} */} —
           </span>
         </div>
       </div>

@@ -30,7 +30,7 @@ const Work = () => {
 
   return (
     <Layout>
-      <HeadingBar title="seleced work">
+      <HeadingBar title="selected work">
         {/* <HeadingAttribute label="client">
           <span>{project.client}</span>
         </HeadingAttribute>

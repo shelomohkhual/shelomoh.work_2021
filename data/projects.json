@@ -1,100 +1,43 @@
-[
-  {
-    "slug": "learning-portal",
-    "title": "Learning Portal",
-    "client": "re.code",
-    "service": "Full-Stack Development",
-    "description": "Learning Portal is a tool for the students to access their curriculum on their long commute with any devices and for instructors to keep track of students progress of the exercises and home work submits.\n\nIt's build with Ruby on Rails Framework backend API and using Typescript React and hosting with Infrastructure Design Server",
-    "coverImg": "./assets/LearningPortalCover.jpg",
-    "archieve": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-    "featureTopics": [
-      {
-        "title": "Overview",
-        "des": "Build in Ruby on Rails API and TypeScript React",
-        "imgs": [
-          {
-            "label": "Basic Pages and Components",
-            "images": ["./assets/LearningPortal-BasicComponent.png"]
-          }
-        ]
-      },
-      {
-        "title": "Instructors and Students Management",
-        "des": "Instructor and Student management page use the same implementation which calling api for listing the members, Adding and removing from the course",
-        "imgs": [
-          {
-            "images": ["./assets/LearningPortal-UserManagement.png"]
-          }
-        ]
-      },
-      {
-        "title": "Curriculum Managment",
-        "des": "Depend on the instrutor teaching methods or the speed of the class, the criculums are flexibly able to amend the struture of the curriculum by simply drag and drop feature which inspored by trello\n\nFor the responsiveness of interactive,the api calling for chaing position and chapters, we build RX sink and Stream feature for our app.",
-        "imgs": [
-          {
-            "images": ["./assets/LearningPortal-CurriculumManagement.png"]
-          }
-        ]
-      },
-      {
-        "title": "MarkDown Rendering",
-        "des": "Markdown allows to show embed multimedia content and format and styling text.\n\n\n\n\nNot only that we could use visual explanation such as graphical images and videos for the students, we use could use \"Details\" HTML tags as spoiler tags for pop quiz answer in the content.",
-        "imgs": [
-          {
-            "images": ["./assets/LearningPortal-MarkDownRender.png"]
-          }
-        ]
-      }
-    ],
-    "featureImgs": [
-      {
-        "images": []
-      }
-    ],
-    "result": "this will be the take away from the project that you have done or the achievements12 "
-  },
-  {
-    "slug": "elementrix",
-    "title": "Elementrix",
-    "client": "Elementric",
-    "service": "Static Website Development",
-    "description": "Website for an elegant apartment ‘Edition’ developed by New Zealand based design studio Graphic Activity. The website designed by Studio South.Via graphicactivity.co.nz",
-    "coverImg": "./assets/Elementrix-thumnail.png",
-    "archieve": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-    "featureTopics": [
-      {
-        "title": "UI/UX",
-        "des": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-        "imgs": [
-          {
-            "images": [
-              "./assets/Elementrix-responsive.png",
-              "./assets/Elementrix-responsive2.png",
-              "./assets/Elementrix-responsive3.png"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "web development",
-        "des": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
-        "imgs": [
-          {
-            "label": "wireframing",
-            "images": [
-              "./assets/learning-portal-2.jpg",
-              "./assets/learning-portal-2.jpg"
-            ]
-          }
-        ]
-      }
-    ],
-    "featureImgs": [
-      {
-        "label": "features Images",
-        "images": ["./assets/learning-portal-2.jpg"]
-      }
-    ],
-    "result": "this will be the take away from the project that you have done or the achievements12 "
-  }
-]
+[{
+  "slug": "learning-portal",
+  "title": "Learning Portal",
+  "client": "re.code",
+  "service": "Full-Stack Development",
+  "description": "Learning Portal is a tool for the students to access their curriculum on their long commute with any devices and for instructors to keep track of students progress of the exercises and home work submits.\n\nIt's build with Ruby on Rails Framework backend API and using Typescript React and hosting with Infrastructure Design Server",
+  "coverImg": "./assets/LearningPortalCover.jpg",
+  "archieve": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ",
+  "featureTopics": [{
+      "title": "Overview",
+      "des": "Build in Ruby on Rails API and TypeScript React",
+      "imgs": [{
+        "label": "Basic Pages and Components",
+        "images": ["./assets/LearningPortal-BasicComponent.png"]
+      }]
+    },
+    {
+      "title": "Instructors and Students Management",
+      "des": "Instructor and Student management page use the same implementation which calling api for listing the members, Adding and removing from the course",
+      "imgs": [{
+        "images": ["./assets/LearningPortal-UserManagement.png"]
+      }]
+    },
+    {
+      "title": "Curriculum Managment",
+      "des": "Depend on the instrutor teaching methods or the speed of the class, the criculums are flexibly able to amend the struture of the curriculum by simply drag and drop feature which inspored by trello\n\nFor the responsiveness of interactive,the api calling for chaing position and chapters, we build RX sink and Stream feature for our app.",
+      "imgs": [{
+        "images": ["./assets/LearningPortal-CurriculumManagement.png"]
+      }]
+    },
+    {
+      "title": "MarkDown Rendering",
+      "des": "Markdown allows to show embed multimedia content and format and styling text.\n\n\n\n\nNot only that we could use visual explanation such as graphical images and videos for the students, we use could use \"Details\" HTML tags as spoiler tags for pop quiz answer in the content.",
+      "imgs": [{
+        "images": ["./assets/LearningPortal-MarkDownRender.png"]
+      }]
+    }
+  ],
+  "featureImgs": [{
+    "images": []
+  }],
+  "result": "this will be the take away from the project that you have done or the achievements12 "
+}]
