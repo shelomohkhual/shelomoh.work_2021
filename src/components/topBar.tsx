@@ -69,7 +69,7 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
               activeClassName="active"
             >
               <span className="topbar-item-link logo">
-                SHELOMOH
+                shelomoh
                 <span
                   className="hover-dash"
                   style={{

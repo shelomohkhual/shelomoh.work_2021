@@ -22,11 +22,11 @@ const Navbar = () => {
       </TransitionLink>
       <TransitionLink
         fade
-        to="/contact/"
+        to="/info/"
         className="navbar-item-link-container"
         activeClassName="active"
       >
-        <span className="navbar-item-link ">Contact</span>
+        <span className="navbar-item-link ">info</span>
       </TransitionLink>
     </div>
   );

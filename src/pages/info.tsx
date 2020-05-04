@@ -1,4 +1,4 @@
-import ContactDetail from "../components/contact-detail";
+import InfoDetail from "../components/info-detail";
 import Layout from "../components/layout";
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
@@ -7,9 +7,9 @@ import HeadingBar from "../components/heading-bar";
 import HeadingAttribute from "../components/heading-attribute";
 // import Project from "../components/project";
 
-const Contact = () => {
+const Info = () => {
   const data = useStaticQuery(graphql`
-    query ContactDetailsJson {
+    query InfoDetailsJson {
       dataJson {
         description
         email
@@ -21,33 +21,32 @@ const Contact = () => {
             }
           }
         }
-        phone
       }
     }
   `);
 
-  const contactDetails = data.dataJson;
-  const email = contactDetails.email;
-  const phone = contactDetails.phone;
-  const heading = contactDetails.heading;
-  const description = contactDetails.description;
+  const infoDetails = data.dataJson;
+  const email = infoDetails.email;
+  // const phone = infoDetails.phone;
+  const heading = infoDetails.heading;
+  const description = infoDetails.description;
   // const cv: FluidObject = contactDetails.cv.childImageSharp.fluid;
-  const imageData: FluidObject = contactDetails.image.childImageSharp.fluid;
+  const imageData: FluidObject = infoDetails.image.childImageSharp.fluid;
   // const imageData = contactDetails.image.childImageSharp.original.src;
 
   return (
     <Layout>
-      <HeadingBar key="contact" title="contact">
-        <HeadingAttribute label="h/p:">
+      <HeadingBar key="info" title="info">
+        {/* <HeadingAttribute label="h/p:">
           <span>{phone}</span>
-        </HeadingAttribute>
+        </HeadingAttribute> */}
         <HeadingAttribute label="email:">
           <a className="clickable-link" href={`mailto:${email}`}>
             {email}
           </a>
         </HeadingAttribute>
       </HeadingBar>
-      <ContactDetail
+      <InfoDetail
         // email={email}
         // phone={phone}
         heading={heading}
@@ -59,4 +58,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Info;

@@ -1,32 +1,26 @@
 import React from "react";
-import { FluidObject } from "gatsby-image";
+import Img, { FluidObject } from "gatsby-image";
 // import { mainTopicComponent } from "./project";
 
-interface ContactPageInterface {
+interface InfoPageInterface {
   // email: string;
   // phone: string;
   heading: string;
   description: string;
   // image?: string;
-  image?: any;
-  // image?: FluidObject;
+  // image?: any;
+  image?: FluidObject;
   cv?: FluidObject;
 }
 
-const ContactDetail = (contactDetails: ContactPageInterface) => {
-  // const aboutImage = contactDetails.image ? (
-  //   <div className="img-container">
-  //     <img src={contactDetails.image} className="contact-image" />
-
-  //     {/* <Image
-  //       fluid={contactDetails.image}
-  //       alt={contactDetails.heading}
-  //       className="contact-image"
-  //     /> */}
-  //   </div>
-  // ) : (
-  //   <div />
-  // );
+const InfoDetail = (infoDetails: InfoPageInterface) => {
+  const aboutImage = infoDetails.image ? (
+    <div className="img-container">
+      <Img fluid={infoDetails.image} className="info-image-container" />
+    </div>
+  ) : (
+    <div />
+  );
 
   // const downloadCV = contactDetails.cv ? (
   //   <a href={contactDetails.cv.src} className="contact-cv">
@@ -45,8 +39,28 @@ const ContactDetail = (contactDetails: ContactPageInterface) => {
       {/* </div> */}
       {/* <div className="contact-detail-container"> */}
       <div>
-        <h2 className="contact-detail-heading">Hi!</h2>
-        <p className="contact-detail-des">{contactDetails.description}</p>
+        {/* <div>
+          <div>{aboutImage}</div>
+          <div>
+            <h2 className="contact-detail-heading">Hi!</h2>
+            <p className="contact-detail-des">{infoDetails.description}</p>
+          </div>
+        </div> */}
+
+        <div className="contact-content-container">
+          <div className="contact-title-col">
+            <div className="heading-container">
+              <div>{aboutImage}</div>
+            </div>
+          </div>
+          <div className="contact-content-col">
+            <div>
+              <h2 className="contact-detail-heading">Hi!</h2>
+              <p className="contact-detail-des">{infoDetails.description}</p>
+            </div>
+          </div>
+        </div>
+
         {/* {downloadCV} */}
 
         {/* <div className="contact-content-container">
@@ -132,4 +146,4 @@ const ContactDetail = (contactDetails: ContactPageInterface) => {
     </div>
   );
 };
-export default ContactDetail;
+export default InfoDetail;
