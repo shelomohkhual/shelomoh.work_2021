@@ -34,14 +34,6 @@ const Info = () => {
       }
     }
   `);
-
-  // const cvData = useStaticQuery(graphql`
-  //   query {
-  //     pdf: file(base: { eq: "shelomoh_cv.pdf" }) {
-  //       publicURL
-  //     }
-  //   }
-  // `);
   // const { contactData } = useContactData();
 
   const infoDetails = data.infoJson;
@@ -123,7 +115,7 @@ const Info = () => {
         heading={heading}
         description={description}
         image={imageData}
-        cv={cv.publicURL}
+        cv={cv}
       />
     </Layout>
   );
