@@ -5,7 +5,7 @@ import { Project } from "../components/project";
 import HeadingBar from "../components/heading-bar";
 import HeadingAttribute from "../components/heading-attribute";
 import { FluidObject } from "gatsby-image";
-import SEO from "components/seo";
+import SEO from "../components/seo";
 // import { FluidObject } from "gatsby-image";
 
 export const query = graphql`
