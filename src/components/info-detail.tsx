@@ -10,7 +10,7 @@ interface InfoPageInterface {
   // image?: string;
   // image?: any;
   image?: FluidObject;
-  cv?: any;
+  cv?: string;
 }
 
 const InfoDetail = (infoDetails: InfoPageInterface) => {

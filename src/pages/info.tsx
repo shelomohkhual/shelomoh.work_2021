@@ -44,7 +44,7 @@ const Info = () => {
   // const phone = contactData.phone;
   const heading = infoDetails.heading;
   const description = infoDetails.description;
-  const cv: FluidObject = infoDetails.cv.publicURL;
+  const cv: string = infoDetails.cv.publicURL;
   const imageData: FluidObject = infoDetails.image.childImageSharp.fluid;
   // const imageData = contactDetails.image.childImageSharp.original.src;
 
