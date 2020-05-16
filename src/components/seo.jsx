@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image, project }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
   const {
@@ -25,7 +25,7 @@ const SEO = ({ title, description, image, article }) => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
-      {(article ? true : null) && <meta property="og:type" content="article" />}
+      {(project ? true : null) && <meta property="og:type" content="project" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
@@ -48,13 +48,13 @@ SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  article: PropTypes.bool,
+  project: PropTypes.bool,
 };
 SEO.defaultProps = {
   title: null,
   description: null,
   image: null,
-  article: false,
+  project: false,
 };
 const query = graphql`
   query SEO {
