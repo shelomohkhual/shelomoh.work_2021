@@ -12,7 +12,8 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <TransitionLink
-        fade
+        paintDrip
+        hex="#d20000"
         to="/work/"
         className="navbar-item-link-container"
         activeClassName="active"
@@ -21,7 +22,8 @@ const Navbar = () => {
         <span className="navbar-item-link ">Work</span>
       </TransitionLink>
       <TransitionLink
-        fade
+        paintDrip
+        hex="#d20000"
         to="/info/"
         className="navbar-item-link-container"
         activeClassName="active"

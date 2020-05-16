@@ -10,7 +10,7 @@ interface InfoPageInterface {
   // image?: string;
   // image?: any;
   image?: FluidObject;
-  cv?: FluidObject;
+  cv?: any;
 }
 
 const InfoDetail = (infoDetails: InfoPageInterface) => {
@@ -22,13 +22,17 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
     <div />
   );
 
-  // const downloadCV = contactDetails.cv ? (
-  //   <a href={contactDetails.cv.src} className="contact-cv">
-  //     Download CV
-  //   </a>
-  // ) : (
-  //   <div />
-  // );
+  const downloadCV = infoDetails.cv ? (
+    <a
+      target="_blank"
+      href={infoDetails.cv}
+      className="contact-cv clickable-link"
+    >
+      Resume
+    </a>
+  ) : (
+    <></>
+  );
 
   return (
     <div className="contact-container">
@@ -58,10 +62,9 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
               <h2 className="contact-detail-heading">Hi!</h2>
               <p className="contact-detail-des">{infoDetails.description}</p>
             </div>
+            <div className="download-cv-container">{downloadCV}</div>
           </div>
         </div>
-
-        {/* {downloadCV} */}
 
         {/* <div className="contact-content-container">
           <div className="contact-title-col">

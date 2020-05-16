@@ -9,13 +9,18 @@ import {
 
 import { faBars, faSlash } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+// import { useStaticQuery, graphql } from "gatsby";
 
-interface TopBarProps {}
-
+interface TopBarProps {
+  title: string;
+  instagramLink: string;
+  twitterLink: string;
+  githubLink: string;
+  linkedInLink: string;
+}
 interface TopBarState {
   isOpen: boolean;
 }
-
 export default class TopBar extends React.Component<TopBarProps, TopBarState> {
   constructor(props: TopBarProps) {
     super(props);
@@ -32,10 +37,73 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
     this.setState({ isOpen: false });
   }
 
+  // useSiteMetadata() {
+  //   const data = useStaticQuery(graphql`
+  //     query siteData {
+  //       site {
+  //         siteMetadata {
+  //           title
+  //           titleTemplate
+  //           url
+  //           image
+  //           description
+  //         }
+  //       }
+  //       infoJson {
+  //         contact {
+  //           email
+  //           github
+  //           instagram
+  //           linkedin
+  //           twitter
+  //         }
+  //       }
+  //     }
+  //   `);
+
+  //   return data.siteData;
+  // }
+
   render() {
-    const linkedInLink = "https://www.linkedin.com/in/shelomoh-khual-17258872";
-    const instagramLink = "https://www.instagram.com/shelomoh";
-    const githubLink = "https://www.github.com/shelomohkhual";
+    // const something = infoData.site.siteMetadata;
+    // const useSiteMetadata = () => {
+    //   return useStaticQuery(graphql`
+    //     query siteData {
+    //       site {
+    //         siteMetadata {
+    //           title
+    //           titleTemplate
+    //           url
+    //           image
+    //           description
+    //         }
+    //       }
+    //       infoJson {
+    //         contact {
+    //           email
+    //           github
+    //           instagram
+    //           linkedin
+    //           twitter
+    //         }
+    //       }
+    //     }
+    //   `);
+    // };
+
+    // const siteMetadata = useSiteMetadata();
+    // const contactData = data.infoJson.contact;
+
+    const title = this.props.title;
+    const linkedInLink =
+      "https://www.linkedin.com/in/" + this.props.linkedInLink;
+    const instagramLink =
+      "https://www.instagram.com/" + this.props.instagramLink;
+    const githubLink = "https://www.github.com/" + this.props.githubLink;
+
+    // const linkedInLink = "https://www.linkedin.com/in/shelomoh-khual-17258872";
+    // const instagramLink = "https://www.instagram.com/shelomoh";
+    // const githubLink = "https://www.github.com/shelomohkhual";
 
     const topBarNavBarColClass = () => {
       const classes = ["topbar-navbar-col"];
@@ -63,17 +131,18 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
         <div className="topbar-logo-col">
           <div className="topbar-item">
             <TransitionLink
-              fade
+              paintDrip
+              hex="#d20000"
               to="/"
               className="topbar-item-link-container"
               activeClassName="active"
             >
               <span className="topbar-item-link logo">
-                shelomoh
+                {title}
                 <span
                   className="hover-dash"
                   style={{
-                    margin: "0 0 6px 1vw",
+                    margin: "0 0 5px 1vw",
                   }}
                 />
               </span>
@@ -113,21 +182,21 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
             />
           </span>
           <div className={mobileNavBarContainer()}>
-            <TransitionLink fade to="/">
+            <TransitionLink paintDrip hex="#d20000" to="/">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">HOME</span>
               </p>
             </TransitionLink>
 
-            <TransitionLink fade to="/work">
+            <TransitionLink paintDrip hex="#d20000" to="/work">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Work</span>
               </p>
             </TransitionLink>
 
-            <TransitionLink fade to="/contact">
+            <TransitionLink paintDrip hex="#d20000" to="/info">
               <p className="mobile-navbar-item-link-container">
-                <span className="mobile-navbar-item-link ">Contact</span>
+                <span className="mobile-navbar-item-link ">info</span>
               </p>
             </TransitionLink>
             <span className="divider" />

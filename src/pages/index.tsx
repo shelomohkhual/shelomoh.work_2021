@@ -13,7 +13,7 @@ export default () => (
       }
     `}
     render={(data) => (
-      <Layout>
+      <Layout page="index">
         <div className="index-container">
           <h1 className="index-title">{data.indexJson.title}</h1>
           <a className="index-des">

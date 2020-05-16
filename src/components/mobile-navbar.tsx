@@ -15,9 +15,9 @@ const MobileNavBar = () => (
       </a>
     </Link>
 
-    <Link to="/contact">
+    <Link to="/info">
       <a className="mobile-navbar-item-link-container">
-        <span className="mobile-navbar-item-link ">Contact</span>
+        <span className="mobile-navbar-item-link ">info</span>
       </a>
     </Link>
   </div>

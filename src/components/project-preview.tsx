@@ -4,7 +4,8 @@ import Img from "gatsby-image";
 
 const ProjectPreview = ({ title, service, slug, imageData }) => (
   <TransitionLink
-    fade
+    paintDrip
+    hex="#d20000"
     to={`/work/${slug}/`}
     className="project-preview-container"
   >

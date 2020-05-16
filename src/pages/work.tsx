@@ -26,10 +26,11 @@ const Work = () => {
       }
     }
   `);
+
   const projects = data.allProjectsJson.edges;
 
   return (
-    <Layout>
+    <Layout page="work">
       <HeadingBar title="selected work">
         {/* <HeadingAttribute label="client">
           <span>{project.client}</span>

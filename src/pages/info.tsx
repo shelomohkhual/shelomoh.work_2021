@@ -5,14 +5,23 @@ import { useStaticQuery, graphql } from "gatsby";
 import { FluidObject } from "gatsby-image";
 import HeadingBar from "../components/heading-bar";
 import HeadingAttribute from "../components/heading-attribute";
-// import Project from "../components/project";
+// import useContactData from "components/contactData";
 
 const Info = () => {
   const data = useStaticQuery(graphql`
     query InfoDetailsJson {
-      dataJson {
+      infoJson {
+        contact {
+          email
+          github
+          instagram
+          linkedin
+          twitter
+        }
+        cv {
+          publicURL
+        }
         description
-        email
         heading
         image {
           childImageSharp {
@@ -24,27 +33,79 @@ const Info = () => {
       }
     }
   `);
+  // const { contactData } = useContactData();
 
-  const infoDetails = data.dataJson;
-  const email = infoDetails.email;
-  // const phone = infoDetails.phone;
+  const infoDetails = data.infoJson;
+  const emailLink = infoDetails.contact.email;
+  // const githubLink = infoDetails.contact.github;
+  // const instagramLink = infoDetails.contact.instagram;
+  // const linkedInLink = infoDetails.contact.linkedin;
+  // const twitterLink = infoDetails.contact.twitter;
+  // const phone = contactData.phone;
   const heading = infoDetails.heading;
   const description = infoDetails.description;
-  // const cv: FluidObject = contactDetails.cv.childImageSharp.fluid;
+  const cv: FluidObject = infoDetails.cv.publicURL;
   const imageData: FluidObject = infoDetails.image.childImageSharp.fluid;
   // const imageData = contactDetails.image.childImageSharp.original.src;
 
+  const emailHeadingAttribute = emailLink ? (
+    <HeadingAttribute label="email">
+      <a className="clickable-link" href={`mailto:${emailLink}`}>
+        {emailLink}
+      </a>
+    </HeadingAttribute>
+  ) : (
+    <></>
+  );
+
+  // const githubHeadingAttribute = githubLink ? (
+  //   <HeadingAttribute label="github">
+  //     <a className="clickable-link" href={githubLink}>
+  //       {githubLink}
+  //     </a>
+  //   </HeadingAttribute>
+  // ) : (
+  //   <></>
+  // );
+
+  // const instagramHeadingAttribute = instagramLink ? (
+  //   <HeadingAttribute label=":">
+  //     <a className="clickable-link" href={`mailto:${emailLink}`}>
+  //       {emailLink}
+  //     </a>
+  //   </HeadingAttribute>
+  // ) : (
+  //   <></>
+  // );
+
+  // const linkedInHeadingAttribute = linkedInLink ? (
+  //   <HeadingAttribute label="email:">
+  //     <a className="clickable-link" href={`mailto:${emailLink}`}>
+  //       {emailLink}
+  //     </a>
+  //   </HeadingAttribute>
+  // ) : (
+  //   <></>
+  // );
+
+  // const twitterHeadingAttribute = twitterLink ? (
+  //   <HeadingAttribute label="email:">
+  //     <a className="clickable-link" href={`mailto:${emailLink}`}>
+  //       {emailLink}
+  //     </a>
+  //   </HeadingAttribute>
+  // ) : (
+  //   <></>
+  // );
+
   return (
-    <Layout>
+    <Layout page="info">
       <HeadingBar key="info" title="info">
-        {/* <HeadingAttribute label="h/p:">
-          <span>{phone}</span>
-        </HeadingAttribute> */}
-        <HeadingAttribute label="email:">
-          <a className="clickable-link" href={`mailto:${email}`}>
-            {email}
-          </a>
-        </HeadingAttribute>
+        {emailHeadingAttribute}
+        {/* {githubHeadingAttribute}
+        {instagramHeadingAttribute}
+        {linkedInHeadingAttribute}
+        {twitterHeadingAttribute} */}
       </HeadingBar>
       <InfoDetail
         // email={email}
@@ -52,7 +113,7 @@ const Info = () => {
         heading={heading}
         description={description}
         image={imageData}
-        // cv={cv}
+        cv={cv}
       />
     </Layout>
   );
