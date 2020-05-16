@@ -19,9 +19,6 @@ const Info = () => {
           linkedin
           twitter
         }
-        cv {
-          publicURL
-        }
         description
         heading
         image {
@@ -32,8 +29,19 @@ const Info = () => {
           }
         }
       }
+      pdf: file(base: { eq: "shelomoh_cv.pdf" }) {
+        publicURL
+      }
     }
   `);
+
+  // const cvData = useStaticQuery(graphql`
+  //   query {
+  //     pdf: file(base: { eq: "shelomoh_cv.pdf" }) {
+  //       publicURL
+  //     }
+  //   }
+  // `);
   // const { contactData } = useContactData();
 
   const infoDetails = data.infoJson;
@@ -45,7 +53,7 @@ const Info = () => {
   // const phone = contactData.phone;
   const heading = infoDetails.heading;
   const description = infoDetails.description;
-  const cv: string = infoDetails.cv.publicURL;
+  const cv = data.pdf;
   const imageData: FluidObject = infoDetails.image.childImageSharp.fluid;
   // const imageData = contactDetails.image.childImageSharp.original.src;
 
@@ -115,7 +123,7 @@ const Info = () => {
         heading={heading}
         description={description}
         image={imageData}
-        cv={cv}
+        cv={cv.publicURL}
       />
     </Layout>
   );
