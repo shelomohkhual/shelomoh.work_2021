@@ -1,7 +1,17 @@
 module.exports = {
   siteMetadata: {
     title: `Shelomoh`,
+    titleTemplate: "Shelomoh",
     description: `Full-Stack Developer • Graphic Designer`,
+    url: "https://shelomoh.work",
+    image: "./assets/contact.jpg",
+    contact: {
+      email: "business@shelomoh.work",
+      linkedin: "shelomoh-khual-17258872",
+      github: "shelomohkhual",
+      instagram: "shelomoh",
+      twitter: "shelomohkhual",
+    },
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -11,6 +21,7 @@ module.exports = {
     "gatsby-transformer-json",
     "gatsby-plugin-typescript",
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-filesystem",
       options: {

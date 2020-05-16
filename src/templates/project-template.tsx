@@ -54,7 +54,7 @@ const ProjectTemplate = ({ data }) => {
   const result = project.result;
 
   return (
-    <Layout>
+    <Layout page={title}>
       <HeadingBar key={title} title={title}>
         <HeadingAttribute label="client">
           <span>{client}</span>
