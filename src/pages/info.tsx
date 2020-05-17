@@ -29,7 +29,7 @@ const Info = () => {
           }
         }
       }
-      pdf: file(base: { eq: "shelomoh_cv.pdf" }) {
+      // pdf: file(base: { eq: "shelomoh_cv.pdf" }) {
         publicURL
       }
     }
@@ -45,7 +45,7 @@ const Info = () => {
   // const phone = contactData.phone;
   const heading = infoDetails.heading;
   const description = infoDetails.description;
-  const cv = data.pdf;
+  // const cv = data.pdf;
   const imageData: FluidObject = infoDetails.image.childImageSharp.fluid;
   // const imageData = contactDetails.image.childImageSharp.original.src;
 
@@ -115,7 +115,7 @@ const Info = () => {
         heading={heading}
         description={description}
         image={imageData}
-        cv={cv}
+        // cv={cv}
       />
     </Layout>
   );

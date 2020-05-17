@@ -22,17 +22,17 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
     <div />
   );
 
-  const downloadCV = infoDetails.cv ? (
-    <a
-      target="_blank"
-      href={infoDetails.cv}
-      className="contact-cv clickable-link"
-    >
-      Resume
-    </a>
-  ) : (
-    <></>
-  );
+  // const downloadCV = CV ? (
+  //   <a
+  //     target="_blank"
+  //     href={infoDetails.cv}
+  //     className="contact-cv clickable-link"
+  //   >
+  //     Resume
+  //   </a>
+  // ) : (
+  //   <></>
+  // );
 
   return (
     <div className="contact-container">
@@ -62,7 +62,15 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
               <h2 className="contact-detail-heading">Hi!</h2>
               <p className="contact-detail-des">{infoDetails.description}</p>
             </div>
-            <div className="download-cv-container">{downloadCV}</div>
+            <div className="download-cv-container">
+              <a
+                target="_blank"
+                href={"shelomoh_cv.pdf"}
+                className="contact-cv clickable-link"
+              >
+                Resume
+              </a>
+            </div>
           </div>
         </div>
 
