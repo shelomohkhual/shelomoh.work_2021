@@ -79,7 +79,7 @@ const Layout = ({ page, children }) => {
           title={siteMetadata.title}
           instagramLink={contactData.instagram}
           twitterLink={contactData.twitter}
-          githubLink={contactData.githubLink}
+          githubLink={contactData.github}
           linkedInLink={contactData.linkedin}
         />
         <Navbar />
