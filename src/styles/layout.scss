@@ -16,7 +16,8 @@ $des-size: 18px;
   .main-container {
     margin: 0;
     // height: calc(85vh - 132px);
-    height: 60vh;
+    // height: auto;
+    height: 65vh;
 
 
     display: flex;
@@ -32,14 +33,14 @@ $des-size: 18px;
       flex-direction: column;
 
       .index-title {
-        font-size: 28px;
+        font-size: 32px;
         word-wrap: break-word;
         font-weight: 400;
       }
 
       .index-des {
-        margin-top: 2vh;
-        font-size: 16px;
+        margin-top: 4vh;
+        font-size: 18px;
         color: $accent-darker;
         transition: color 0.8s;
 
