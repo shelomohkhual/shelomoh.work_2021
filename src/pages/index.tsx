@@ -14,7 +14,7 @@ export default () => (
       }
     `}
     render={(data) => (
-      <Layout page="index">
+      <Layout page="">
         <SEO
           title={data.indexJson.title}
           description={data.indexJson.description}

@@ -32,11 +32,13 @@ const Layout = ({ page, children }) => {
   const siteMetadata = data.site.siteMetadata;
   const contactData = data.infoJson.contact;
 
-  const title = !page
-    ? siteMetadata.title
-    : page !== "index"
-    ? `${page} • ${siteMetadata.title}`
-    : siteMetadata.title;
+  const title =
+    page === "" ? siteMetadata.title : `${page} • ${siteMetadata.title}`;
+  // const title = !page
+  //   ? siteMetadata.title
+  //   : page !== "index"
+  //   ? `${page} • ${siteMetadata.title}`
+  //   : siteMetadata.title;
   const description = siteMetadata.description;
 
   return (
