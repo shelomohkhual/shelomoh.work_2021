@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Shelomoh`,
-    titleTemplate: "Shelomoh",
+    title: `shelomoh`,
+    titleTemplate: "shelomoh",
     description: `Full-Stack Developer • Graphic Designer`,
     url: "https://shelomoh.work",
     image: "./assets/contact.jpg",

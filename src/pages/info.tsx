@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { FluidObject } from "gatsby-image";
 import HeadingBar from "../components/heading-bar";
 import HeadingAttribute from "../components/heading-attribute";
-import SEO from "../components/seo";
 // import useContactData from "components/contactData";
 
 const Info = () => {
@@ -97,8 +96,13 @@ const Info = () => {
   // );
 
   return (
-    <Layout page="info">
-      <SEO title={heading} description={description} project={false} />
+    <Layout
+      page={{
+        pageTitle: "info",
+        pageHeading: heading,
+        pageDes: description,
+      }}
+    >
       <HeadingBar key="info" title="info">
         {emailHeadingAttribute}
         {/* {githubHeadingAttribute}

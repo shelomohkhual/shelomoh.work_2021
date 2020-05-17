@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
 import { StaticQuery, graphql } from "gatsby";
-import SEO from "../components/seo";
 
 export default () => (
   <StaticQuery
@@ -14,12 +13,13 @@ export default () => (
       }
     `}
     render={(data) => (
-      <Layout page="">
-        <SEO
-          title={data.indexJson.title}
-          description={data.indexJson.description}
-          project={false}
-        />
+      <Layout
+        page={{
+          pageTitle: "index",
+          pageHeading: `${data.indexJson.title}`,
+          pageDes: `${data.indexJson.description}`,
+        }}
+      >
         <div className="index-container">
           <h1 className="index-title">{data.indexJson.title}</h1>
           <a className="index-des">
