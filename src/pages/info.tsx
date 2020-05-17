@@ -29,9 +29,6 @@ const Info = () => {
           }
         }
       }
-      // pdf: file(base: { eq: "shelomoh_cv.pdf" }) {
-        publicURL
-      }
     }
   `);
   // const { contactData } = useContactData();
