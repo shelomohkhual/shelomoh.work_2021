@@ -65,6 +65,10 @@ const Work = () => {
             </div>
           );
         })}
+        <div className="last-project-divider">
+          <hr className="divider" />
+          <p className="more-to-come">More to come</p>
+        </div>
       </div>
     </Layout>
   );
