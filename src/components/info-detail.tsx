@@ -68,7 +68,7 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
                 href={"/shelomoh_cv.pdf"}
                 className="contact-cv clickable-link"
               >
-                Resume
+                RESUME
               </a>
             </div>
           </div>

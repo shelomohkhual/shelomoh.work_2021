@@ -64,12 +64,8 @@ const ProjectTemplate = ({ data }) => {
     >
       {/* <SEO title={title} description={description} project={true} /> */}
       <HeadingBar key={title} title={title}>
-        <HeadingAttribute label="client">
-          <span>{client}</span>
-        </HeadingAttribute>
-        <HeadingAttribute label="SERVICE">
-          <span>{service}</span>
-        </HeadingAttribute>
+        <HeadingAttribute label="client">{client}</HeadingAttribute>
+        <HeadingAttribute label="SERVICE">{service}</HeadingAttribute>
       </HeadingBar>
       <Project
         title={title}

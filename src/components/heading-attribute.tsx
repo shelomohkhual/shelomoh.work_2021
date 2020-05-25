@@ -3,8 +3,8 @@ import React from "react";
 const HeadingAttribute = ({ label, children }) => {
   return (
     <div className="attribute-item">
-      <span className="attribute-lable">{label}</span>
-      <span className="attribute-detail">{children}</span>
+      <p className="attribute-lable">{label}</p>
+      <p className="attribute-detail">{children}</p>
     </div>
   );
 };

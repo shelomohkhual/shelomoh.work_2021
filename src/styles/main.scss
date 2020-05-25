@@ -6,6 +6,7 @@
   font-family: $font-stack-5;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  cursor: url("/cursor.cur"), auto;
 }
 
 @keyframes mobileNavbarOpen {
@@ -60,6 +61,7 @@ a {
 a:hover {
   color: $accent;
   transition: color 0.8s;
+  border-bottom: 2.5px;
 }
 
 li {
@@ -75,8 +77,16 @@ img {
 }
 
 .clickable-link {
-  text-decoration: underline;
-  text-decoration-color: #d20000;
+  font-family: Forum;
+  font-size: 24px;
+  border-bottom: 1.5px solid #d20000;
+  transition: border 0.4s;
+
+  :hover {
+    color: #d20000;
+    transition: color 0.4s;
+    border-bottom: 2.5px;
+  }
 }
 
 .clickable-img {
@@ -260,7 +270,7 @@ img {
   background-color: black;
   content: "";
   display: block;
-  height: 3px;
+  height: 2px;
   top: 50%;
   width: 100%;
   margin: 3vh 0;
