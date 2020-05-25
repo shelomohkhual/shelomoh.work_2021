@@ -5,6 +5,7 @@ $dash-height: 5px;
 $dash-space: 1vw;
 
 $title-size: 38px;
+$project-title-size: 24px;
 $title-weight: 400;
 $title-text-tranform: capitalize;
 
@@ -156,7 +157,7 @@ $des-size: 18px;
   }
 
   .feature-topic-container {
-    margin: 18vh 0 auto;
+    margin: 10vh 0 auto;
 
     .feature-topic-double-col-container {
       display: flex;
@@ -195,7 +196,7 @@ $des-size: 18px;
         // background-color: $primary-color;
         transform: scale(1);
         // transition: all 0.6s;
-        // position: initial !important;
+        position: initial !important;
 
         // &::after {
         //   content: "";
@@ -585,6 +586,7 @@ $des-size: 18px;
 
         .heading-title {
           font-size: 5.8vw;
+          line-height: 6vw;
           // word-wrap: break-word;
           // font-weight: 400;
           // line-height: 50px;
@@ -735,9 +737,12 @@ $des-size: 18px;
 
       .project-container {
 
-        .project-topic-title,
+        .project-topic-title {
+          font-size: $project-title-size;
+
+        }
+
         .feature-topic-title {
-          // font-size: 2.4rem;
           font-size: $title-size;
         }
 
@@ -761,7 +766,7 @@ $des-size: 18px;
         }
 
         .feature-topic-container {
-          margin: 10vh 0 auto;
+          margin: 12vh 0 auto;
 
           .feature-topic-single-content-col {
             margin: 10vh 7vw auto;
@@ -821,8 +826,7 @@ $des-size: 18px;
   .heading-title {
     font-family: 'Forum', cursive;
     text-transform: capitalize;
-    // font-size: 6vh;
     font-size: 18vw;
-    // padding-right: 30px;
+    line-height: 18vw;
   }
 }
