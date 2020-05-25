@@ -3,7 +3,7 @@ import TopBar from "./topBar";
 import Navbar from "./navbar";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import SEO from "../components/seo";
+// import SEO from "../components/seo";
 
 const Layout = ({ page, children }) => {
   // const scrollDown = <p className="scroll"> SCROLL - >> </p>;
@@ -39,7 +39,7 @@ const Layout = ({ page, children }) => {
     ? `${page.pageTitle} • ${siteMetadata.title}`
     : siteMetadata.title;
   const description = siteMetadata.description;
-  const pageProject = !page.pageProject ? false : page.pageProject;
+  // const pageProject = !page.pageProject ? false : page.pageProject;
 
   return (
     <>
@@ -67,11 +67,11 @@ const Layout = ({ page, children }) => {
 
         <meta name="twitter:card" content="summary" />
         {/* <meta name="twitter:site" content={twitter} /> */}
-        <SEO
+        {/* <SEO
           title={page.pageHeading}
           description={page.pageDes}
           project={pageProject}
-        />
+        /> */}
       </Helmet>
 
       <div className="layout-container">
