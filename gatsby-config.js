@@ -6,7 +6,7 @@ module.exports = {
     keywords:
       "shelomoh,shelomoh khual,Graphic Designer,Full-stack Developer, Front-end Developer, Portfolio, Gatsby",
     url: "https://shelomoh.work",
-    image: "./assets/contact.jpg",
+    image: "/assets/contact.jpg",
     contact: {
       email: "business@shelomoh.work",
       linkedin: "shelomoh-khual-17258872",

@@ -20,6 +20,13 @@ const Layout = ({ page, children }) => {
         }
       }
       infoJson {
+        image {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
         contact {
           email
           github
@@ -33,9 +40,11 @@ const Layout = ({ page, children }) => {
 
   const siteMetadata = data.site.siteMetadata;
   const contactData = data.infoJson.contact;
-  const imageUrl = page.imageUrl ? page.imageUrl : siteMetadata.image;
-
-  console.log("imageURl:" + imageUrl);
+  const imageUrl = page.imageUrl
+    ? siteMetadata.url + page.imageUrl
+    : data.infoJson.image.childImageSharp.fluid.src
+    ? siteMetadata.url + data.infoJson.image.childImageSharp.fluid.src
+    : siteMetadata.url;
 
   const title = !page.pageTitle
     ? siteMetadata.title
@@ -51,9 +60,6 @@ const Layout = ({ page, children }) => {
   } else {
     path = `${siteMetadata.url + "/" + page.slug}`;
   }
-
-  console.log("slug:" + page.slug);
-  console.log("path:" + path);
 
   return (
     <>
