@@ -31,7 +31,6 @@ const Layout = ({ page, children }) => {
     }
   `);
 
-  const path = window.location.href;
   const siteMetadata = data.site.siteMetadata;
   const contactData = data.infoJson.contact;
   const imageUrl = page.imageUrl ? page.imageUrl : siteMetadata.image;
@@ -43,7 +42,18 @@ const Layout = ({ page, children }) => {
     : page.pageTitle !== "index"
     ? `${page.pageTitle} | ${siteMetadata.title}`
     : siteMetadata.title;
-  // const pageProject = !page.pageProject ? false : page.pageProject;
+
+  let path = "";
+  if (page.slug === undefined) {
+    path = siteMetadata.url;
+  } else if (page.slug !== "info" && page.slug !== "work") {
+    path = `${siteMetadata.url + "/work/" + page.slug}`;
+  } else {
+    path = `${siteMetadata.url + "/" + page.slug}`;
+  }
+
+  console.log("slug:" + page.slug);
+  console.log("path:" + path);
 
   return (
     <>

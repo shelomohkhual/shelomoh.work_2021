@@ -35,6 +35,7 @@ const Work = () => {
         pageTitle: "work",
         pageHeading: "selected work",
         pageDes: "selected work",
+        slug: "work",
       }}
     >
       <HeadingBar title="selected work">

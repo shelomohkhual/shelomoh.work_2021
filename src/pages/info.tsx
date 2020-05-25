@@ -101,6 +101,7 @@ const Info = () => {
         pageTitle: "info",
         pageHeading: heading,
         pageDes: description,
+        slug: "info",
       }}
     >
       <HeadingBar key="info" title="info">

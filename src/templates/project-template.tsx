@@ -4,7 +4,6 @@ import Layout from "../components/layout";
 import { Project } from "../components/project";
 import HeadingBar from "../components/heading-bar";
 import HeadingAttribute from "../components/heading-attribute";
-import { FluidObject } from "gatsby-image";
 // import { FluidObject } from "gatsby-image";
 
 export const query = graphql`
@@ -62,6 +61,7 @@ const ProjectTemplate = ({ data }) => {
         pageDes: description,
         pageProject: true,
         imageUrl: coverImg.fluid.src,
+        slug: project.slug,
       }}
     >
       {/* <SEO title={title} description={description} project={true} /> */}
