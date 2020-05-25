@@ -16,6 +16,7 @@ const Layout = ({ page, children }) => {
           url
           description
           image
+          keywords
         }
       }
       infoJson {
@@ -30,42 +31,49 @@ const Layout = ({ page, children }) => {
     }
   `);
 
+  const path = window.location.href;
   const siteMetadata = data.site.siteMetadata;
   const contactData = data.infoJson.contact;
+  const imageUrl = page.imageUrl ? page.imageUrl : siteMetadata.image;
+
+  console.log("imageURl:" + imageUrl);
 
   const title = !page.pageTitle
     ? siteMetadata.title
     : page.pageTitle !== "index"
-    ? `${page.pageTitle} • ${siteMetadata.title}`
+    ? `${page.pageTitle} | ${siteMetadata.title}`
     : siteMetadata.title;
-  const description = siteMetadata.description;
   // const pageProject = !page.pageProject ? false : page.pageProject;
 
   return (
     <>
       <Helmet>
-        <html lang="en" />
         <title>{title}</title>
-        <meta name="description" content={description} />
-
-        {/* <html lang={en} /> */}
-        {/* <link rel="canonical" href={href} /> */}
-        <meta name="docsearch:version" content="2.0" />
-        <meta
+        <meta name="description" content={siteMetadata.description} />
+        <meta name="keywords" content={siteMetadata.keywords} />
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={siteMetadata.description} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content={path} />
+        <link rel="canonical" href={path} />
+        {/* <meta name="docsearch:version" content="2.0" /> */}
+        {/* <meta
           name="viewport"
           content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"
-        />
-        <meta charSet="utf-8" />
+        /> */}
+        {/* <meta charSet="utf-8" /> */}
         {/* <meta property="og:url" content={href} /> */}
-        <meta property="og:type" content="website" />
+        {/* <meta property="og:type" content="website" /> */}
         {/* <meta property="og:locale" content={locale} /> */}
-        <meta property="og:site_name" content={title} />
+        {/* <meta property="og:site_name" content={title} /> */}
         {/* <meta property="og:image" content={`${siteUrl}${gatsbyIcon}`} /> */}
-        <meta property="og:image:alt" content="shelomoh.work" />
+        {/* <meta property="og:image:alt" content="shelomoh.work" />
         <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
+        <meta property="og:image:height" content="512" /> */}
 
-        <meta name="twitter:card" content="summary" />
+        {/* <meta name="twitter:card" content="summary" /> */}
         {/* <meta name="twitter:site" content={twitter} /> */}
         {/* <SEO
           title={page.pageHeading}
