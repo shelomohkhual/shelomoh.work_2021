@@ -599,7 +599,6 @@ $des-size: 18px;
 
       .project-preview-container {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
         align-items: stretch;
@@ -675,14 +674,18 @@ $des-size: 18px;
         font-size: 1.2rem;
       }
 
+      // Hide scrollbar
       .project-container::-webkit-scrollbar,
       .contact-container::-webkit-scrollbar {
         display: none;
       }
 
-      .project-container {
+      .project-container,
+      .contact-container {
+        overflow-x: hidden;
         overflow-y: scroll;
         -ms-overflow-style: none;
+        scrollbar-width: none; // Hide scrollbar for Firefox
       }
 
       .contact-container {
