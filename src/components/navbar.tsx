@@ -1,5 +1,6 @@
 import TransitionLink from "gatsby-plugin-transition-link/AniLink";
 import React from "react";
+import { accentHexColor } from "../components/layout";
 
 export const workPathsLocation = (props) => {
   const currentLocation = props.pathname;
@@ -13,7 +14,7 @@ const Navbar = () => {
     <div className="navbar">
       <TransitionLink
         paintDrip
-        hex="#d20000"
+        hex={accentHexColor}
         to="/work/"
         className="navbar-item-link-container"
         activeClassName="active"
@@ -23,7 +24,7 @@ const Navbar = () => {
       </TransitionLink>
       <TransitionLink
         paintDrip
-        hex="#d20000"
+        hex={accentHexColor}
         to="/info/"
         className="navbar-item-link-container"
         activeClassName="active"

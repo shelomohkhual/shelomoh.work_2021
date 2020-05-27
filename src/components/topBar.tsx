@@ -9,6 +9,7 @@ import {
 
 import { faBars, faSlash } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import { accentHexColor } from "../components/layout";
 // import { useStaticQuery, graphql } from "gatsby";
 
 interface TopBarProps {
@@ -132,7 +133,7 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
           <div className="topbar-item">
             <TransitionLink
               paintDrip
-              hex="#d20000"
+              hex={accentHexColor}
               to="/"
               className="topbar-item-link-container"
               activeClassName="active"
@@ -182,19 +183,19 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
             />
           </span>
           <div className={mobileNavBarContainer()}>
-            <TransitionLink paintDrip hex="#d20000" to="/">
+            <TransitionLink paintDrip hex={accentHexColor} to="/">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">HOME</span>
               </p>
             </TransitionLink>
 
-            <TransitionLink paintDrip hex="#d20000" to="/work">
+            <TransitionLink paintDrip hex={accentHexColor} to="/work">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">Work</span>
               </p>
             </TransitionLink>
 
-            <TransitionLink paintDrip hex="#d20000" to="/info">
+            <TransitionLink paintDrip hex={accentHexColor} to="/info">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">info</span>
               </p>

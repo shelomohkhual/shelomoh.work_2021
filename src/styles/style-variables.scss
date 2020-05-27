@@ -1,33 +1,13 @@
-$font-stack-1: "Space Mono",
-monospace,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
+$primary-font: "Inter",
 Roboto,
 Helvetica,
 Arial,
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol";
-
-$font-stack-2: -apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-Helvetica;
-
-$font-stack-3: "Inria Sans",
 sans-serif;
 
-$font-stack-4: "Roboto";
+$heading-font: "Forum",
+cursive;
 
-$font-stack-5: "Inter";
-$heading-font: "Forum";
-
-// $primary-color:#f3f3f3;
-// $secondary-color:#383838;
-$accent: #d20000;
-$accent-darker: #b00000;
+$accent: #D2453F;
+$accent-darker: rgb(133, 39, 36);
 $primary-color: #f6f6f6;
 $secondary-color: #1f1f1f;

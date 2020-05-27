@@ -1,12 +1,24 @@
 @import "style-variables";
 @import "layout";
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  font-family: $font-stack-5;
+}
+
+* {
+  font-family: $primary-font;
   margin: 0;
+
   -webkit-font-smoothing: antialiased;
+
+  // Customizing Cusor
   cursor: url("/cursor.cur"), auto;
+}
+
+::selection {
+  background-color: $accent;
 }
 
 @keyframes mobileNavbarOpen {
@@ -18,28 +30,6 @@
   to {
     height: 100%;
     opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes mobileNavbarClose {
-  from {
-    height: 100%;
-    opacity: 1;
-  }
-
-  to {
-    height: 0%;
-    opacity: 0;
   }
 }
 
@@ -76,14 +66,36 @@ img {
   left: 50%;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mobileNavbarClose {
+  from {
+    height: 100%;
+    opacity: 1;
+  }
+
+  to {
+    height: 0%;
+    opacity: 0;
+  }
+}
+
 .clickable-link {
-  font-family: Forum;
+  font-family: $heading-font;
   font-size: 24px;
-  border-bottom: 1.5px solid #d20000;
+  border-bottom: 1.5px solid $accent;
   transition: border 0.4s;
 
   :hover {
-    color: #d20000;
+    color: $accent;
     transition: color 0.4s;
     border-bottom: 2.5px;
   }
@@ -257,7 +269,7 @@ img {
 }
 
 .top-divider {
-  background-color: black;
+  background-color: $secondary-color;
   content: "";
   display: block;
   height: 3px;
@@ -267,7 +279,7 @@ img {
 }
 
 .divider {
-  background-color: black;
+  background-color: $secondary-color;
   content: "";
   display: block;
   height: 2px;
@@ -277,7 +289,7 @@ img {
 }
 
 .bottom-divider {
-  background-color: black;
+  background-color: $secondary-color;
   content: "";
   display: block;
   height: 3px;
