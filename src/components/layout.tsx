@@ -3,7 +3,8 @@ import TopBar from "./topBar";
 import Navbar from "./navbar";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-// import SEO from "../components/seo";
+
+export const accentHexColor = "#D2453F";
 
 const Layout = ({ page, children }) => {
   // const scrollDown = <p className="scroll"> SCROLL - >> </p>;
@@ -74,28 +75,6 @@ const Layout = ({ page, children }) => {
         <meta property="og:locale" content="en_US" />
         <meta property="og:url" content={path} />
         <link rel="canonical" href={path} />
-        {/* <meta name="docsearch:version" content="2.0" /> */}
-        {/* <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"
-        /> */}
-        {/* <meta charSet="utf-8" /> */}
-        {/* <meta property="og:url" content={href} /> */}
-        {/* <meta property="og:type" content="website" /> */}
-        {/* <meta property="og:locale" content={locale} /> */}
-        {/* <meta property="og:site_name" content={title} /> */}
-        {/* <meta property="og:image" content={`${siteUrl}${gatsbyIcon}`} /> */}
-        {/* <meta property="og:image:alt" content="shelomoh.work" />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" /> */}
-
-        {/* <meta name="twitter:card" content="summary" /> */}
-        {/* <meta name="twitter:site" content={twitter} /> */}
-        {/* <SEO
-          title={page.pageHeading}
-          description={page.pageDes}
-          project={pageProject}
-        /> */}
       </Helmet>
 
       <div className="layout-container">

@@ -1,11 +1,12 @@
 import React from "react";
 import TransitionLink from "gatsby-plugin-transition-link/AniLink";
 import Img from "gatsby-image";
+import { accentHexColor } from "../components/layout";
 
 const ProjectPreview = ({ title, service, slug, imageData }) => (
   <TransitionLink
     paintDrip
-    hex="#d20000"
+    hex={accentHexColor}
     to={`/work/${slug}/`}
     className="project-preview-container"
   >

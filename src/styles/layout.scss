@@ -11,6 +11,7 @@ $title-text-tranform: capitalize;
 
 $des-size: 18px;
 
+// Default Styles and Mobile View  ==============
 .layout-container {
   margin: 4vh 8vw;
 
@@ -19,7 +20,6 @@ $des-size: 18px;
     // height: calc(85vh - 132px);
     // height: auto;
     height: 65vh;
-
 
     display: flex;
     flex-wrap: wrap;
@@ -106,14 +106,13 @@ $des-size: 18px;
   }
 }
 
+// Project & Contact container common style ==============
 .project-container,
 .contact-container {
   order: 2;
   flex-basis: 100%;
   margin-top: 3vh;
   overflow-y: scroll;
-
-
 
   .project-des,
   .feature-topic-des,
@@ -127,6 +126,7 @@ $des-size: 18px;
   }
 }
 
+// Projec container style ==============
 .project-container {
   .project-preview-wrapper {
     display: grid;
@@ -231,6 +231,7 @@ $des-size: 18px;
   }
 }
 
+// Contact container style ==============
 .contact-container {
   .contact-image-container {
     flex-basis: 35%;
@@ -240,6 +241,7 @@ $des-size: 18px;
     background-color: $primary-color;
     opacity: 0.9;
 
+    // B/W effecton the image before hovering
     img {
       mix-blend-mode: luminosity;
     }
@@ -277,7 +279,7 @@ $des-size: 18px;
     .contact-title {
       font-size: 38px;
       margin-top: 0;
-      font-family: Forum;
+      font-family: $heading-font;
       text-transform: $title-text-tranform;
     }
   }
@@ -674,23 +676,44 @@ $des-size: 18px;
         font-size: 1.2rem;
       }
 
-      // Hide scrollbar
+      // Project & Contact container common style ==============
       .project-container::-webkit-scrollbar,
       .contact-container::-webkit-scrollbar {
-        display: none;
+        display: none; // Hide scrollbar
       }
 
       .project-container,
       .contact-container {
         overflow-x: hidden;
         overflow-y: scroll;
-        -ms-overflow-style: none;
+        -ms-overflow-style: none; // Hide scrollbar for IE
         scrollbar-width: none; // Hide scrollbar for Firefox
       }
 
+      .project-container,
+      .contact-container {
+        flex-basis: 75%;
+        order: 2;
+
+        .project-des,
+        .feature-topic-des,
+        .contact-detail-des {
+          font-size: $des-size;
+          line-height: 28px;
+          font-weight: 300;
+        }
+      }
+
+      // Contact container common style ==============
       .contact-container {
         display: flex;
         flex-wrap: wrap;
+
+        .contact-detail-container {
+          flex-basis: 65%;
+          padding-left: 2vw;
+          margin: 0;
+        }
       }
 
       .contact-content-col {
@@ -724,25 +747,10 @@ $des-size: 18px;
         margin-top: 0;
       }
 
-      .project-container,
-      .contact-container {
-        flex-basis: 75%;
-        order: 2;
-
-        .project-des,
-        .feature-topic-des,
-        .contact-detail-des {
-          font-size: $des-size;
-          line-height: 28px;
-          font-weight: 300;
-        }
-      }
-
+      // Project container style ==============
       .project-container {
-
         .project-topic-title {
           font-size: $project-title-size;
-
         }
 
         .feature-topic-title {
@@ -810,14 +818,6 @@ $des-size: 18px;
           }
         }
       }
-
-      .contact-container {
-        .contact-detail-container {
-          flex-basis: 65%;
-          padding-left: 2vw;
-          margin: 0;
-        }
-      }
     }
   }
 }
@@ -827,7 +827,7 @@ $des-size: 18px;
   margin-bottom: 3vh;
 
   .heading-title {
-    font-family: 'Forum', cursive;
+    font-family: $heading-font;
     text-transform: capitalize;
     font-size: 18vw;
     line-height: 18vw;
