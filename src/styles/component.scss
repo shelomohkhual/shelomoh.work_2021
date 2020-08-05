@@ -1,0 +1,31 @@
+.product-preview-image {
+    width: 20vw;
+    height: 20vw;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .product-preview-container {
+        margin: 0px 0px 60px !important;
+    }
+
+    .product-preview-image {
+        width: 29vw;
+        height: 29vw;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .product-preview-image {
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-preview-image {
+        width: 85vw;
+        height: 85vw;
+    }
+}
