@@ -1,0 +1,49 @@
+[{
+    "slug": "2020-preset-pack",
+    "title": "2020 Preset Pack",
+    "images": ["./assets/product/Cine+lightroom+presets+2020.jpg"],
+    "categories": [{
+        "category-name": "Lightroom Preset"
+    }],
+    "short-description": "Cool Presets for 2020",
+    "description": "Capping off Minimalissimo's trilogy with a keen eye for architecture and interior design, Volume Nº3—the curated home edition—welcomes readers to explore a life of simplicity through minimalist and mindful design for the home. This volume features a mix of architectural and interior photography, profiles, and essays, we revisit iconic works by some of the world‘s most renowned designers, architects and stylists, setting a strong foundation with classics.",
+    "file-detail": {
+        "files": "Preset, Installation",
+        "format": "XMP",
+        "Compatible": "Lighroom"
+    },
+    "price": 20,
+    "purchase-term": "Using Shopify Cart"
+}, {
+    "slug": "wedding-preset-pack",
+    "title": "Wedding Preset Pack",
+    "images": ["./assets/product/rustic-barn.jpg"],
+    "categories": [{
+        "category-name": "Lightroom Preset"
+    }],
+    "short-description": "Wedding warm color Presets",
+    "description": "Grainy Preset with Skin Colors",
+    "file-detail": {
+        "files": "Preset, Installation",
+        "format": "XMP",
+        "Compatible": "Lighroom"
+    },
+    "price": 10,
+    "purchase-term": "Using Shopify Cart"
+}, {
+    "slug": "warm-flim-mobile-preset",
+    "title": "Warm Flim Mobile Preset",
+    "images": ["./assets/product/09bee3f152d8bac4cec869151642454c.jpg"],
+    "categories": [{
+        "category-name": "Lightroom Preset"
+    }],
+    "short-description": "Warm Flim look preset",
+    "description": "Warm Flim look preset",
+    "file-detail": {
+        "files": "Preset, Installation",
+        "format": "XMP",
+        "Compatible": "Lighroom"
+    },
+    "price": 10,
+    "purchase-term": "Using Shopify Cart"
+}]
