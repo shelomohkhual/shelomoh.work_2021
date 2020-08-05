@@ -20,7 +20,16 @@ const Navbar = () => {
         activeClassName="active"
         getProps={({ location }) => workPathsLocation(location)}
       >
-        <span className="navbar-item-link ">Work</span>
+        <span className="navbar-item-link">Work</span>
+      </TransitionLink>
+      <TransitionLink
+        paintDrip
+        hex={accentHexColor}
+        to="/shop/"
+        className="navbar-item-link-container"
+        activeClassName="active"
+      >
+        <span className="navbar-item-link ">shop</span>
       </TransitionLink>
       <TransitionLink
         paintDrip
