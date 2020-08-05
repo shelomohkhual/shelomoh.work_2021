@@ -28,7 +28,6 @@ const Work = () => {
   `);
 
   const projects = data.allProjectsJson.edges;
-
   return (
     <Layout
       page={{

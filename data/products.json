@@ -10,7 +10,7 @@
     "file-detail": {
         "files": "Preset, Installation",
         "format": "XMP",
-        "Compatible": "Lighroom"
+        "compatible": "Lighroom"
     },
     "price": 20,
     "purchase-term": "Using Shopify Cart"
@@ -26,7 +26,7 @@
     "file-detail": {
         "files": "Preset, Installation",
         "format": "XMP",
-        "Compatible": "Lighroom"
+        "compatible": "Lighroom"
     },
     "price": 10,
     "purchase-term": "Using Shopify Cart"
@@ -42,7 +42,7 @@
     "file-detail": {
         "files": "Preset, Installation",
         "format": "XMP",
-        "Compatible": "Lighroom"
+        "compatible": "Lighroom"
     },
     "price": 10,
     "purchase-term": "Using Shopify Cart"
