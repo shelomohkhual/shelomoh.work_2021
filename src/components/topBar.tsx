@@ -195,6 +195,12 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
               </p>
             </TransitionLink>
 
+            <TransitionLink paintDrip hex={accentHexColor} to="/shop">
+              <p className="mobile-navbar-item-link-container">
+                <span className="mobile-navbar-item-link ">shop</span>
+              </p>
+            </TransitionLink>
+
             <TransitionLink paintDrip hex={accentHexColor} to="/info">
               <p className="mobile-navbar-item-link-container">
                 <span className="mobile-navbar-item-link ">info</span>
