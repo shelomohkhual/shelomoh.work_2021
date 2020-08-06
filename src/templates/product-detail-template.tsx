@@ -40,6 +40,8 @@ export const query = graphql`
       title
       slug
       price
+      purchase_term
+      description
       short_description
       images {
         childImageSharp {

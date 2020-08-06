@@ -21,7 +21,7 @@ export interface ProductInterface {
   categories: ProductCategoryInterface[];
   shortDes: string;
   des: string;
-  fileDetail: FileDetailInteface[];
+  fileDetail: FileDetailInteface;
   price: number;
   purchaseTerm: string;
 }
@@ -84,7 +84,7 @@ export const ProductViewContainer = ({
     <div className="product-container">
       <span>
         <TransitionLink fade to="/shop">
-          All Products{" "}
+          All Products
         </TransitionLink>
         {path}
       </span>

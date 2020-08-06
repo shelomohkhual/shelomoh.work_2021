@@ -1,7 +1,9 @@
 import React from "react";
-import Img from "gatsby-image";
+import Img, { FluidObject } from "gatsby-image";
+import { ProductInterface } from "./product-view-container";
 
 export const ProductDetail = ({ product }) => {
+  const pDetail: ProductInterface = product;
   const tdStyle: React.CSSProperties = {
     fontWeight: "600",
     paddingRight: "15px",
@@ -22,7 +24,7 @@ export const ProductDetail = ({ product }) => {
   return (
     <div>
       <h1 style={{ fontWeight: "normal", marginBottom: "30px" }}>
-        2020 Preset Pack
+        {pDetail.title}
       </h1>
       <div
         style={{
@@ -33,7 +35,6 @@ export const ProductDetail = ({ product }) => {
         <div
           style={{
             display: "flex",
-
             flexDirection: "row",
           }}
         >
@@ -44,7 +45,9 @@ export const ProductDetail = ({ product }) => {
               display: "inline-table",
             }}
           >
-            <Img fluid={product.images[0]} />
+            {pDetail.images.map((img: FluidObject) => (
+              <Img fluid={img} />
+            ))}
           </div>
           <div
             style={{
@@ -57,28 +60,21 @@ export const ProductDetail = ({ product }) => {
                 lineHeight: "28px",
               }}
             >
-              Capping off Minimalissimo's trilogy with a keen eye for
-              architecture and interior design, Volume Nº3—the curated home
-              edition—welcomes readers to explore a life of simplicity through
-              minimalist and mindful design for the home. This volume features a
-              mix of architectural and interior photography, profiles, and
-              essays, we revisit iconic works by some of the world‘s most
-              renowned designers, architects and stylists, setting a strong
-              foundation with classics.
+              {pDetail.des}
             </p>
             <hr className="divider" />
             <table>
               <tr>
                 <td style={tdStyle}>Files</td>
-                <td>Presets, Installation</td>
+                <td>{pDetail.fileDetail.files}</td>
               </tr>
               <tr>
                 <td style={tdStyle}>Format</td>
-                <td>XMP</td>
+                <td> {pDetail.fileDetail.format}</td>
               </tr>
               <tr>
                 <td style={tdStyle}>Compatible</td>
-                <td>Lightroom</td>
+                <td> {pDetail.fileDetail.compatible}</td>
               </tr>
             </table>
             <hr className="divider" />
@@ -89,9 +85,9 @@ export const ProductDetail = ({ product }) => {
                 flexWrap: "wrap",
               }}
             >
-              <div style={buttonStyle}>$ 20</div>
+              <div style={buttonStyle}>$ {pDetail.price}</div>
               <p style={{ margin: "10px", opacity: "0.5" }}>
-                Using Shopify Cart
+                {pDetail.purchaseTerm}
               </p>
             </div>
           </div>
