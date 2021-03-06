@@ -40,4 +40,19 @@
     "images": []
   }],
   "result": "this will be the take away from the project that you have done or the achievements12 "
-}]
+},
+{
+  "slug": "newyear-bibleverse",
+  "title": "New-year Bible-verse",
+  "client": "CICC",
+  "service": "Development and Hosting",
+  "description": "Every new",
+  "coverImg": "./assets/NewyearBibleVerseCover.jpg",
+  "featureTopics": [{
+      "title": "Overview",
+      "des": "Build in Ruby on Rails API and TypeScript React",
+      "imgs": []
+    }
+   ]
+  }
+]

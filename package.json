@@ -31,7 +31,6 @@
     "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-sharp": "^2.1.14",
     "gsap": "^3.2.6",
-    "node-sass": "^4.13.1",
     "prettier": "^1.13.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
