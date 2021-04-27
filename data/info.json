@@ -1,5 +1,5 @@
 [{
-  "image": "./assets/contact.jpg",
+  "image": "./assets/info/contact.jpg",
   "heading": "Shelomoh Khual",
   "description": "I’m a designer and creative developer — currently based in Malaysia.\n\nI love creating interactive solutions with a strong emphasis on clean, simple and usable design.",
   "contact": {
@@ -9,5 +9,5 @@
     "instagram": "shelomoh",
     "twitter": "shelomohkhual"
   },
-  "cv": "./assets/shelomoh_cv.pdf"
+  "cv": "./assets/CV/shelomoh_cv.pdf"
 }]
