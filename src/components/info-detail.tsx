@@ -65,7 +65,7 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
             <div className="download-cv-container">
               <a
                 target="_blank"
-                href={"/shelomoh_cv.pdf"}
+                href={"/shelomoh_cv-2021.pdf"}
                 className="contact-cv clickable-link"
               >
                 RESUME
