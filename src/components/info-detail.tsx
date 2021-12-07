@@ -99,7 +99,7 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
           </div>
           <div className="contact-content-col">
 
-            <div style={{ marginBottom: '0.5rem' }}>
+            <div style={{ marginBottom: '1.5rem' }}>
               <h5>
                 Full-Stack Developer :{" "}
                 <a
@@ -117,7 +117,7 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
               </p>
             </div>
 
-            <div style={{ marginBottom: '0.5rem' }}>
+            <div style={{ marginBottom: '1.5rem' }}>
               <h5>
                 Full-Stack Developer :{" "}
                 <a
