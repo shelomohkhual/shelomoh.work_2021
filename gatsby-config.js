@@ -9,7 +9,7 @@ module.exports = {
     image: "/assets/info/contact.jpg",
     contact: {
       email: "business@shelomoh.work",
-      linkedin: "shelomoh-khual-17258872",
+      linkedin: "shelomohkhual",
       github: "shelomohkhual",
       instagram: "shelomoh",
       twitter: "shelomohkhual",

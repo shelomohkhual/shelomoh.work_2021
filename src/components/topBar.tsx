@@ -102,7 +102,7 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
       "https://www.instagram.com/" + this.props.instagramLink;
     const githubLink = "https://www.github.com/" + this.props.githubLink;
 
-    // const linkedInLink = "https://www.linkedin.com/in/shelomoh-khual-17258872";
+    // const linkedInLink = "https://www.linkedin.com/in/shelomohkhual";
     // const instagramLink = "https://www.instagram.com/shelomoh";
     // const githubLink = "https://www.github.com/shelomohkhual";
 
