@@ -98,8 +98,47 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
             </div>
           </div>
           <div className="contact-content-col">
+
+            <div style={{ marginBottom: '0.5rem' }}>
+              <h5>
+                Full-Stack Developer :{" "}
+                <a
+                  className="clickable-link"
+                  target="_blank"
+                  href="https://mindset.swiss"
+                >
+                  Mindset Sdn Bhd
+                </a>
+              </h5>
+              <span className="contact-year">Nov 2021 - Present</span>
+              <p>
+                Implement scripting with NodeJS for ecommerce warehouse integration
+                and Build ecommerce websites using Sharetribe on top of ReactJS Library.
+              </p>
+            </div>
+
+            <div style={{ marginBottom: '0.5rem' }}>
+              <h5>
+                Full-Stack Developer :{" "}
+                <a
+                  className="clickable-link"
+                  target="_blank"
+                  href="https://qworky.tech"
+                >
+                  Qworky
+                </a>
+              </h5>
+              <span className="contact-year">Nov 2020 - Nov 2021</span>
+              <p>
+                As fullstack developer, I contribute on creating UI components
+                and implementing new features for better experience for users
+                and developers on variety of web apps using MERN stack.
+              </p>
+            </div>
+
+            <div>
             <h5>
-              Full-stack Developer :{" "}
+                Web {'&'} Mobile Developer :{" "}
               <a
                 className="clickable-link"
                 target="_blank"
@@ -118,6 +157,7 @@ const InfoDetail = (infoDetails: InfoPageInterface) => {
               help the new company about branding, designing webpage and able to
               publish through wordpress.
             </p>
+            </div>
           </div>
         </div>
 

@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: "shelomoh",
     description: `Full-Stack Developer • Graphic Designer`,
     keywords:
-      "shelomoh,shelomoh khual,Graphic Designer,Full-stack Developer, Front-end Developer, Portfolio, Gatsby",
+      "shelomoh, shelomoh khual, Graphic Designer, Full-stack Developer, Front-end Developer, Portfolio, Gatsby",
     url: "https://shelomoh.work",
     image: "/assets/info/contact.jpg",
     contact: {
