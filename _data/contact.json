@@ -1,0 +1,21 @@
+{
+    "title": "Come say hello! 👋",
+    "platforms": [
+        {
+            "name": "LinkedIn",
+            "link": "www.linkedIn.com"
+        },
+        {
+            "name": "Github",
+            "link": "www.github.com"
+        },
+        {
+            "name": "Instagram",
+            "link": "www.instagram.com"
+        }
+    ],
+    "alternative": {
+        "text": "or if you feeling old fashioned, send me an email",
+        "link": "hello@shelomoh.work"
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "shelomoh.work",
+  "version": "1.0.0",
+  "repository": "git@github.com:shelomohkhual/shelomoh.work.git",
+  "author": "Shelomoh <49126015+shelomohkhual@users.noreply.github.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "rm -rf _site && npx eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

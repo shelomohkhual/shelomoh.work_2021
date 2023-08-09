@@ -1,0 +1,31 @@
+{
+    "title": "Credits",
+    "credits": [
+        {
+            "heading": "Font",
+            "contents": [
+                {
+                    "title": "Manrope",
+                    "link": "https://www.googlefonts.com"
+                }
+            ]
+        },
+        {
+            "title": "Development",
+            "contents": [
+                {
+                    "title": "HTML"
+                }
+            ]
+        },
+        {
+            "title": "Design And Code",
+            "contents": [
+                {
+                    "title": "Shelomoh",
+                    "link": "https://www.googlefonts.com"
+                }
+            ]
+        }
+    ]
+}

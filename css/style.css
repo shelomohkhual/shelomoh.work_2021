@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap");
+
+:root {
+	--primary-color: #e2e2e2;
+	--accent-color: #020202;
+
+	--border: 2px solid var(--accent-color);
+	--padding: 5px 20px;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+
+	font-family: "Manrope", sans-serif;
+}
+
+.main-layout {
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+
+	align-content: center;
+}
+
+.btn {
+	text-decoration: none;
+
+	border-radius: 50px;
+	border: var(--border);
+
+	padding: var(--padding);
+	margin: 10px 0px;
+
+	text-transform: uppercase;
+	color: var(--accent-color);
+
+	height: fit-content;
+
+	font-family: Manrope;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.btn:hover {
+	color: var(--primary-color);
+	background: var(--accent-color);
+}
+
+.intro-title {
+	color: #020202;
+	font-family: Manrope;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.intro-description {
+	color: #020202;
+	font-family: Manrope;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.contact-text {
+	color: #020202;
+	font-family: Manrope;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.credit-heading {
+	color: #020202;
+	font-family: Manrope;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.credit-value {
+	color: #020202;
+	font-family: Manrope;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+section#intro {
+	height: 100vh;
+}
+
+section#projects {
+	min-height: 80vh;
+
+	background: black;
+
+	color: white;
+}
+
+.horizontal-text {
+	color: #e2e2e2;
+	font-family: Manrope;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 39px; /* 97.5% */
+	text-transform: uppercase;
+}
+
+.project-title {
+	font-family: Manrope;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.project-title:hover {
+	background: white;
+	color: black;
+}
