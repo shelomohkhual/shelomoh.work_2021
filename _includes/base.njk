@@ -9,91 +9,125 @@
     <meta name="description" content="{{ seo.siteDescription }}">
     <meta name="keywords" content="{{ seo.siteKeywords }}">
     <meta name="author" content="{{ seo.siteAuthor }}">
-    <!-- Include other meta tags and stylesheets as needed -->
+    <!-- STYLE -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css" />
+    <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css" />
     <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- LOCO -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <!-- <script src="js/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="css/locomotive-scroll.css" /> -->
+    <!-- GSAP -->
+    <!-- <!-- <script src="js/gsap-latest-beta.min.js"></script> -->
+    <!-- <script src="js/gsap-latest-beta.min.js"></script>
+    <script src="js/scrollTrigger.min.js"></script> -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
-    <main>
-        <div>
-            <div class="">
-                <section id='intro' class="bg-black text-white">
-                    <div class="container mx-auto px-4 py-8 grid grid-cols-4 grid-rows-7 gap-4 items-end h-full">
-                        <div class="col-start-1">
-                            <img src="assets/logo.svg" alt="logo" />
-                        </div>
-                        <div class="col-start-4">
-                        </div>
-                        <div class="col-span-4 row-span-2 col-start-1 row-start-2 intro-title">
-                            <a href={{ intro.link }} target="_blank">
-                                {{ intro.greeting | safe }}
-                            </a>
-                            <br />
-                            {{ intro.title }}
-                        </div>
-                        <div class="col-span-4 row-span-2 col-start-1 row-start-4 intro-description">
-                            {{ intro.description | safe }}
-                        </div>
-                        <div class="col-span-4 row-span-2 col-start-1 row-start-6 contact-text">
-                            <h6 class="">
-                                {{ contact.title }}
-                            </h6>
+    <main class="smooth-scroll">
+        <section data-color="white" id='intro' class="section min-h-screen">
+            <div class="container mx-auto px-4 py-8 grid grid-cols-4 grid-rows-7 gap-4 items-end h-screen">
+                <div class="col-start-1">
+                    <img src="assets/logo.svg" alt="logo" />
+                </div>
+                <div class="col-start-4">
+                </div>
+                <div class="col-span-4 row-span-2 col-start-1 row-start-2 intro-title">
+                    <a href={{ intro.link }} target="_blank" class="
+                                    hover:text-[#0000E0]
+                                    after:content-['_↗']
+                                    after:align-bottom
+                                    flip-animate
+                    ">
+                        {{ intro.greeting | safe }}
+                    </a>
+                    <br />
+                    {{ intro.title }}
+                </div>
+                <div class="col-span-4 row-span-2 col-start-1 row-start-4 intro-description">
+                    {{ intro.description | safe }}
+                </div>
+                <div class="col-span-4 row-span-2 col-start-1 row-start-6 contact-text">
+                    <h6 class="">
+                        {{ contact.title }}
+                    </h6>
 
-                            <div class="my-6">
-                                {% for platform in contact.platforms %}
-                                <a href={{ platform.link }} target="_blank" class="btn border-2 rounded-full border-white
-                                    hover:bg-white
+                    <div class="my-6">
+                        {% for platform in contact.platforms %}
+                        <a href={{ platform.link }} target="_blank" class="btn border-2 rounded-full border-black
+                        after:content-['_↗']
+                        after:align-bottom
+                       hover:cursor:none
+                                    hover:text-white
+                                    hover:bg-[#0000E0]
                                     hover:text-black
-                                    ">{{
-                                    platform.name }}</a>
-                                {% endfor %}
-                            </div>
+                                    hover:no-underline
+                                    flip-animate
+                                    ">
 
-                            <h6>
-                                <a href="mailto: {{contact.alternative.link}}" class="
-                                    hover:underline">
-                                    {{ contact.alternative.text }}
-                                </a>
-                            </h6>
-                        </div>
-                    </div>
-                </section>
-
-                <section id='projects' class="">
-                    <div class="scrolling_text_wrapper w-mx bg-black text-white py-8 my-4 horizontal-text ">
-                        <div class="scrolling_text">
-                            {% for _ in range(8) %}
-                            <span>
-                                {{ projects.title }} • </span>
-                            {% endfor %}
-
-                        </div>
-                    </div>
-
-                    <div class="container mx-auto px-4 grid grid-cols-4 gap-4 grid-rows-2">
-                        {% for project in projects.projects %}
-                        <a href={{ project.link }} target="_blank" class="border-y-2 col-span-4 col-start-1 row-start-{{loop.index}} p-6 project-title flex justify-between
-                            hover:text-white
-                            ">
-                            <span>
-                                {{loop.index}}. {{ project.title }}
-                            </span>
-                            <span>
-                                <span>
-                                    ->
-                                </span>
+                            <span data-hover={{platform.name}}>
+                                {{ platform.name }}</span>
                         </a>
                         {% endfor %}
                     </div>
+
+                    <h6>
+                        <a href="mailto: {{contact.alternative.link}}" class="
+                                    hover:underline
+                                    hover:text-[#0000E0]
+                                    after:content-['_↗']
+                                    after:align-bottom
+                                    flip-animate
+                                    ">
+                            <span data-hover="{{contact.alternative.text}}">
+                                {{ contact.alternative.text }}</span>
+                        </a>
+                    </h6>
+                </div>
             </div>
-            </section>
+
+        </section>
+
+        <section data-color="black" id='projects' class="section min-h-screen text-white">
+            <div class="scrolling_text_wrapper w-mx py-8 my-4 horizontal-text ">
+                <div class="scrolling_text">
+                    {% for _ in range(8) %}
+                    <span>
+                        {{ projects.title }} • </span>
+                    {% endfor %}
+                </div>
+            </div>
 
 
+            <div class="container mx-auto px-4 w-full">
+                {% for project in projects.projects %}
+                <a href={{ project.link }} target="_blank" class="
+                project-title
+                flex justify-between
+                border-white border-y-2 p-6 
+                col-span-4 col-start-1 row-start-{{loop.index}}
+                after:content-['_↗']
+                after:align-bottom
+                            hover:no-underline
+                            hover:bg-white
+                            hover:text-black
+                            hover:border-none
+                            ">
+                    <span data-hover="{{loop.index}}.{{ project.title }}">
+                        {{loop.index}}.{{ project.title }}</span>
+                </a>
+
+                {% endfor %}
+            </div>
+
+        </section>
+
+        <section data-color="black" id='credits' class="section">
             <div id='credits' class="d-flex justify-items-end bg-black text-white">
                 <div class="container mx-auto p-4  grid grid-cols-4 grid-rows-2 gap-2 items-center">
                     <div class="row-start-1 col-start-1">
@@ -132,7 +166,8 @@
 
                     </div>
                 </div>
-                <div class="scrolling_text_wrapper w-mx bg-black text-white py-8 horizontal-text ">
+
+                <div class="scrolling_text_wrapper w-mx py-8 mt-4 horizontal-text ">
                     <div class="scrolling_text">
                         {% for _ in range(8) %}
                         <span>
@@ -141,9 +176,17 @@
                         {% endfor %}
                     </div>
                 </div>
+
+
+        </section>
+
+        <footer class="bg-black text-white">
+            <div class="container mx-auto py-4 uppercase">
+                {{ footer.copyright }}
             </div>
-        </div>
+        </footer>
     </main>
+
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;700&family=Manrope:wght@400;700;800&display=swap");
 
 :root {
 	/* --primary-color: #e2e2e2; */
@@ -9,13 +10,25 @@
 }
 
 * {
-	transition: all 0.4s;
+	transition: all 0.2s;
 
 	text-underline-offset: 10px;
 }
 
 a:hover {
 	text-decoration: underline;
+
+	cursor: none;
+}
+
+a:after {
+	font-family: "Inter", "Fira Code", "monospace";
+	font-weight: 400;
+}
+
+html,
+body {
+	height: auto;
 }
 
 body {
@@ -23,9 +36,8 @@ body {
 	margin: 0px;
 
 	font-family: "Manrope", sans-serif;
-}
 
-.main-layout {
+	cursor: url("../assets/cursor.svg"), auto;
 }
 
 .nav {
@@ -107,12 +119,8 @@ body {
 	line-height: normal;
 }
 
-section#intro {
-	height: 100vh;
-}
-
-section#projects {
-	min-height: 100vh;
+section {
+	top: 0;
 }
 
 .horizontal-text {
@@ -135,7 +143,7 @@ section#projects {
 }
 
 .project-title:hover {
-	background: black;
+	/* background: black; */
 	/* color: white; */
 }
 
@@ -161,4 +169,38 @@ section#projects {
 
 .scrolling_text {
 	animation: animate_text 30s linear infinite; /* The animation property */
+}
+
+a.flip-animate {
+	perspective: 1000px;
+}
+a.flip-animate span {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	transition: transform 0.3s;
+	transform-origin: 50% 0;
+	transform-style: preserve-3d;
+}
+
+a.flip-animate span:before {
+	/* opacity: 0; */
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: attr(data-hover);
+	transition: color 0.3s;
+	transform: rotateX(-90deg);
+	transform-origin: 50% 0;
+}
+a.flip-animate:hover span,
+a.flip-animate:focus span {
+	transform: rotateX(90deg) translateY(-22px);
+}
+a.flip-animate:hover span:before,
+a.flip-animate:focus span:before {
+	/* opacity: 1; */
 }

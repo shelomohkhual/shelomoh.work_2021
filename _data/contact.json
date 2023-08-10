@@ -3,14 +3,17 @@
     "platforms": [
         {
             "name": "LinkedIn",
+            "username": "shelomohkhual",
             "link": "www.linkedIn.com"
         },
         {
             "name": "Github",
+            "username": "@shelomohkhual",
             "link": "www.github.com"
         },
         {
             "name": "Instagram",
+            "username": "@shelomoh",
             "link": "www.instagram.com"
         }
     ],

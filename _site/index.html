@@ -9,133 +9,193 @@
     <meta name="description" content="A description of my awesome project.">
     <meta name="keywords" content="eleventy, static site generator, web development">
     <meta name="author" content="Your Name">
-    <!-- Include other meta tags and stylesheets as needed -->
+    <!-- STYLE -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css" />
+    <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css" />
     <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- LOCO -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <!-- <script src="js/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="css/locomotive-scroll.css" /> -->
+    <!-- GSAP -->
+    <!-- <!-- <script src="js/gsap-latest-beta.min.js"></script> -->
+    <!-- <script src="js/gsap-latest-beta.min.js"></script>
+    <script src="js/scrollTrigger.min.js"></script> -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
-    <main>
-        <div>
-            <div class="">
-                <section id='intro' class="bg-black text-white">
-                    <div class="container mx-auto px-4 py-8 grid grid-cols-4 grid-rows-7 gap-4 items-end h-full">
-                        <div class="col-start-1">
-                            <img src="assets/logo.svg" alt="logo" />
-                        </div>
-                        <div class="col-start-4">
-                        </div>
-                        <div class="col-span-4 row-span-2 col-start-1 row-start-2 intro-title">
-                            <a href=https://en.wikipedia.org/wiki/Mingalaba target="_blank">
-                                Mingalaba! 🙏
-                            </a>
-                            <br />
-                            I’m Shelomoh
-                        </div>
-                        <div class="col-span-4 row-span-2 col-start-1 row-start-4 intro-description">
-                            A self-taught software developer/ ui & ux designer, currently enjoying the vibrant Kuala Lumpur.<br><br>Enthusiast about interactive web design, branding, and UI/UX. Currently working on my portfolio site—stay tuned!
-                        </div>
-                        <div class="col-span-4 row-span-2 col-start-1 row-start-6 contact-text">
-                            <h6 class="">
-                                Come say hello! 👋
-                            </h6>
+    <main class="smooth-scroll">
+        <section data-color="white" id='intro' class="section min-h-screen">
+            <div class="container mx-auto px-4 py-8 grid grid-cols-4 grid-rows-7 gap-4 items-end h-screen">
+                <div class="col-start-1">
+                    <img src="assets/logo.svg" alt="logo" />
+                </div>
+                <div class="col-start-4">
+                </div>
+                <div class="col-span-4 row-span-2 col-start-1 row-start-2 intro-title">
+                    <a href=https://en.wikipedia.org/wiki/Mingalaba target="_blank" class="
+                                    hover:text-[#0000E0]
+                                    after:content-['_↗']
+                                    after:align-bottom
+                                    flip-animate
+                    ">
+                        Mingalaba! 🙏
+                    </a>
+                    <br />
+                    I’m Shelomoh
+                </div>
+                <div class="col-span-4 row-span-2 col-start-1 row-start-4 intro-description">
+                    A self-taught software developer/ ui & ux designer, currently enjoying the vibrant Kuala Lumpur.<br><br>Enthusiast about interactive web design, branding, and UI/UX.<br>Working on my portfolio site — stay tuned!
+                </div>
+                <div class="col-span-4 row-span-2 col-start-1 row-start-6 contact-text">
+                    <h6 class="">
+                        Come say hello! 👋
+                    </h6>
 
-                            <div class="my-6">
-                                
-                                <a href=www.linkedIn.com target="_blank" class="btn border-2 rounded-full border-white
-                                    hover:bg-white
-                                    hover:text-black
-                                    ">LinkedIn</a>
-                                
-                                <a href=www.github.com target="_blank" class="btn border-2 rounded-full border-white
-                                    hover:bg-white
-                                    hover:text-black
-                                    ">Github</a>
-                                
-                                <a href=www.instagram.com target="_blank" class="btn border-2 rounded-full border-white
-                                    hover:bg-white
-                                    hover:text-black
-                                    ">Instagram</a>
-                                
-                            </div>
-
-                            <h6>
-                                <a href="mailto: hello@shelomoh.work" class="
-                                    hover:underline">
-                                    or if you feeling old fashioned, send me an email
-                                </a>
-                            </h6>
-                        </div>
-                    </div>
-                </section>
-
-                <section id='projects' class="">
-                    <div class="scrolling_text_wrapper w-mx bg-black text-white py-8 my-4 horizontal-text ">
-                        <div class="scrolling_text">
-                            
-                            <span>
-                                Personal Project • </span>
-                            
-                            <span>
-                                Personal Project • </span>
-                            
-                            <span>
-                                Personal Project • </span>
-                            
-                            <span>
-                                Personal Project • </span>
-                            
-                            <span>
-                                Personal Project • </span>
-                            
-                            <span>
-                                Personal Project • </span>
-                            
-                            <span>
-                                Personal Project • </span>
-                            
-                            <span>
-                                Personal Project • </span>
-                            
-
-                        </div>
-                    </div>
-
-                    <div class="container mx-auto px-4 grid grid-cols-4 gap-4 grid-rows-2">
+                    <div class="my-6">
                         
-                        <a href=https://mindset-feeds.shelomoh.work target="_blank" class="border-y-2 col-span-4 col-start-1 row-start-1 p-6 project-title flex justify-between
-                            hover:text-white
-                            ">
-                            <span>
-                                1. mindset-feeds
-                            </span>
-                            <span>
-                                <span>
-                                    ->
-                                </span>
+                        <a href=www.linkedIn.com target="_blank" class="btn border-2 rounded-full border-black
+                        after:content-['_↗']
+                        after:align-bottom
+                       hover:cursor:none
+                                    hover:text-white
+                                    hover:bg-[#0000E0]
+                                    hover:text-black
+                                    hover:no-underline
+                                    flip-animate
+                                    ">
+
+                            <span data-hover=LinkedIn>
+                                LinkedIn</span>
                         </a>
                         
-                        <a href=https://mindset-feeds.shelomoh.work target="_blank" class="border-y-2 col-span-4 col-start-1 row-start-2 p-6 project-title flex justify-between
-                            hover:text-white
-                            ">
-                            <span>
-                                2. goal-organizer
-                            </span>
-                            <span>
-                                <span>
-                                    ->
-                                </span>
+                        <a href=www.github.com target="_blank" class="btn border-2 rounded-full border-black
+                        after:content-['_↗']
+                        after:align-bottom
+                       hover:cursor:none
+                                    hover:text-white
+                                    hover:bg-[#0000E0]
+                                    hover:text-black
+                                    hover:no-underline
+                                    flip-animate
+                                    ">
+
+                            <span data-hover=Github>
+                                Github</span>
+                        </a>
+                        
+                        <a href=www.instagram.com target="_blank" class="btn border-2 rounded-full border-black
+                        after:content-['_↗']
+                        after:align-bottom
+                       hover:cursor:none
+                                    hover:text-white
+                                    hover:bg-[#0000E0]
+                                    hover:text-black
+                                    hover:no-underline
+                                    flip-animate
+                                    ">
+
+                            <span data-hover=Instagram>
+                                Instagram</span>
                         </a>
                         
                     </div>
+
+                    <h6>
+                        <a href="mailto: hello@shelomoh.work" class="
+                                    hover:underline
+                                    hover:text-[#0000E0]
+                                    after:content-['_↗']
+                                    after:align-bottom
+                                    flip-animate
+                                    ">
+                            <span data-hover="or if you feeling old fashioned, send me an email">
+                                or if you feeling old fashioned, send me an email</span>
+                        </a>
+                    </h6>
+                </div>
             </div>
-            </section>
+
+        </section>
+
+        <section data-color="black" id='projects' class="section min-h-screen text-white">
+            <div class="scrolling_text_wrapper w-mx py-8 my-4 horizontal-text ">
+                <div class="scrolling_text">
+                    
+                    <span>
+                        Personal Project • </span>
+                    
+                    <span>
+                        Personal Project • </span>
+                    
+                    <span>
+                        Personal Project • </span>
+                    
+                    <span>
+                        Personal Project • </span>
+                    
+                    <span>
+                        Personal Project • </span>
+                    
+                    <span>
+                        Personal Project • </span>
+                    
+                    <span>
+                        Personal Project • </span>
+                    
+                    <span>
+                        Personal Project • </span>
+                    
+                </div>
+            </div>
 
 
+            <div class="container mx-auto px-4 w-full">
+                
+                <a href=https://mindset-feeds.shelomoh.work target="_blank" class="
+                project-title
+                flex justify-between
+                border-white border-y-2 p-6 
+                col-span-4 col-start-1 row-start-1
+                after:content-['_↗']
+                after:align-bottom
+                            hover:no-underline
+                            hover:bg-white
+                            hover:text-black
+                            hover:border-none
+                            ">
+                    <span data-hover="1.mindset-feeds">
+                        1.mindset-feeds</span>
+                </a>
+
+                
+                <a href=https://mindset-feeds.shelomoh.work target="_blank" class="
+                project-title
+                flex justify-between
+                border-white border-y-2 p-6 
+                col-span-4 col-start-1 row-start-2
+                after:content-['_↗']
+                after:align-bottom
+                            hover:no-underline
+                            hover:bg-white
+                            hover:text-black
+                            hover:border-none
+                            ">
+                    <span data-hover="2.goal-organizer">
+                        2.goal-organizer</span>
+                </a>
+
+                
+            </div>
+
+        </section>
+
+        <section data-color="black" id='credits' class="section">
             <div id='credits' class="d-flex justify-items-end bg-black text-white">
                 <div class="container mx-auto p-4  grid grid-cols-4 grid-rows-2 gap-2 items-center">
                     <div class="row-start-1 col-start-1">
@@ -174,7 +234,8 @@
 
                     </div>
                 </div>
-                <div class="scrolling_text_wrapper w-mx bg-black text-white py-8 horizontal-text ">
+
+                <div class="scrolling_text_wrapper w-mx py-8 mt-4 horizontal-text ">
                     <div class="scrolling_text">
                         
                         <span>
@@ -211,9 +272,17 @@
                         
                     </div>
                 </div>
+
+
+        </section>
+
+        <footer class="bg-black text-white">
+            <div class="container mx-auto py-4 uppercase">
+                ©Shelomoh • all rights reserved
             </div>
-        </div>
+        </footer>
     </main>
+
 </body>
 
 </html>
