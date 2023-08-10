@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap");
 
 :root {
-	--primary-color: #e2e2e2;
-	--accent-color: #020202;
+	/* --primary-color: #e2e2e2; */
+	/* --accent-color: #020202; */
 
 	--border: 2px solid var(--accent-color);
 	--padding: 5px 20px;
+}
+
+* {
+	transition: all 0.4s;
+
+	text-underline-offset: 10px;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 body {
@@ -28,14 +38,13 @@ body {
 .btn {
 	text-decoration: none;
 
-	border-radius: 50px;
-	border: var(--border);
+	/* border-radius: 50px;
+	border: var(--border); */
 
 	padding: var(--padding);
 	margin: 10px 0px;
 
 	text-transform: uppercase;
-	color: var(--accent-color);
 
 	height: fit-content;
 
@@ -48,12 +57,12 @@ body {
 }
 
 .btn:hover {
-	color: var(--primary-color);
-	background: var(--accent-color);
+	/* color: var(--primary-color); */
+	/* background: var(--accent-color); */
 }
 
 .intro-title {
-	color: #020202;
+	/* color: #020202; */
 	font-family: Manrope;
 	font-size: 64px;
 	font-style: normal;
@@ -63,16 +72,16 @@ body {
 }
 
 .intro-description {
-	color: #020202;
+	/* color: #020202; */
 	font-family: Manrope;
 	font-size: 32px;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: normal;
 }
 
 .contact-text {
-	color: #020202;
+	/* color: #020202; */
 	font-family: Manrope;
 	font-size: 32px;
 	font-style: normal;
@@ -81,7 +90,7 @@ body {
 }
 
 .credit-heading {
-	color: #020202;
+	/* color: #020202; */
 	font-family: Manrope;
 	font-size: 24px;
 	font-style: normal;
@@ -90,7 +99,7 @@ body {
 }
 
 .credit-value {
-	color: #020202;
+	/* color: #020202; */
 	font-family: Manrope;
 	font-size: 24px;
 	font-style: normal;
@@ -103,15 +112,11 @@ section#intro {
 }
 
 section#projects {
-	min-height: 80vh;
-
-	background: black;
-
-	color: white;
+	min-height: 100vh;
 }
 
 .horizontal-text {
-	color: #e2e2e2;
+	/* color: #e2e2e2; */
 	font-family: Manrope;
 	font-size: 40px;
 	font-style: normal;
@@ -130,6 +135,30 @@ section#projects {
 }
 
 .project-title:hover {
-	background: white;
-	color: black;
+	background: black;
+	/* color: white; */
+}
+
+.scrolling_text_wrapper {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	white-space: nowrap;
+}
+
+.scrolling_text_wrapper > span {
+	margin: 0 40px;
+}
+
+@keyframes animate_text {
+	from {
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+.scrolling_text {
+	animation: animate_text 30s linear infinite; /* The animation property */
 }
