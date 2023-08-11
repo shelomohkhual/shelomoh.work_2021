@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;700&family=Manrope:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@200;400;700&family=Manrope:wght@400;700;800&display=swap");
+
+@font-face {
+	font-family: "Cyrene";
+	src: url("../assets/fonts/Cyrene+Regular+Advanced.otf");
+}
 
 :root {
 	/* --primary-color: #e2e2e2; */
@@ -268,8 +273,16 @@ img {
 
 .square {
 	aspect-ratio: 1 / 1;
-	height: 100%;
 	max-height: 100%;
+	width: 100%;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: grid;
+	place-content: center;
 }
 
 .hover-paused-animate:hover {

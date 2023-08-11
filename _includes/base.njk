@@ -50,161 +50,216 @@
 </head>
 
 <body>
-    <main class="smooth-scroll" data-scroll-container >
-        <section
-        data-scroll-section 
-        data-color="#fbfbfd" id='intro' class="section h-screen">
-            <div class="mx-auto px-4 py-8 
-                grid auto-rows-fr
-                sm:
-                md:grid-cols-8 
-                lg:grid-cols-12
-                grid-rows-7 gap-4 
-                items-end 
-                h-screen
+    <main class="smooth-scroll" data-scroll-container>
+        <section data-scroll-section data-color="#fbfbfd" id='intro' class="section h-screen">
+            <div class="px-4 py-8 
+            grid 
+            grid-cols-3
+            gap-4
+            items-end
+            h-screen
+
+            sm:bg-[orange]
+
+            md:bg-[green]
+            md:grid-cols-6
+            md:text-3xl
+            lg:bg-[blue]
+
+            xl:grid-cols-12
+            xl:bg-[yellow]
+            2xl:bg-[pink]
+            
                 ">
-                <!-- HEADING -->
-                <h6 class="
-                    row-start-1 col-span-1 
-                    md:col-start-2
+                <!-- NAV -->
+                <!-- logo -->
+                <h6
+                    class="
+                    row-start-1 
+                    row-span-1 
+                    col-span-1 
+                    col-start-1
                     flex items-center
-                    font-['Manrope'] text-black text-2xl font-bold uppercase leading-7 self-center">
+                    font-['Manrope'] text-black text-xl md:text-xl lg:text-2xl font-bold uppercase leading-tight self-center">
                     <img src="assets/logo.svg" alt="logo" class="mr-2" />
                     {{ intro.name | safe }}
                 </h6>
-                <h6 class="row-start-1 
- col-start-7 col-span-1 
-                    font-['Manrope'] text-black text-2xl font-bold uppercase leading-7 self-center">
+
+                <!-- position -->
+                <h6
+                    class="
+                row-start-1 
+                col-span-1
+                col-start-3
+                md:col-start-3
+                xl:col-start-7 
+                    font-['Manrope'] text-black text-xl md:text-xl lg:text-2xl font-bold uppercase leading-tight self-center">
                     {{ intro.position | safe}}
                 </h6>
-                <h6 class="row-start-1
 
-                 col-start-4 md:col-start-9  col-span-2
-                    font-['Manrope'] text-black text-2xl font-bold uppercase leading-7 self-center">
-                    {{ intro.location | safe }}
-                </h6>
-                <h6 class="row-start-1 col-start-4 md:col-start-11  col-span-1
-                                    font-['Manrope'] text-black text-2xl font-bold uppercase leading-7 self-center">
+                <h6
+                    class="
+                                        row-start-1
+                                        col-span-1
+                                        hidden
+                                    md:block
+                                   md:col-start-4 
+                    xl:col-start-9
+                                        
+                                                        font-['Manrope'] text-black text-xl md:text-xl lg:text-2xl font-bold uppercase leading-tight self-center">
                     {{ intro.version | safe }}
                 </h6>
 
-                <h1 
-                class="
-                    md:col-start-2
-                row-start-4 row-span-3 col-start-1 col-span-8
-                self-start
-                font-['Manrope']
-                    text-black 
-font-normal
-                   text-[80px] 
-                    leading-[92px]">
-                    {{ intro.title | safe }}
-                </h1>
-                <div class="
-                opacity-50
-                self-start
-                 row-start-4 row-span-2 col-start-7 col-span-4 font-['Manrope'] text-black text-[32px] font-400">
-                    {{ intro.description | safe }}
-                </div>
+                <!-- location -->
+                <h6
+                    class="
+                col-span-2
+                hidden
+                md:block
+               md:col-start-5 
+                 xl:col-start-11
+                    font-['Manrope'] text-black text-xl md:text-xl lg:text-2xl font-bold uppercase leading-tight self-center">
+                    {{ intro.location | safe }}
+                </h6>
 
-                <!-- INTRO-IMG -->
+                <!-- INTRO -->
+                <!-- greeting -->
                 <div class="
-                row-start-3 row-span-1 col-start-2 col-span-4  w-full h-full 
-                flex items-end
+                row-start-3
+                row-span-1
+                col-start-1
+               
+                w-full
+                h-full
+                flex items-end relative
+                col-span-3
+                md:col-span-6
                     ">
-                    <div class="flip-container block square rounded-full overflow-hidden bg-[blue]
-                        hover:cursor-none">
-                        <div class="card">
-                            <div class="front">
-                                <img src="assets/portrait.jpg" class="
-                                    w-full h-full object-cover scale-125">
-                            </div>
-                            <div class="back">
-                                <img src="assets/emoji.png" class="  w-full h-full object-cover scale-115"
-                                    alt="Front Image">
+
+                    <div class="
+                    w-[80px]
+                    h-[80px]
+                    md:w-[100px]
+                    md:h-[100px]
+                    2xl:w-[150px]
+                    2xl:h-[150px]
+                    relative
+                    aspect-square">
+                        <!-- intro-img -->
+                        <div class="
+                            flip-container
+                            w-full h-full
+                            rounded-full overflow-hidden bg-[blue]
+                            hover:cursor-none">
+                            <div class="card">
+                                <div class="front">
+                                    <img src="assets/portrait.jpg" class="
+                                        w-full 
+                                        h-full 
+                                        object-cover 
+                                        scale-125" />
+                                </div>
+                                <div class="back">
+                                    <img src="assets/emoji.png" class="w-full h-full object-cover scale-115"
+                                        alt="Front Image">
+                                </div>
                             </div>
                         </div>
                     </div>
 
-
+                    <!-- greeting-text -->
                     <h6 class="ml-4">
                         <a href={{ intro.link }} target="_blank" class="
-                                        no-underline
-                                        text-[40px] text-black font-normal
-                                        hover:text-[#0000E0]
-                                        hover:n0-underline
-                                        flip-animate">
-                            <span data-hover="{{ intro.greeting }}" class="
-                                        
-                                            ">
+                        no-underline
+                        font-['Manrope']
+                        text-black font-normal
+                        hover:text-[#0000E0]
+                        hover:no-underline
+                        flip-animate
+                        text-2xl
+                        md:text-3xl
+                        2xl:text-5xl">
+                            <span data-hover="{{ intro.greeting }}" class="">
                                 {{ intro.greeting | safe }}
                             </span>
                         </a>
                     </h6>
                 </div>
 
-                <!-- SCROLL-DOWN -->
-                <div class="row-start-6 row-span-2 col-start-7 col-span-2 
-                     w-full h-full 
-                     flex justify-center items-center
-                     ">
-                    <a 
-                    id="next-section-link"
-                    class="block square
-                    group
-                    bg-black
-                    hover:bg-[blue]
-                    hover:cursor-none
-                    rounded-full overflow-hidden
-                    relative
-                    hover-paused-animate
-                    ">
-                        <img src="assets/scroll-down.svg" class="
-                            absolute
-                        invert
-                        group-hover:invert
-                        w-full
-                        h-full
-                       animate-[spin_15s_linear_infinite;]
-                       ">
-                        <span class="
-                            w-full h-full
-                            flex justify-center items-center
-                            absolute
-                            invert
-                            group-hover:invert
-                            group-hover:animate-bounce
-                            font-['Inter']
-                            font-300
-                            text-red text-center text-[80px] ">
-                            ↓
-                        </span>
-                    </a>
-                </div>
+                <!-- title -->
+                <h1 class="
+                font-['Manrope'] text-black  font-bold uppercase
+                self-start
+                col-start-1 
+                row-start-4 
+                col-span-3
+                text-5xl
+                row-span-1
+                md:col-span-6
+                md:text-6xl
+                xl:row-span-3 
+                xl:text-6xl
+                ">
+                    {{ intro.title | safe }}
+                </h1>
+
+                <!-- description -->
+                <h6 class="
+                font-['Manrope'] text-black  font-normal
+                self-start
+                row-span-1
+                col-span-3
+                leading-9
+                col-start-1
+                text-2xl
+                row-start-5
+                
+                md:col-span-4
+                md:text-3xl
+                
+                xl:row-start-4
+                xl:col-start-7
+                xl:col-span-4
+                xl:text-4xl
+                xl:leading-relaxed
+                ">
+                    {{ intro.description | safe }}
+                </h6>
 
                 <!-- CONTACT -->
                 <h6 class="
-                row-start-6
-                md:col-start-2
-                row-span-2 
-                col-start-1
-                col-span-5
                 font-['Manrope']
                 text-black
-                text-[31px]
                 font-normal
-                link-cursor_wrapper
+                leading-relaxed
+                
+                text-2xl
+
+                row-start-7
+                col-start-1
+                
+col-span-3
+                md:col-span-6
+                lg:col-span-4
+                md:text-3xl
+                xl:col-span-6
+                xl:text-4xl
                 ">
                     {{ contact.title }}
-                    <div class="my-6">
+                    <div class="my-2 flex warp">
                         {% for platform in contact.platforms %}
                         <a href={{ platform.link }} target="_blank" class="btn border-2 rounded-full border-black
-                                    hover:text-white
-                                    hover:bg-[#0000E0]
-                                    hover:text-black
-                                    hover:no-underline
-                                    flip-animate
-                                    ">
+                                                hover:text-white
+                                                hover:bg-[#0000E0]
+                                                hover:text-black
+                                                hover:no-underline
+                                                flip-animate
+
+                                                  text-2xl
+                md:text-2xl
+                xl:text-4xl
+                xl:leading-relaxed
+                                                ">
 
                             <span data-hover={{platform.name}}>
                                 {{ platform.name }}</span>
@@ -213,20 +268,132 @@ font-normal
                     </div>
 
                     <a href="mailto: {{contact.alternative.link}}" class="
-                                    hover:underline
-                                    hover:text-[#0000E0]
-                                    flip-animate
-                                    ">
+                                                hover:underline
+                                                hover:text-[#0000E0]
+                                                flip-animate
+                                                ">
                         <span data-hover="{{contact.alternative.text}}" class="">
                             {{ contact.alternative.text }}</span>
                     </a>
                 </h6>
-            </div>
+
+                <!-- SCROLL-DOWN -->
+                <div class="
+                relative
+                row-start-6
+                self-center
+
+                flex 
+                col-start-3
+                
+                md:col-start-5
+                md:col-span-2
+
+                lg:col-start-5
+                lg:row-start-6
+                lg:row-span-2
+
+                xl:row-span-1
+                xl:row-start-7
+               xl:col-start-7
+               xl:col-span-3
+
+md:ml-[150px]
+                ">
+                    <div class="relative">
+                        <a class="absolute inset-0 flex items-center justify-center 
+                            w-[220px] 
+                            h-[220px]
+                             md:w-[300px] 
+                            md:h-[300px]
+                             left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2
+                             
+                             group
+                             hover:bg-[blue]
+                             hover:cursor-none
+                             rounded-full overflow-hidden
+                             hover-paused-animate
+                             ">
+                            <img class="
+                            w-[220px] 
+                            h-[220px]
+                             md:w-[300px] 
+                            md:h-[300px]
+                            animate-[spin_15s_linear_infinite;]
+
+                            group-hover:invert
+                            " src="assets/scroll-down.svg">
+                            <span class="absolute
+                                w-full h-full
+                                flex justify-center items-center
+                                group-hover:invert
+                                group-hover:animate-bounce
+                                font-['Inter']
+                                font-light
+                                text-red text-center text-[80px] ">
+                                ↓
+                            </span>
+                        </a>
+                    </div>
+                    <!-- <a id="next-section-link" class="
+                    absolute
+                    left-2/4
+                    top-2/4
+                                                                w-[300px]
+                                                                h-[300px]
+
+                                                                flex just
+                                                                ">
+                        <img <div class="relative">
+  <a class="absolute inset-0 flex items-center justify-center" style="width: 600px; height: 600px; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+    <img class="max-w-full max-h-full" src="your-image-source.jpg" alt="Image">
+  </a>
+</div> class="
+                        absolute
+                                                                    w-full
+                                                                    h-full
+                                                                   animate-[spin_15s_linear_infinite;]
+                                                                   ">
+                     
+                    </a> -->
+
+
+                    <!-- <a id="next-section-link" class="
+                                                group
+                                                hover:bg-[blue]
+                                                hover:cursor-none
+                                                rounded-full overflow-hidden
+                                                relative
+                                                hover-paused-animate
+                                                w-[400px]
+                                                h-[400px]
+                                                xl:w-[400px]
+                                                xl:h-[400px]
+                                                overflow-hidden
+                                                ">
+                        <img src="assets/scroll-down.svg" class="
+                                                        absolute
+                                                        group-hover:invert
+                                                    w-full
+                                                    h-full
+                                                   animate-[spin_15s_linear_infinite;]
+                                                   ">
+                        <span class="
+                                                        w-full h-full
+                                                        flex justify-center items-center
+                                                        absolute
+                                                        group-hover:invert
+                                                        group-hover:animate-bounce
+                                                        font-['Inter']
+                                                        font-light
+                                                        text-red text-center text-[80px] ">
+                            ↓
+                        </span>
+                    </a> -->
+                </div>
         </section>
 
-        <section
-        data-scroll-section 
-        data-color="#1d1d1f" id='projects' class="section min-h-screen text-white ">
+        <section data-scroll-section data-color="#1d1d1f" id='projects' class="section min-h-screen text-white ">
             <div class="marquee w-mx py-10 my-4 bg-accent flex items-center">
                 <div class="track h-full flex items-center">
                     <div class="horizontal-text">
@@ -237,8 +404,6 @@ font-normal
                     </div>
                 </div>
             </div>
-
-
 
             <div class="container mx-auto px-4 w-full">
                 {% for project in projects.projects %}
@@ -261,9 +426,7 @@ font-normal
 
         </section>
 
-        <section
-        data-scroll-section 
-        data-color="#1d1d1f" id='credits' class="section">
+        <section data-scroll-section data-color="#1d1d1f" id='credits' class="section">
             <div id='credits' class="d-flex justify-items-end bg-black text-white">
                 <!-- <div class="container mx-auto p-4  grid grid-cols-4 grid-rows-auto gap-2 items-center"> -->
                 <div class="container mx-auto">
