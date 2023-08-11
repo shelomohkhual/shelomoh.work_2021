@@ -6,4 +6,5 @@ contact: contact.json
 projects: projects.json
 credits: credits.json
 footer: footer.json
+colors: colors.json
 ---

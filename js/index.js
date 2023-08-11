@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				gsap.to("main", { backgroundColor: color });
 				gsap.to(elem, { opacity: 0 });
 			},
-			// onUpdate: (self) => {
-			// 	// Use the scroll position from Locomotive Scroll to update ScrollTrigger
-			// 	scroller.scroll.instance.scroll.y = self.scroll();
-			// },
+			onUpdate: (self) => {
+				// Use the scroll position from Locomotive Scroll to update ScrollTrigger
+				locoScroll.scroll.instance.scroll.y = self.scroll();
+			},
 			markers: true,
 		});
 	});

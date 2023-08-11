@@ -18,7 +18,7 @@
 a:hover {
 	text-decoration: underline;
 
-	cursor: none;
+	cursor: url("assets/hover-cursor.svg");
 }
 
 a:after {
@@ -203,4 +203,62 @@ a.flip-animate:focus span {
 a.flip-animate:hover span:before,
 a.flip-animate:focus span:before {
 	/* opacity: 1; */
+}
+
+.scroll-down {
+	animation: rotation 80s infinite linear;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+img {
+	user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.flip-container {
+	perspective: 1000;
+}
+
+.flip-container:hover .card {
+	transform: rotateY(180deg);
+}
+
+.card {
+}
+.card {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.front,
+.back {
+	backface-visibility: hidden;
+	position: absolute;
+}
+.front {
+	z-index: 1;
+	transform: rotateY(180deg);
+}
+.back {
+	z-index: 2; /* back side, placed above front */
+	transform: rotateY(0deg);
+}
+
+.square {
+	aspect-ratio: 1 / 1;
+	height: 100%;
+	max-height: 100%;
 }
