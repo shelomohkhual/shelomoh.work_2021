@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 	const locoScroll = new LocomotiveScroll({
 		el: document.querySelector(".smooth-scroll"),
-		smooth: true,
+		smooth: true, // Enable smooth scrolling
+		smoothMobile: true, // Disable smooth scrolling on mobile devices if needed
 	});
 	// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
 	locoScroll.on("scroll", ScrollTrigger.update);
@@ -35,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 	ScrollTrigger.defaults({ scroller: ".smooth-scroll" });
 	// --- SETUP END ---
-	window.scrollTo(0, 0);
 
 	gsap.utils.toArray(".section").forEach(function (elem) {
 		var color = elem.getAttribute("data-color");
@@ -67,5 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 			markers: true,
 		});
+	});
+
+	const nextSectionLink = document.querySelector("#next-section-link");
+
+	// Scroll to the respective sections when the links are clicked
+	nextSectionLink.addEventListener("click", () => {
+		locoScroll.scrollTo(document.querySelector("#projects"));
 	});
 });

@@ -26,6 +26,8 @@
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <!--  -->
     <script src="js/index.js"></script>
 
     <script>
@@ -48,8 +50,10 @@
 </head>
 
 <body>
-    <main class="smooth-scroll">
-        <section data-color="#fbfbfd" id='intro' class="section h-screen">
+    <main class="smooth-scroll" data-scroll-container >
+        <section
+        data-scroll-section 
+        data-color="#fbfbfd" id='intro' class="section h-screen">
             <div class="mx-auto px-4 py-8 
                 grid auto-rows-fr
                 sm:
@@ -84,7 +88,8 @@
                     temporary<br> portfolio
                 </h6>
 
-                <h1 class="
+                <h1 
+                class="
                     md:col-start-2
                 row-start-4 row-span-3 col-start-1 col-span-8
                 self-start
@@ -128,10 +133,7 @@ font-normal
                                         text-[40px] text-black font-normal
                                         hover:text-[#0000E0]
                                         hover:n0-underline
-                                        after:content-['_↗']
-                                        after:align-bottom
-                                        flip-animate
-                                                        ">
+                                        flip-animate">
                             <span data-hover="Mingalaba! 🙏" class="
                                         
                                             ">
@@ -146,13 +148,17 @@ font-normal
                      w-full h-full 
                      flex justify-center items-center
                      ">
-                    <a class="block square
+                    <a 
+                    id="next-section-link"
+                    href="#projects"
+                    class="block square
                     group
                     bg-black
                     hover:bg-[blue]
                     hover:cursor-none
                     rounded-full overflow-hidden
                     relative
+                    hover-paused-animate
                     ">
                         <img src="assets/scroll-down.svg" class="
                             absolute
@@ -160,13 +166,15 @@ font-normal
                         group-hover:invert
                         w-full
                         h-full
-                        motion-safe:animate-[spin_15s_linear_infinite;]">
+                       animate-[spin_15s_linear_infinite;]
+                       ">
                         <span class="
                             w-full h-full
                             flex justify-center items-center
                             absolute
                             invert
                             group-hover:invert
+                            group-hover:animate-bounce
                             font-['Inter']
                             font-300
                             text-red text-center text-[80px] ">
@@ -186,14 +194,12 @@ font-normal
                 text-black
                 text-[31px]
                 font-normal
+                link-cursor_wrapper
                 ">
                     Come say hello! 👋
                     <div class="my-6">
                         
                         <a href=www.linkedIn.com target="_blank" class="btn border-2 rounded-full border-black
-                        after:content-['_↗']
-                        after:align-bottom
-                       hover:cursor-none
                                     hover:text-white
                                     hover:bg-[#0000E0]
                                     hover:text-black
@@ -206,9 +212,6 @@ font-normal
                         </a>
                         
                         <a href=www.github.com target="_blank" class="btn border-2 rounded-full border-black
-                        after:content-['_↗']
-                        after:align-bottom
-                       hover:cursor-none
                                     hover:text-white
                                     hover:bg-[#0000E0]
                                     hover:text-black
@@ -221,9 +224,6 @@ font-normal
                         </a>
                         
                         <a href=www.instagram.com target="_blank" class="btn border-2 rounded-full border-black
-                        after:content-['_↗']
-                        after:align-bottom
-                       hover:cursor-none
                                     hover:text-white
                                     hover:bg-[#0000E0]
                                     hover:text-black
@@ -238,11 +238,8 @@ font-normal
                     </div>
 
                     <a href="mailto: hello@shelomoh.work" class="
-                                    hover:cursor-none
                                     hover:underline
                                     hover:text-[#0000E0]
-                                    after:content-['_↗']
-                                    after:align-bottom
                                     flip-animate
                                     ">
                         <span data-hover="or if you feeling old fashioned, send me an email" class="">
@@ -252,36 +249,77 @@ font-normal
             </div>
         </section>
 
-        <section data-color="#1d1d1f" id='projects' class="section min-h-screen text-white">
-            <div class="scrolling_text_wrapper w-mx py-8 my-4 horizontal-text bg-accent">
-                <div class="scrolling_text">
-                    
-                    <span>
-                        Personal Project • </span>
-                    
-                    <span>
-                        Personal Project • </span>
-                    
-                    <span>
-                        Personal Project • </span>
-                    
-                    <span>
-                        Personal Project • </span>
-                    
-                    <span>
-                        Personal Project • </span>
-                    
-                    <span>
-                        Personal Project • </span>
-                    
-                    <span>
-                        Personal Project • </span>
-                    
-                    <span>
-                        Personal Project • </span>
-                    
+        <section
+        data-scroll-section 
+        data-color="#1d1d1f" id='projects' class="section min-h-screen text-white ">
+            <div class="marquee w-mx py-10 my-4 bg-accent flex items-center">
+                <div class="track h-full flex items-center">
+                    <div class="horizontal-text">
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                        <span>
+                            • Personal Project</span>
+                        
+                    </div>
                 </div>
             </div>
+
 
 
             <div class="container mx-auto px-4 w-full">
@@ -291,9 +329,6 @@ font-normal
                 flex justify-between
                 border-white border-y-2 p-6 
                 col-span-4 col-start-1 row-start-1
-                after:content-['_↗']
-                after:align-bottom
-                            hover:cursor-none
                             hover:no-underline
                             hover:bg-accent
                             hover:text-white
@@ -309,9 +344,6 @@ font-normal
                 flex justify-between
                 border-white border-y-2 p-6 
                 col-span-4 col-start-1 row-start-2
-                after:content-['_↗']
-                after:align-bottom
-                            hover:cursor-none
                             hover:no-underline
                             hover:bg-accent
                             hover:text-white
@@ -326,88 +358,176 @@ font-normal
 
         </section>
 
-        <section data-color="#1d1d1f" id='credits' class="section">
+        <section
+        data-scroll-section 
+        data-color="#1d1d1f" id='credits' class="section">
             <div id='credits' class="d-flex justify-items-end bg-black text-white">
-                <div class="container mx-auto p-4  grid grid-cols-4 grid-rows-2 gap-2 items-center">
-                    <div class="row-start-1 col-start-1">
+                <!-- <div class="container mx-auto p-4  grid grid-cols-4 grid-rows-auto gap-2 items-center"> -->
+                <div class="container mx-auto">
+                    <div class="p-4 row-start-1">
                         <h6 class="contact-text uppercase">
                             Credits
                         </h6>
                     </div>
-                    <div class="row-start-3  col-start-1 col-start-1 ">
-                        <div class="credit-heading">
-                            Font-family</div>
-                        <div class="credit-value">
+                    <div class="p-4 grid grid-cols-4  gap-x-2 gap-y-4">
 
-                            Manrope</div>
+                        
+                        <div class="">
+                            <div class="credit-heading">
+                                Font</div>
+
+                            
+                            
+                            <a href=https://www.googlefonts.com target="_blank" class="
+                            capitalize
+                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
+                                Manrope</a>
+                            
+
+                            
+                            
+                            <a href=https://www.googlefonts.com target="_blank" class="
+                            capitalize
+                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
+                                Inter</a>
+                            
+
+                            
+
+                        </div>
+                        
+                        <div class="">
+                            <div class="credit-heading">
+                                Development</div>
+
+                            
+                            
+                            <span class="capitalize
+                            credit-value comma-after">HTML</span>
+                            
+
+                            
+                            
+                            <span class="capitalize
+                            credit-value comma-after">CSS</span>
+                            
+
+                            
+
+                        </div>
+                        
+                        <div class="">
+                            <div class="credit-heading">
+                                Design And Code</div>
+
+                            
+                            
+                            <a href=https://www.googlefonts.com target="_blank" class="
+                            capitalize
+                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
+                                Shelomoh</a>
+                            
+
+                            
+
+                        </div>
+                        
+
                     </div>
-                    <div class="row-start-3  col-start-2 ">
-                        <div class="credit-heading">
 
-                            Development</div>
-                        <div class="credit-value">
 
-                            HTML, CSS, Tailwind</div>
+                    <div class="marquee w-mx py-10 my-4 text-accent flex items-center">
+                        <div class="track h-full flex items-center">
+                            <div class="horizontal-text">
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                                <span>
+                                    thanks for visting •
+                                </span>
+                                
+                            </div>
+                        </div>
                     </div>
-                    <div class="row-start-3  col-start-3 ">
-                        <div class="credit-heading">
-
-                            Design and Code</div>
-                        <div class="credit-value">
-
-                            Shelomoh</div>
-                    </div>
-                    <div class="row-start-3  col-start-4">
-                        <div class="credit-heading">
-                            Deployment</div>
-                        <div class="credit-value">
-                            Vercel</div>
-
-                    </div>
-                </div>
-
-                <div class="scrolling_text_wrapper w-mx py-8 mt-4 horizontal-text ">
-                    <div class="scrolling_text">
-                        
-                        <span>
-                            thanks for visting •
-                        </span>
-                        
-                        <span>
-                            thanks for visting •
-                        </span>
-                        
-                        <span>
-                            thanks for visting •
-                        </span>
-                        
-                        <span>
-                            thanks for visting •
-                        </span>
-                        
-                        <span>
-                            thanks for visting •
-                        </span>
-                        
-                        <span>
-                            thanks for visting •
-                        </span>
-                        
-                        <span>
-                            thanks for visting •
-                        </span>
-                        
-                        <span>
-                            thanks for visting •
-                        </span>
-                        
-                    </div>
-                </div>
 
 
         </section>
 
-        <footer class="bg-black text-white">
+        <footer data-scroll-section class="bg-black text-white">
             <div class="container mx-auto py-4 uppercase">
                 ©Shelomoh • all rights reserved
             </div>

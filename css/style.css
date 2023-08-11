@@ -15,16 +15,20 @@
 	text-underline-offset: 10px;
 }
 
+a {
+	text-decoration: none;
+	cursor: url("../assets/cursor.svg") 12.5 12.5, auto;
+}
+
 a:hover {
 	text-decoration: underline;
 
-	cursor: url("assets/hover-cursor.svg");
+	cursor: url("../assets/hover-cursor.svg") 40 40, auto;
 }
-
-a:after {
+/* a:after {
 	font-family: "Inter", "Fira Code", "monospace";
 	font-weight: 400;
-}
+} */
 
 html,
 body {
@@ -37,7 +41,8 @@ body {
 
 	font-family: "Manrope", sans-serif;
 
-	cursor: url("../assets/cursor.svg"), auto;
+	cursor: url("../assets/cursor.svg") 12.5 12.6, auto;
+	transition: cursor 1s ease;
 }
 
 .nav {
@@ -119,8 +124,18 @@ body {
 	line-height: normal;
 }
 
+.comma-after:not(:last-child)::after {
+	content: ", ";
+}
+
+main {
+	scroll-snap-type: y mandatory;
+}
+
 section {
 	top: 0;
+
+	scroll-snap-align: start; /* Enables snapping behavior */
 }
 
 .horizontal-text {
@@ -142,33 +157,27 @@ section {
 	text-transform: uppercase;
 }
 
-.project-title:hover {
-	/* background: black; */
-	/* color: white; */
+.marquee {
+	position: relative;
+	width: 100vw;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
-.scrolling_text_wrapper {
-	width: 100%;
-	overflow: hidden;
-	display: flex;
+.track {
+	position: absolute;
 	white-space: nowrap;
+	will-change: transform;
+	animation: marquee 30s linear infinite;
 }
 
-.scrolling_text_wrapper > span {
-	margin: 0 40px;
-}
-
-@keyframes animate_text {
+@keyframes marquee {
 	from {
-		transform: translate3d(0, 0, 0);
+		transform: translateX(0);
 	}
 	to {
-		transform: translate3d(-100%, 0, 0);
+		transform: translateX(-50%);
 	}
-}
-
-.scrolling_text {
-	animation: animate_text 30s linear infinite; /* The animation property */
 }
 
 a.flip-animate {
@@ -261,4 +270,11 @@ img {
 	aspect-ratio: 1 / 1;
 	height: 100%;
 	max-height: 100%;
+}
+
+.hover-paused-animate:hover {
+	animation-play-state: paused;
+}
+.hover-paused-animate:hover > * {
+	animation-play-state: paused;
 }
