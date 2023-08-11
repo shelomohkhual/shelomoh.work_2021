@@ -1,79 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelomoh Khual</title>
-    <meta name="description" content="A Passion-fuelled Software Developer and UI/UX Designer">
-    <meta name="keywords" content="eleventy, static site generator, web development, creative developer, software developer, ui/ux designer, freelance, portfolio">
-    <meta name="author" content="Shelomoh Khual">
-    <link rel="icon" type="image/x-icon" href="assets/favIcon.svg">
-    <!-- STYLE -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css" />
-    <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css" />
-    <!-- TAILWIND -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- LOCO -->
-    <!-- <script src="js/locomotive-scroll.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shelomoh Khual</title>
+        <meta name="description" content="A Passion-fuelled Software Developer and UI/UX Designer">
+        <meta name="keywords" content="eleventy, static site generator, web development, creative developer, software developer, ui/ux designer, freelance, portfolio">
+        <meta name="author" content="Shelomoh Khual">
+        <link rel="icon" type="image/x-icon" href="assets/favIcon.svg">
+        <!-- STYLE -->
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"/>
+        <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css"/>
+        <!-- TAILWIND -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- LOCO -->
+        <!-- <script src="js/locomotive-scroll.min.js"></script>
     <link rel="stylesheet" href="css/locomotive-scroll.css" /> -->
-    <!-- GSAP -->
-    <!-- <!-- <script src="js/gsap-latest-beta.min.js"></script> -->
-    <!-- <script src="js/gsap-latest-beta.min.js"></script>
+        <!-- GSAP -->
+        <!-- <!-- <script src="js/gsap-latest-beta.min.js"></script> -->
+        <!-- <script src="js/gsap-latest-beta.min.js"></script>
     <script src="js/scrollTrigger.min.js"></script> -->
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+        <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+        <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
-    <!--  -->
-    <script src="js/index.js"></script>
+        <!--  -->
+        <script src="js/index.js"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors:
-                    {
-                        "black": "#1d1d1f",
-                        "white": "#fbfbfd",
-                        "accent": "#0027F7"
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "black": "#1d1d1f",
+                            "white": "#fbfbfd",
+                            "accent": "#0027F7"
+                        }
                     }
                 }
             }
-        }
+        </script>
 
-    </script>
+    </head>
 
-
-</head>
-
-<body>
-    <main class="smooth-scroll" data-scroll-container>
-        <section data-scroll-section data-color="#fbfbfd" id='intro' class="section h-screen">
-            <div class="px-4 py-8 
+    <body>
+        <main class="smooth-scroll" data-scroll-container>
+            <section data-scroll-section data-color="#fbfbfd" id='intro' class="section h-screen">
+                <div class="px-4 py-8 
             grid 
             grid-cols-3
             gap-4
             items-end
             h-screen
 
-            sm:bg-[orange]
 
-            md:bg-[green]
             md:grid-cols-6
             md:text-3xl
-            lg:bg-[blue]
 
             xl:grid-cols-12
-            xl:bg-[yellow]
-            2xl:bg-[pink]
-            
                 ">
-                <!-- NAV -->
-                <!-- logo -->
-                <h6
+                    <!-- NAV -->
+                    <!-- logo -->
+                    <h6
                     class="
                     row-start-1 
                     row-span-1 
@@ -81,12 +72,12 @@
                     col-start-1
                     flex items-center
                     font-['Manrope'] text-black text-xl md:text-xl lg:text-2xl font-bold uppercase leading-tight self-center">
-                    <img src="assets/logo.svg" alt="logo" class="mr-2" />
-                    shelomoh khual
-                </h6>
+                        <img src="assets/logo.svg" alt="logo" class="mr-2"/>
+                        shelomoh khual
+                    </h6>
 
-                <!-- position -->
-                <h6
+                    <!-- position -->
+                    <h6
                     class="
                 row-start-1 
                 col-span-1
@@ -94,10 +85,10 @@
                 md:col-start-3
                 xl:col-start-7 
                     font-['Manrope'] text-black text-xl md:text-xl lg:text-2xl font-bold uppercase leading-tight self-center">
-                    creative<br> Developer
-                </h6>
+                        creative<br> Developer
+                    </h6>
 
-                <h6
+                    <h6
                     class="
                                         row-start-1
                                         col-span-1
@@ -107,11 +98,11 @@
                     xl:col-start-9
                                         
                                                         font-['Manrope'] text-black text-xl md:text-xl lg:text-2xl font-bold uppercase leading-tight self-center">
-                    temporary<br> portfolio
-                </h6>
+                        temporary<br> portfolio
+                    </h6>
 
-                <!-- location -->
-                <h6
+                    <!-- location -->
+                    <h6
                     class="
                 col-span-2
                 hidden
@@ -119,12 +110,12 @@
                md:col-start-5 
                  xl:col-start-11
                     font-['Manrope'] text-black text-xl md:text-xl lg:text-2xl font-bold uppercase leading-tight self-center">
-                    kuala lumpur,<br> malaysia.
-                </h6>
+                        kuala lumpur,<br> malaysia.
+                    </h6>
 
-                <!-- INTRO -->
-                <!-- greeting -->
-                <div class="
+                    <!-- INTRO -->
+                    <!-- greeting -->
+                    <div class="
                 row-start-3
                 row-span-1
                 col-start-1
@@ -136,7 +127,7 @@
                 md:col-span-6
                     ">
 
-                    <div class="
+                        <div class="
                     w-[80px]
                     h-[80px]
                     md:w-[100px]
@@ -145,31 +136,31 @@
                     2xl:h-[150px]
                     relative
                     aspect-square">
-                        <!-- intro-img -->
-                        <div class="
+                            <!-- intro-img -->
+                            <div class="
                             flip-container
                             w-full h-full
                             rounded-full overflow-hidden bg-[blue]
                             hover:cursor-none">
-                            <div class="card">
-                                <div class="front">
-                                    <img src="assets/portrait.jpg" class="
+                                <div class="card">
+                                    <div class="front">
+                                        <img src="assets/portrait.jpg" class="
                                         w-full 
                                         h-full 
                                         object-cover 
-                                        scale-125" />
-                                </div>
-                                <div class="back">
-                                    <img src="assets/emoji.png" class="w-full h-full object-cover scale-115"
+                                        scale-125"/>
+                                    </div>
+                                    <div class="back">
+                                        <img src="assets/emoji.png" class="w-full h-full object-cover scale-115"
                                         alt="Front Image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- greeting-text -->
-                    <h6 class="ml-4">
-                        <a href=https://en.wikipedia.org/wiki/Mingalaba target="_blank" class="
+                        <!-- greeting-text -->
+                        <h6 class="ml-4">
+                            <a href=https://en.wikipedia.org/wiki/Mingalaba target="_blank" class="
                         no-underline
                         font-['Manrope']
                         text-black font-normal
@@ -179,15 +170,15 @@
                         text-2xl
                         md:text-3xl
                         2xl:text-5xl">
-                            <span data-hover="Mingalaba! 🙏" class="">
-                                Mingalaba! 🙏
-                            </span>
-                        </a>
-                    </h6>
-                </div>
+                                <span data-hover="Mingalaba! 🙏" class="">
+                                    Mingalaba! 🙏
+                                </span>
+                            </a>
+                        </h6>
+                    </div>
 
-                <!-- title -->
-                <h1 class="
+                    <!-- title -->
+                    <h1 class="
                 font-['Manrope'] text-black  font-bold uppercase
                 self-start
                 col-start-1 
@@ -200,11 +191,11 @@
                 xl:row-span-3 
                 xl:text-6xl
                 ">
-                    A Passion-fuelled<br>Software Developer<br>& UI/UX Designer
-                </h1>
+                        A Passion-fuelled<br>Software Developer<br>& UI/UX Designer
+                    </h1>
 
-                <!-- description -->
-                <h6 class="
+                    <!-- description -->
+                    <h6 class="
                 font-['Manrope'] text-black  font-normal
                 self-start
                 row-span-1
@@ -223,11 +214,11 @@
                 xl:text-4xl
                 xl:leading-relaxed
                 ">
-                    Enthusiast about interactive web design, branding, and UI/UX. Currently working on my portfolio site—stay tuned!
-                </h6>
+                        Enthusiast about interactive web design, branding, and UI/UX. Currently working on my portfolio site—stay tuned!
+                    </h6>
 
-                <!-- CONTACT -->
-                <h6 class="
+                    <!-- CONTACT -->
+                    <h6 class="
                 font-['Manrope']
                 text-black
                 font-normal
@@ -245,10 +236,10 @@ col-span-3
                 xl:col-span-6
                 xl:text-4xl
                 ">
-                    Come say hello! 👋
-                    <div class="my-2 flex warp">
-                        
-                        <a href=www.linkedIn.com target="_blank" class="btn border-2 rounded-full border-black
+                        Come say hello! 👋
+                        <div class="my-2 flex warp">
+                            
+                                <a href=www.linkedIn.com target="_blank" class="btn border-2 rounded-full border-black
                                                 hover:text-white
                                                 hover:bg-[#0000E0]
                                                 hover:text-black
@@ -261,11 +252,11 @@ col-span-3
                 xl:leading-relaxed
                                                 ">
 
-                            <span data-hover=LinkedIn>
-                                LinkedIn</span>
-                        </a>
-                        
-                        <a href=www.github.com target="_blank" class="btn border-2 rounded-full border-black
+                                    <span data-hover=LinkedIn>
+                                        LinkedIn</span>
+                                </a>
+                            
+                                <a href=www.github.com target="_blank" class="btn border-2 rounded-full border-black
                                                 hover:text-white
                                                 hover:bg-[#0000E0]
                                                 hover:text-black
@@ -278,11 +269,11 @@ col-span-3
                 xl:leading-relaxed
                                                 ">
 
-                            <span data-hover=Github>
-                                Github</span>
-                        </a>
-                        
-                        <a href=www.instagram.com target="_blank" class="btn border-2 rounded-full border-black
+                                    <span data-hover=Github>
+                                        Github</span>
+                                </a>
+                            
+                                <a href=www.instagram.com target="_blank" class="btn border-2 rounded-full border-black
                                                 hover:text-white
                                                 hover:bg-[#0000E0]
                                                 hover:text-black
@@ -295,24 +286,24 @@ col-span-3
                 xl:leading-relaxed
                                                 ">
 
-                            <span data-hover=Instagram>
-                                Instagram</span>
-                        </a>
-                        
-                    </div>
+                                    <span data-hover=Instagram>
+                                        Instagram</span>
+                                </a>
+                            
+                        </div>
 
-                    <a href="mailto: hello@shelomoh.work" class="
+                        <a href="mailto: hello@shelomoh.work" class="
                                                 hover:underline
                                                 hover:text-[#0000E0]
                                                 flip-animate
                                                 ">
-                        <span data-hover="or if you feeling old fashioned, send me an email" class="">
-                            or if you feeling old fashioned, send me an email</span>
-                    </a>
-                </h6>
+                            <span data-hover="or if you feeling old fashioned, send me an email" class="">
+                                or if you feeling old fashioned, send me an email</span>
+                        </a>
+                    </h6>
 
-                <!-- SCROLL-DOWN -->
-                <div class="
+                    <!-- SCROLL-DOWN -->
+                    <div class="
                 relative
                 row-start-6
                 self-center
@@ -334,8 +325,11 @@ col-span-3
 
 md:ml-[150px]
                 ">
-                    <div class="relative">
-                        <a class="absolute inset-0 flex items-center justify-center 
+                        <div class="relative">
+                            <a 
+                            id="next-section-link" 
+                            class="
+                            absolute inset-0 flex items-center justify-center 
                             w-[220px] 
                             h-[220px]
                              md:w-[300px] 
@@ -348,7 +342,7 @@ md:ml-[150px]
                              rounded-full overflow-hidden
                              hover-paused-animate
                              ">
-                            <img class="
+                                <img class="
                             w-[220px] 
                             h-[220px]
                              md:w-[300px] 
@@ -357,7 +351,7 @@ md:ml-[150px]
 
                             group-hover:invert
                             " src="assets/scroll-down.svg">
-                            <span class="absolute
+                                <span class="absolute
                                 w-full h-full
                                 flex justify-center items-center
                                 group-hover:invert
@@ -367,9 +361,9 @@ md:ml-[150px]
                                 text-red text-center text-[80px] ">
                                 ↓
                             </span>
-                        </a>
-                    </div>
-                    <!-- <a id="next-section-link" class="
+                            </a>
+                        </div>
+                        <!-- <a id="next-section-link" class="
                     absolute
                     left-2/4
                     top-2/4
@@ -391,8 +385,7 @@ md:ml-[150px]
                      
                     </a> -->
 
-
-                    <!-- <a id="next-section-link" class="
+                        <!-- <a id="next-section-link" class="
                                                 group
                                                 hover:bg-[blue]
                                                 hover:cursor-none
@@ -424,81 +417,81 @@ md:ml-[150px]
                             ↓
                         </span>
                     </a> -->
-                </div>
-        </section>
-
-        <section data-scroll-section data-color="#1d1d1f" id='projects' class="section min-h-screen text-white ">
-            <div class="marquee w-mx py-10 my-4 bg-accent flex items-center">
-                <div class="track h-full flex items-center">
-                    <div class="horizontal-text">
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
-                        <span>
-                            • Personal Project</span>
-                        
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="container mx-auto px-4 w-full">
-                
-                <a href=https://mindset-feeds.shelomoh.work target="_blank" class="
+                <section data-scroll-section data-color="#1d1d1f" id='projects' class="section min-h-screen text-white ">
+                    <div class="marquee w-mx py-10 my-4 bg-accent flex items-center">
+                        <div class="track h-full flex items-center">
+                            <div class="horizontal-text">
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                                    <span>
+                            • Personal Project</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mx-auto px-4 w-full">
+                        
+                            <a href=https://mindset-feeds.shelomoh.work target="_blank" class="
                 project-title
                 flex justify-between
                 border-white border-y-2 p-6 
@@ -508,12 +501,12 @@ md:ml-[150px]
                             hover:text-white
                             hover:border-none
                             ">
-                    <span data-hover="1.mindset-feeds">
-                        1.mindset-feeds</span>
-                </a>
+                                <span data-hover="1.mindset-feeds">
+                                    1.mindset-feeds</span>
+                            </a>
 
-                
-                <a href=https://mindset-feeds.shelomoh.work target="_blank" class="
+                        
+                            <a href=https://mindset-feeds.shelomoh.work target="_blank" class="
                 project-title
                 flex justify-between
                 border-white border-y-2 p-6 
@@ -523,189 +516,187 @@ md:ml-[150px]
                             hover:text-white
                             hover:border-none
                             ">
-                    <span data-hover="2.goal-organizer">
-                        2.goal-organizer</span>
-                </a>
-
-                
-            </div>
-
-        </section>
-
-        <section data-scroll-section data-color="#1d1d1f" id='credits' class="section">
-            <div id='credits' class="d-flex justify-items-end bg-black text-white">
-                <!-- <div class="container mx-auto p-4  grid grid-cols-4 grid-rows-auto gap-2 items-center"> -->
-                <div class="container mx-auto">
-                    <div class="p-4 row-start-1">
-                        <h6 class="contact-text uppercase">
-                            Credits
-                        </h6>
-                    </div>
-                    <div class="p-4 grid grid-cols-4  gap-x-2 gap-y-4">
+                                <span data-hover="2.goal-organizer">
+                                    2.goal-organizer</span>
+                            </a>
 
                         
-                        <div class="">
-                            <div class="credit-heading">
-                                Font</div>
-
-                            
-                            
-                            <a href=https://www.googlefonts.com target="_blank" class="
-                            capitalize
-                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
-                                Manrope</a>
-                            
-
-                            
-                            
-                            <a href=https://www.googlefonts.com target="_blank" class="
-                            capitalize
-                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
-                                Inter</a>
-                            
-
-                            
-
-                        </div>
-                        
-                        <div class="">
-                            <div class="credit-heading">
-                                Development</div>
-
-                            
-                            
-                            <span class="capitalize
-                            credit-value comma-after">HTML</span>
-                            
-
-                            
-                            
-                            <span class="capitalize
-                            credit-value comma-after">CSS</span>
-                            
-
-                            
-
-                        </div>
-                        
-                        <div class="">
-                            <div class="credit-heading">
-                                Design And Code</div>
-
-                            
-                            
-                            <a href=https://www.googlefonts.com target="_blank" class="
-                            capitalize
-                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
-                                Shelomoh</a>
-                            
-
-                            
-
-                        </div>
-                        
-
                     </div>
 
+                </section>
 
-                    <div class="marquee w-mx py-10 my-4 text-accent flex items-center">
-                        <div class="track h-full flex items-center">
-                            <div class="horizontal-text">
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
-                                <span>
-                                    thanks for visting •
-                                </span>
-                                
+                <section data-scroll-section data-color="#1d1d1f" id='credits' class="section">
+                    <div id='credits' class="d-flex justify-items-end bg-black text-white">
+                        <!-- <div class="container mx-auto p-4  grid grid-cols-4 grid-rows-auto gap-2 items-center"> -->
+                        <div class=" mx-auto">
+                            <div class="p-4 row-start-1">
+                                <h6 class="contact-text uppercase">
+                                    Credits
+                                </h6>
                             </div>
-                        </div>
-                    </div>
+                            <div class="p-4 grid grid-cols-4  gap-x-2 gap-y-4">
 
+                                
+                                    <div class="">
+                                        <div class="credit-heading">
+                                            Font</div>
 
-        </section>
+                                        
+                                            
+                                                <a href=https://www.googlefonts.com target="_blank" class="
+                            capitalize
+                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
+                                                    Manrope</a>
+                                            
 
-        <footer data-scroll-section class="bg-black text-white">
-            <div class="container mx-auto py-4 uppercase">
-                ©Shelomoh • all rights reserved
-            </div>
-        </footer>
-    </main>
+                                        
+                                            
+                                                <a href=https://www.googlefonts.com target="_blank" class="
+                            capitalize
+                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
+                                                    Inter</a>
+                                            
 
-</body>
+                                        
 
-</html>
+                                    </div>
+                                
+                                    <div class="">
+                                        <div class="credit-heading">
+                                            Development</div>
+
+                                        
+                                            
+                                                <span class="capitalize
+                            credit-value comma-after">HTML</span>
+                                            
+
+                                        
+                                            
+                                                <span class="capitalize
+                            credit-value comma-after">CSS</span>
+                                            
+
+                                        
+
+                                    </div>
+                                
+                                    <div class="">
+                                        <div class="credit-heading">
+                                            Design And Code</div>
+
+                                        
+                                            
+                                                <a href=https://www.googlefonts.com target="_blank" class="
+                            capitalize
+                            credit-value comma-after" style="cursor: url('assets/hover-cursor.svg'), auto;">
+                                                    Shelomoh</a>
+                                            
+
+                                        
+
+                                    </div>
+                                
+
+                            </div>
+
+                            <div class="marquee w-mx py-10 my-4 text-white bg-accent flex items-center">
+                                <div class="track h-full flex items-center">
+                                    <div class="horizontal-text">
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                            <span>
+                                    thanks for visting •
+                                </span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <footer data-scroll-section class="bg-black text-white">
+                            <div class=" mx-auto p-4 uppercase">
+                                ©Shelomoh • all rights reserved
+                            </div>
+                        </footer>
+                    </main>
+
+                </body>
+
+            </html>
