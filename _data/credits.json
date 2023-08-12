@@ -6,11 +6,15 @@
             "contents": [
                 {
                     "title": "Manrope",
-                    "link": "https://www.googlefonts.com"
+                    "link": "hhttps://fonts.google.com/specimen/Manrope?query=manrope"
                 },
                 {
                     "title": "Inter",
-                    "link": "https://www.googlefonts.com"
+                    "link": "https://fonts.google.com/specimen/Inter?query=inter"
+                },
+                {
+                    "title": "Cyrene",
+                    "link": "https://www.behance.net/gallery/100001445/Cyrene-Free-Font"
                 }
             ]
         },
@@ -18,10 +22,29 @@
             "title": "Development",
             "contents": [
                 {
-                    "title": "HTML"
+                    "title": "Eleventy",
+                    "link": "https://www.11ty.dev"
                 },
                 {
-                    "title": "CSS"
+                    "title": "Tailwind CSS",
+                    "link": "https://www.11ty.dev"
+                },
+                {
+                    "title": "Locomotive Scroll",
+                    "link": "https://locomotivemtl.github.io/locomotive-scroll/"
+                },
+                {
+                    "title": "GSAP",
+                    "link": "https://greensock.com/gsap/"
+                }
+            ]
+        },
+        {
+            "title": "Deploy",
+            "contents": [
+                {
+                    "title": "Vercel",
+                    "link": "https://vercel.com/"
                 }
             ]
         },
@@ -30,7 +53,7 @@
             "contents": [
                 {
                     "title": "Shelomoh",
-                    "link": "https://www.googlefonts.com"
+                    "link": "https://www.linkedin.com/in/shelomohkhual/"
                 }
             ]
         }

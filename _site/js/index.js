@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				// Use the scroll position from Locomotive Scroll to update ScrollTrigger
 				locoScroll.scroll.instance.scroll.y = self.scroll();
 			},
-			markers: true,
+			// markers: true,
 		});
 	});
 

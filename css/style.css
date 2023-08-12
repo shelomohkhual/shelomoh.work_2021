@@ -1,10 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@200;400;700&family=Manrope:wght@400;700;800&display=swap");
-
-@font-face {
-	font-family: "Cyrene";
-	src: url("../assets/fonts/Cyrene+Regular+Advanced.otf");
-}
 
 :root {
 	/* --primary-color: #e2e2e2; */
@@ -30,10 +24,6 @@ a:hover {
 
 	cursor: url("../assets/hover-cursor.svg") 40 40, auto;
 }
-/* a:after {
-	font-family: "Inter", "Fira Code", "monospace";
-	font-weight: 400;
-} */
 
 html,
 body {
